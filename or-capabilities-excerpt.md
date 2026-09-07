@@ -1,5 +1,5 @@
 # Strategic Operations Research Capabilities
-## Excerpt from Comprehensive Survey of O.R. Sub-Domains and Their Theoretical Foundations
+## Excerpt from Comprehensive Survey of O.R. Sub-Domains and their Theoretical Foundations
 
 ### I. LOGISTICS & SUPPLY CHAIN OPERATIONS
 
