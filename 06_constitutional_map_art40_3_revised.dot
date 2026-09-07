@@ -1,0 +1,108 @@
+digraph ConstitutionalMap_Article40_3 {
+  rankdir=TB;
+  fontname="Georgia";
+  label="CONSTITUTIONAL MAPPING — ARTICLE 40.3\nPost Hoc Report Fig. 1b (rev.)\nMeta-subject: Constitutional Contumacy\nOrange-dashed = contestable framing, not settled law";
+  labelloc=t;
+  fontsize=18;
+  node [fontname="Helvetica", fontsize=10, style=filled];
+  edge [fontname="Helvetica", fontsize=9, color=gray30];
+
+  subgraph cluster_foundation {
+    label="Constitutional Foundation"; style=solid; color=black; fontsize=12;
+    Art40_3 [label="Article 40.3\nDefend and vindicate —\npositive duty", shape=box, fillcolor=lightblue];
+    Art45   [label="Article 45\nDirective Principles —\ncommon good", shape=box, fillcolor=lightblue];
+    Art9_3  [label="Article 9.3 + Preamble\nReciprocal civic compact", shape=box, fillcolor=lightblue];
+  }
+
+  subgraph cluster_props {
+    label="Props Register — six open conditions\n(each load-bearing, none determinative)";
+    style=dashed; color=orange; fontsize=11;
+    Prop1 [label="1. McEntee certiorari\nNot yet lodged", shape=note, fillcolor=orange];
+    Prop2 [label="2. Limitation period\nConversion clock contested", shape=note, fillcolor=orange];
+    Prop3 [label="3. PETI admissibility\nPending decision", shape=note, fillcolor=orange];
+    Prop4 [label="4. Art. 26 evaluation scope\nMay not reach CA failure", shape=note, fillcolor=orange];
+    Prop5 [label="5. DFA s.7 file\nUndisclosed, may shift record", shape=note, fillcolor=orange];
+    Prop6 [label="6. Presidency non-recusal\nAssumed, not guaranteed", shape=note, fillcolor=orange];
+  }
+
+  subgraph cluster_exparte {
+    label="Ex Parte Propositions"; style=solid; color=darkgreen; fontsize=12;
+    InstitutionalCompetence [label="Institutional Competence\nas constitutional imperative\n(O.R. methodology = deployable means)", shape=box, fillcolor=palegreen];
+    FiduciarySteward        [label="Fiduciary Steward\nState holds corpus as trustee,\nnot gatekeeper — beneficiary is public", shape=box, fillcolor=palegreen];
+    EvidenceBasedPolicy     [label="Evidence-Based Policy\nas vindication duty —\nnon-assessment = non-vindication", shape=box, fillcolor=palegreen];
+  }
+
+  subgraph cluster_anchors {
+    label="Record Anchors"; style=solid; color=firebrick; fontsize=12;
+    TMSWriteDown  [label="TMS Write-down\n€50m — Unit 1\nCompetence duty", shape=box, fillcolor=wheat];
+    StormEowyn    [label="Storm Éowyn\nLife and person — Art. 40.3\nForeseeable, no framework", shape=box, fillcolor=orange];
+    EirGridPricing[label="EirGrid Pricing\nProperty + livelihood rights\nNo benchmark = no vindication", shape=box, fillcolor=wheat];
+    DODForeclosure[label="DOD Foreclosure\nBreach of trust/steward\nUnreasoned · 3× irrational", shape=box, fillcolor=lightsalmon];
+    TransportEnergy[label="Transport and Energy\nO.R. corpus unassessed since 2006\n19-yr delay, compounding\n(EirGrid, haulier network, modal lock-in)", shape=box, fillcolor=wheat];
+  }
+
+  subgraph cluster_chain {
+    label="Foreseeability / Notice / EU Overlay"; style=solid; color=steelblue; fontsize=12;
+    PastHypothetical [label="Past Hypothetical\nForeseeability —\nrecord has quantified, realised harm", shape=box, fillcolor=lightblue];
+    NoticeChain      [label="Notice Chain\n2006 · 2009 · 2020 · 2025\nForeseeability is actual knowledge", shape=box, fillcolor=lightblue];
+    EULawOverlay     [label="EU Law Overlay\nArt. 42.7 · Art. 4(3) · Art. 41 CFR\nDirectly effective, not directive", shape=box, fillcolor=lightblue];
+  }
+
+  ForeclosureByProxy [label="Reliance on Unresolved\nPrior Conclusions\n(s.8A — Bill operative term)\npop. 'Foreclosure-by-Proxy'\nReasons cited, none responsive;\ncheck rebuttal before treating\nas settled — Art. 40.3 applies", shape=box, fillcolor=palegreen];
+
+  TacitConsent [label="Structural Non-Processing\n(pop. 'Tacit Consent / Capture')\nContested framing — not\nan assertion of bad faith;\ndescribes pattern, not intent.\nPublic-goods equilibrium analysis\napplies — see Annex §5.2", shape=octagon, style="dashed,filled", fillcolor=lightyellow, color=orange];
+
+  Art45NonJusticiable [label="Article 45 —\nnon-justiciable in itself,\nbut operative as interpretive\nconstraint: Art. 40.3 carries\nthe justiciable load", shape=box, fillcolor=orange];
+  DemocratisedComputing [label="Democratised Computing\nSovereign Solving Methods —\nO.R. corpus as public\ncomputational resource", shape=box, fillcolor=lightblue];
+
+  FiduciaryFraming [label="Fiduciary Framing\n[contestable — not settled law]\nCorpus held in State custody:\nargued as trust property;\nnon-assessment argued as\nbreach of duty to beneficiary-public.\nA court settles this, not the bill.", shape=box, style="dashed,filled", fillcolor=lightyellow, color=orange];
+
+  OperationalFormulation [label="OPERATIONAL FORMULATION\n(ministerial correspondence / High Court grounds)\nThe State received the corpus (2006).\nThe State received notice of its applicability\n(2009, 2020, 2025). The State witnessed\nquantified downstream harm (Storm Éowyn).\nThe State then declined to determine without\nreasons, without referral, without statutory\naccount of inapplicability.\nArgued: that sequence is not inadvertence\nbut a pattern Art. 40.3 does not excuse.\n[Fiduciary framing and capture framing\neach qualify this argument — see orange nodes]", shape=box, fillcolor=lightpink, peripheries=2];
+
+  ConstitutionalContumacy [label="CONSTITUTIONAL\nCONTUMACY\n(argued conclusion —\nfor court or Ombudsman\nto determine)", shape=doubleoctagon, fillcolor=firebrick, fontcolor=white];
+
+  /* foundation -> ex parte propositions */
+  Art40_3 -> InstitutionalCompetence;
+  Art40_3 -> FiduciarySteward;
+  Art40_3 -> EvidenceBasedPolicy;
+  Art9_3 -> FiduciarySteward [style=dashed];
+  Art45 -> Art45NonJusticiable [style=dashed];
+
+  /* ex parte propositions -> record anchors */
+  InstitutionalCompetence -> TMSWriteDown;
+  FiduciarySteward -> DODForeclosure;
+  EvidenceBasedPolicy -> StormEowyn;
+  EvidenceBasedPolicy -> EirGridPricing;
+  TMSWriteDown -> TransportEnergy [style=dotted];
+
+  /* record anchors -> foreseeability/notice/EU chain */
+  StormEowyn -> PastHypothetical;
+  TransportEnergy -> NoticeChain;
+  DODForeclosure -> EULawOverlay;
+
+  /* chain -> foreclosure-by-proxy -> tacit consent */
+  PastHypothetical -> ForeclosureByProxy;
+  NoticeChain -> ForeclosureByProxy;
+  EULawOverlay -> ForeclosureByProxy;
+  ForeclosureByProxy -> TacitConsent [color=orange, style=dashed];
+
+  /* directive-principle / computing counterweight */
+  TacitConsent -> Art45NonJusticiable [style=dashed];
+  Art45NonJusticiable -> DemocratisedComputing [style=dashed, dir=both];
+
+  /* fiduciary framing and operational formulation */
+  TacitConsent -> FiduciaryFraming [color=orange, style=dashed];
+  DemocratisedComputing -> FiduciaryFraming [style=dashed];
+  FiduciaryFraming -> OperationalFormulation [color=orange, style=dashed, penwidth=1.5];
+
+  OperationalFormulation -> ConstitutionalContumacy [color=red, penwidth=2, label="if argued\nclaims held"];
+
+  /* props register qualifies the load-bearing argument */
+  Prop1 -> DODForeclosure [style=dashed, color=orange, label="qualifies"];
+  Prop2 -> TMSWriteDown [style=dashed, color=orange, label="qualifies"];
+  Prop3 -> EULawOverlay [style=dashed, color=orange, label="qualifies"];
+  Prop4 -> EULawOverlay [style=dashed, color=orange, label="qualifies"];
+  Prop5 -> FiduciaryFraming [style=dashed, color=orange, label="qualifies"];
+  Prop5 -> TacitConsent [style=dashed, color=orange, label="qualifies"];
+  Prop6 -> OperationalFormulation [style=dashed, color=orange, label="qualifies"];
+}
