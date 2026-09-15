@@ -41,20 +41,20 @@ Five stages, each with its own working directory and its own `index.html`. Each 
 
 ## Site Map
 
-### [`/corpus`](dr-bosch/post-hoc/corpus/index.html) — the documentary base
+### [`/corpus`](htttps://dr-bosch/post-hoc/corpus/index.html) — the documentary base
 
 The evidentiary and normative material the rest of the project is built on top of. Nothing downstream is permitted to introduce a fact that doesn't originate here.
 
-- [`statements`](dr-bosch/post-hoc/corpus/statements/index.html) — first-person and institutional statements of position
-- [`correspondence`](dr-bosch/post-hoc/corpus/correspondence/index.html) — letters, emails, and formal exchanges
-- [`decisions`](dr-bosch/post-hoc/corpus/decisions/index.html) — rulings, determinations, and formal dispositions
-- [`institutional-records`](dr-bosch/post-hoc/corpus/institutional-records/index.html) — minutes, logs, registers, and internal records
-- [`laws-and-codes`](dr-bosch/post-hoc/corpus/laws-and-codes/index.html) — the normative framework the behaviour is measured against
-  - [`primary-legislation`](dr-bosch/post-hoc/corpus/laws-and-codes/primary-legislation/index.html)
-  - [`statutory-instruments`](dr-bosch/post-hoc/corpus/laws-and-codes/statutory-instruments/index.html)
-  - [`eu-regulations`](dr-bosch/post-hoc/corpus/laws-and-codes/eu-regulations/index.html)
-  - [`eu-directives`](dr-bosch/post-hoc/corpus/laws-and-codes/eu-directives/index.html)
-  - [`codes-of-practice`](dr-bosch/post-hoc/corpus/laws-and-codes/codes-of-practice/index.html)
+- [`statements`](htttps://dr-bosch/post-hoc/corpus/statements/index.html) — first-person and institutional statements of position
+- [`correspondence`](htttps://dr-bosch/post-hoc/corpus/correspondence/index.html) — letters, emails, and formal exchanges
+- [`decisions`](htttps://dr-bosch/post-hoc/corpus/decisions/index.html) — rulings, determinations, and formal dispositions
+- [`institutional-records`](htttps://dr-bosch/post-hoc/corpus/institutional-records/index.html) — minutes, logs, registers, and internal records
+- [`laws-and-codes`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/index.html) — the normative framework the behaviour is measured against
+  - [`primary-legislation`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/primary-legislation/index.html)
+  - [`statutory-instruments`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/statutory-instruments/index.html)
+  - [`eu-regulations`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/eu-regulations/index.html)
+  - [`eu-directives`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/eu-directives/index.html)
+  - [`codes-of-practice`](htttps://dr-bosch/post-hoc/corpus/laws-and-codes/codes-of-practice/index.html)
 
 ### [`/semiotics`](./semiotics/index.html) — how reality is represented
 
