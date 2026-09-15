@@ -1,10 +1,75 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>system-observations</title>
-</head>
-<body>
-  <h1>system-observations</h1>
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>system-observations — post-hoc/posiwid</title><style>body{font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:24px;background:#fafaf7;color:#1a1a1a;line-height:1.55}
+h1{font-size:24px;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:4px}
+h2{font-size:17px;margin-top:32px;margin-bottom:0;color:#222}
+.dir-desc{font-size:14px;color:#555;margin:4px 0 18px;font-style:italic}
+.tag{display:inline-block;font-family:monospace;font-size:10px;padding:1px 6px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.OBS{background:#dbe9ff;color:#1a3a6b}
+.INT{background:#ffe9c2;color:#6b3a00}
+.INF{background:#f5d0d0;color:#6b1a1a}
+.HYP{background:#e3d0f5;color:#3a1a6b}
+.atom{border-left:3px solid #ccc;padding:10px 14px;margin:12px 0;background:#fff}
+.atom.obs-atom{border-left-color:#4a7abd}
+.atom.int-atom{border-left-color:#c08020}
+.atom.inf-atom{border-left-color:#b03030}
+.atom.hyp-atom{border-left-color:#7030a0}
+.fsd-class{border-left:3px solid #2a7a5a;padding:10px 14px;margin:12px 0;background:#f4fbf7}
+.fsd-label{font-family:monospace;font-size:10px;color:#2a7a5a;margin-bottom:4px}
+.chrono{font-family:monospace;font-size:13px;border:1px solid #ddd;padding:9px 12px;margin:8px 0;background:#f9f9f7}
+.chrono .date{color:#555;display:inline-block;min-width:120px}
+.chrono .actor{color:#1a3a6b;font-weight:bold}
+.chrono .consequence{color:#8a0000;font-size:12px;margin-top:3px}
+.src{font-family:monospace;font-size:11px;color:#777;margin-top:5px}
+.gap{font-size:13px;color:#7a4400;margin-top:6px;padding-left:8px;border-left:2px solid #c08020}
+.see-also{font-size:12px;color:#555;margin-top:6px}
+.see-also a{color:#444}
+nav{font-family:monospace;font-size:12px;margin-bottom:16px;color:#666}
+nav a{color:#555}
+ul{padding-left:20px;line-height:2}
+ul a{color:#333}
+footer{margin-top:48px;font-size:11px;color:#aaa;border-top:1px solid #ddd;padding-top:10px;font-family:monospace}
+</style></head><body>
+<nav><a href="../../index.html">post-hoc</a> / <a href="../index.html">posiwid</a> / system-observations</nav>
+<h1>posiwid/system-observations/</h1>
+<p class="dir-desc">Recurring outputs of the system, named without reference to intent. Each observation states a pattern and its frequency. Where the FSD ontology provides a SWRL rule, the rule is applied to the existing record.</p>
+
+<h2>Recurring output: procedurally valid non-engagement</h2>
+<div class="atom obs-atom"><span class="tag OBS">OBSERVATION</span>
+Across every listed institutional contact point in the corpus — OEP (×3), DFA, JCEUA (×7), JCPP (×18), JCDNS, JCFAT, SSCEUST, DETE — the recorded system output is one of: receipt acknowledged / remit declined / sufficiency asserted / correspondence closed. None of the listed contact points is recorded as producing a substantive determination on the merits of the OR corpus, favourable or unfavourable.
+<div class="src">source: Interregnum-nullificans-v13.md §III; meinhardt-initiative-compact-sep10.md (Committee Matrix)</div>
+<div class="gap">Evidence gap: the corpus supplies the contact log; independent verification of each entry's characterisation requires primary records (committee minutes, departmental files) not in this repository.</div></div>
+
+<div class="fsd-class"><div class="fsd-label">fsd:SWRL Rule 2 — Loop Condition: Three Declinations (FSD-Ontology-2026 §7)</div>
+<p>Triggers when fsd:declinationCount ≥ 3. Applied to the existing record: per the corpus, formal declinations recorded at JCEUA, JCPP, JCDNS, Justice (×2), Finance, Budgetary Oversight, PAC, and others. Count exceeds threshold by a factor of approximately 3.
+<br>SWRL Rule 3 — 24-Month Non-Determination: triggers at 24 months aggregate non-determination period. Applied to existing record: approximately 236 months at July 2026.</div>
+<div class="src">source: FSD-Ontology-2026.md §7, §12</div></div>
+
+<h2>Recurring output: transfer without discharge</h2>
+<div class="atom obs-atom"><span class="tag OBS">OBSERVATION</span>
+The corpus identifies two instances of a function moving between institutions without the accumulated obligation moving with it: (1) the DFA → DETE CA designation transfer of 22 Aug 2024; (2) the 2011 reconfiguration of the DFA portfolio when Minister Martin left and "Trade" was added to the remit without any audit of the outstanding CA obligation.
+<div class="src">source: Interregnum-nullificans-v13.md §II (2011 entry), §V</div></div>
+<div class="fsd-class"><div class="fsd-label">fsd:AdministrativeAmnesia (FSD-Ontology-2026 §4.4)</div>
+Pattern: each transfer resets the institutional clock to zero while the underlying fsd:nonDeterminationPeriodMonths continues to accumulate. The receiving body has no formal record of the submission, producing fresh cycles of superficial engagement.
+<div class="src">source: FSD-Ontology-2026.md §4.4</div></div>
+
+<h2>Recurring output: OEP three positions, none reconciled</h2>
+<div class="atom obs-atom"><span class="tag OBS">OBSERVATION</span>
+The OEP has three recorded positions on the corpus across 19 years: (1) May 2006 — Rooney: State interest acknowledged, submission invited, processing blocked on credentials condition, no referral. (2) Jul 2009 — Kelliher: declined on remit grounds. (3) Jun 2025 — McMoreland: substantive adequacy conclusion. None reconciles the prior positions. The McEntee Foreclosure relies on (3) without acknowledging (1) or (2).
+<div class="src">source: Interregnum-nullificans-v13.md §IV</div></div>
+<div class="atom int-atom"><span class="tag INT">INTERPRETATION</span>
+Three irreconcilable positions from the same institutional body across 19 years is the corpus's strongest case for fsd:NullificationLoop as a pattern of acts rather than a sequence of individually defensible decisions. The pattern is: each position is locally defensible; the aggregate is logically incoherent; the Foreclosure uses the most recent position as though the prior two do not exist. This is fsd:AdministrativeAmnesia applied not across bodies but within a single body.
+<div class="see-also">See also: <a href="../../behaviour/closures/index.html">behaviour/closures/</a> · <a href="../purpose-inferred-from-behaviour/index.html">posiwid/purpose-inferred-from-behaviour/</a></div></div>
+
+<h2>Structural condition: three-institution fragmentation</h2>
+<div class="fsd-class"><div class="fsd-label">fsd:StructuralDisplacement → fsd:OnticCollapse (FSD-Ontology-2026 §4.5)</div>
+SWRL Rule 6: established when (a) no single body holds the full competence required and (b) no statutory mechanism assembles the partial competences. Applied to the existing record:<br>
+— DETE: licensing, CA designation<br>
+— DFA: Wassenaar / NSG / MTCR / Australia Group regime memberships<br>
+— DoD / OEP: security assessment architecture<br>
+No statute requires these three to consult before a determination. An integrated dual-use assessment requires all three simultaneously. Per Rule 6: fsd:OnticCollapse is instantiated.
+<div class="src">source: FSD-Ontology-2026.md §7, §12; Interregnum-nullificans-v13.md §V</div></div>
+<div class="atom inf-atom"><span class="tag INF">INFERENCE</span>
+Whether the integrated assessment actually requires all three inputs simultaneously — or whether DETE could discharge the obligation with the information it holds, consulting the others on an ad hoc basis — is the institutional design question the corpus treats as closed and this repository treats as open pending a court or Ombudsman determination.
+</div>
+
+<footer>post-hoc · posiwid/system-observations/</footer>
+</body></html>
