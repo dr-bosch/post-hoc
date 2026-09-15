@@ -56,36 +56,36 @@ The evidentiary and normative material the rest of the project is built on top o
   - [`eu-directives`](https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/eu-directives/index.html)
   - [`codes-of-practice`](https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/codes-of-practice/index.html)
 
-### [`/semiotics`](./semiotics/index.html) — how reality is represented
+### [`/semiotics`](https://dr-bosch.github.io/post-hoc/semiotics/index.html) — how reality is represented
 
 The layer of representation: what the corpus says, implies, and omits, independent of whether what it says is true.
 
-- [`signifiers`](./semiotics/signifiers/index.html) — recurring terms, labels, and framings
-- [`narratives`](./semiotics/narratives/index.html) — the stories the corpus tells about itself
-- [`metaphors`](./semiotics/metaphors/index.html) — figurative structures carrying argumentative weight
-- [`absences`](./semiotics/absences/index.html) — what is conspicuously not said
-- [`oppositions`](./semiotics/oppositions/index.html) — binary framings the corpus relies on
+- [`signifiers`](https://dr-bosch.github.io/post-hoc/semiotics/signifiers/index.html) — recurring terms, labels, and framings
+- [`narratives`](https://dr-bosch.github.io/post-hoc/semiotics/narratives/index.html) — the stories the corpus tells about itself
+- [`metaphors`](https://dr-bosch.github.io/post-hoc/semiotics/metaphors/index.html) — figurative structures carrying argumentative weight
+- [`absences`](https://dr-bosch.github.io/post-hoc/semiotics/absences/index.html) — what is conspicuously not said
+- [`oppositions`](https://dr-bosch.github.io/post-hoc/semiotics/oppositions/index.html) — binary framings the corpus relies on
 
-### [`/behaviour`](./behaviour/index.html) — what the system actually does
+### [`/behaviour`](https://dr-bosch.github.io/post-hoc/behaviour/index.html) — what the system actually does
 
 The observable record, stripped of framing: actions and non-actions as documented events, not as characterised by any party.
 
-- [`actions`](./behaviour/actions/index.html)
-- [`non-actions`](./behaviour/non-actions/index.html)
-- [`delays`](./behaviour/delays/index.html)
-- [`referrals`](./behaviour/referrals/index.html)
-- [`closures`](./behaviour/closures/index.html)
+- [`actions`](https://dr-bosch.github.io/post-hoc/behaviour/actions/index.html)
+- [`non-actions`](https://dr-bosch.github.io/post-hoc/behaviour/non-actions/index.html)
+- [`delays`](https://dr-bosch.github.io/post-hoc/behaviour/delays/index.html)
+- [`referrals`](https://dr-bosch.github.io/post-hoc/behaviour/referrals/index.html)
+- [`closures`](https://dr-bosch.github.io/post-hoc/behaviour/closures/index.html)
 
-### [`/posiwid`](./posiwid/index.html) — what function behaviour appears to produce
+### [`/posiwid`](https://dr-bosch.github.io/post-hoc/posiwid/index.html) — what function behaviour appears to produce
 
 *The Purpose Of a System Is What It Does.* This stage draws no conclusions about intent. It asks only: given the documented behaviour, and only the documented behaviour, what function does the system appear, structurally, to be performing?
 
-- [`system-observations`](./posiwid/system-observations/index.html)
-- [`purpose-inferred-from-behaviour`](./posiwid/purpose-inferred-from-behaviour/index.html)
+- [`system-observations`](https://dr-bosch.github.io/post-hoc/posiwid/system-observations/index.html)
+- [`purpose-inferred-from-behaviour`](https://dr-bosch.github.io/post-hoc/posiwid/purpose-inferred-from-behaviour/index.html)
 
-### [`/synthesis`](./synthesis/index.html) — where the stages are drawn together
+### [`/synthesis`](https://dr-bosch.github.io/post-hoc/synthesis/index.html) — where the stages are drawn together
 
-- [`system-analysis.md`](./synthesis/system-analysis.md)
+- [`system-analysis.md`](https://dr-bosch.github.io/post-hoc/synthesis/system-analysis.md)
 
 ---
 
@@ -115,5 +115,5 @@ structural inference • documentary evidence • normative framework • semiot
 
 ## Project Files
 
-- [`index.html`](./index.html) — landing page
+- [`index.html`](https://dr-bosch.github.io/post-hoc/index.html) — landing page
 - [`CLAUDE.md`](./CLAUDE.md) — working notes and project instructions
