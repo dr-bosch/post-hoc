@@ -14,7 +14,7 @@
                    │
        ┌───────────┴───────────┐
        │                       │
- documentary             normative
+ documentary               normative
  evidence                  framework
        │                       │
        └───────────┬───────────┘
