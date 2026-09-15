@@ -1033,4 +1033,120 @@ It is:
 
 > **"What system is constituted by the relationship between what the institution says, what it does, what it does not do, and what those repeated behaviours produce?"**
 
+---
+
+# XVI. Ontology-Governed Atomic Classifications
+
+`FSD-Ontology-2026.md` is the master guide for ontology-governed atomic concepts in this repository. Its `fsd:` classes define the controlled vocabulary; they do not, by themselves, establish that the corresponding phenomenon exists in any source document.
+
+When an atomic concept is extracted from a document:
+
+- preserve the exact source passage;
+- identify the source file and, where available, its section or location;
+- record the matching ontology class;
+- distinguish an occurrence of the term from an assertion that the class applies;
+- do not convert a proposed legal or analytical category into an established fact;
+- record ambiguity where a word is used in an ordinary, rhetorical, or different technical sense;
+- retain competing classifications where the passage supports more than one;
+- treat the ontology as an analytical instrument, not as evidence.
+
+## XVI.1 Evidentiary and analytical statuses
+
+Use the following statuses consistently:
+
+| Status | Meaning | Required treatment |
+|---|---|---|
+| `OBS` | Directly verifiable from the stated source | Quote or identify the source passage |
+| `INT` | Analytical interpretation requiring argument | State the interpretive operation |
+| `INF` | Derived from observations through a logical step | State the premises and inference |
+| `HYP` | Plausible explanation requiring additional evidence | Identify what evidence is missing |
+| `FSD` | Occurrence or application of an OWL class defined by the FSD ontology | Cite `FSD-Ontology-2026.md`; do not treat the label alone as proof |
+| `CHR` | Dated behavioural event in the legal-chronology register | Preserve date, actor, action, consequence, and source |
+
+An atom may carry more than one analytical dimension. For example, a passage may be an `OBS` about a `fsd:Submission`, or an `INF` supporting `fsd:NonDetermination`. Do not replace the evidentiary status with the ontology class.
+
+## XVI.2 FSD class families
+
+The ontology classes are grouped as follows:
+
+### Core submission classes
+
+- `fsd:Submission`
+- `fsd:SubmissionOfNationalUtility`
+- `fsd:DualUseSubmission`
+- `fsd:HighRiskAISubmission`
+- `fsd:TestableSubmission`
+
+### Institutional classes
+
+- `fsd:PublicBody`
+- `fsd:CompetentAuthority`
+- `fsd:Ombudsman`
+- `fsd:IndependentAuditor`
+
+### Determination classes
+
+- `fsd:Determination`
+- `fsd:AcceptanceDetermination`
+- `fsd:RejectionDetermination`
+- `fsd:ReferralDetermination`
+- `fsd:NonDetermination`
+
+### Prohibited-practice classes
+
+- `fsd:ProhibitedPractice`
+- `fsd:RemitDisplacement`
+- `fsd:SufficiencyAssertion`
+- `fsd:AdministrativeAmnesia`
+- `fsd:DesignedForgetting`
+- `fsd:ForeClosureByProxy`
+
+### Structural-failure classes
+
+- `fsd:StructuralCondition`
+- `fsd:NormativeCollapse`
+- `fsd:SilenceVeto`
+- `fsd:StructuralDisplacement`
+- `fsd:OnticCollapse`
+
+### Loop-architecture classes
+
+- `fsd:NullificationLoop`
+- `fsd:LoopCondition`
+- `fsd:ResidualObligation`
+- `fsd:LoopClosure`
+- `fsd:TechnicalAudit`
+
+The class family is descriptive of the ontology's structure. It must not be used to imply that all classes are present, applicable, or empirically established in every corpus.
+
+## XVI.3 Atomic extraction rules
+
+For root-level Markdown and HTML extraction:
+
+1. use `FSD-Ontology-2026.md` as the vocabulary authority;
+2. scan source documents without rewriting or normalising their substantive wording;
+3. preserve a short, traceable passage rather than an isolated keyword where possible;
+4. record the ontology identifier separately from the passage text;
+5. exclude the ontology master from evidence counts unless the task is specifically to analyse the ontology itself;
+6. exclude generated atom outputs from subsequent source extraction;
+7. treat repeated occurrences as separate atoms only when their source passage or analytical context differs;
+8. distinguish a literal ontology identifier, an exact preferred label, and an ordinary-language resemblance;
+9. flag false positives and ambiguous matches for review;
+10. never infer recurrence, institutional behaviour, legal effect, or system purpose from term frequency alone.
+
+The extraction output should remain traceable through at least:
+
+```text
+source file
+  ↓
+source passage
+  ↓
+evidentiary status
+  ↓
+FSD ontology class
+  ↓
+interpretation or inference, if any
+```
+
+An atom is therefore an indexed analytical unit, not a conclusion. System-level conclusions require separate behavioural analysis, recurrence testing, counterevidence, and an explicitly stated system boundary.
 
