@@ -85,7 +85,7 @@ The observable record, stripped of framing: actions and non-actions as documente
 
 ### [`/synthesis`](https://dr-bosch.github.io/post-hoc/synthesis/index.html) — where the stages are drawn together
 
-- [`system-analysis.md`](https://dr-bosch.github.io/post-hoc/synthesis/system-analysis.md)
+- [`system-analysis.md`](https://github.com/dr-bosch/post-hoc/blob/main/system-analysis.md)
 
 ---
 
