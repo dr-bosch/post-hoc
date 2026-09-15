@@ -1,2 +1,119 @@
 # post-hoc
-Post Hoc Report/Audit
+## Post Hoc Report/Audit
+
+**A structural method for inferring institutional purpose from documented institutional behaviour.**
+
+*post hoc*, Latin: "after the fact." This project does not argue about intentions, motives, or what an institution says it exists to do. It works backward from what a system **produced** — the corpus, the record, the trail — to what that system's behaviour, considered as a whole, functioned to accomplish.
+
+---
+
+## The Method
+
+```
+                 CORPUS
+                   │
+       ┌───────────┴───────────┐
+       │                       │
+ documentary             normative
+ evidence                  framework
+       │                       │
+       └───────────┬───────────┘
+                   ↓
+              SEMIOTICS
+                   │
+       How reality is represented
+                   ↓
+              BEHAVIOUR
+                   │
+       What the system actually does
+                   ↓
+               POSIWID
+                   │
+       What function behaviour
+          appears to produce
+                   ↓
+              SYNTHESIS
+```
+
+Five stages, each with its own working directory and its own `index.html`. Each stage constrains the one after it: semiotics is read only from what the corpus actually contains; behaviour is read only from what can be documented, not what is claimed; POSIWID inference is drawn only from behaviour, never from stated intent; synthesis draws only on what survives all three prior stages.
+
+---
+
+## Site Map
+
+### [`/corpus`](./corpus/index.html) — the documentary base
+
+The evidentiary and normative material the rest of the project is built on top of. Nothing downstream is permitted to introduce a fact that doesn't originate here.
+
+- [`statements`](./corpus/statements/index.html) — first-person and institutional statements of position
+- [`correspondence`](./corpus/correspondence/index.html) — letters, emails, and formal exchanges
+- [`decisions`](./corpus/decisions/index.html) — rulings, determinations, and formal dispositions
+- [`institutional-records`](./corpus/institutional-records/index.html) — minutes, logs, registers, and internal records
+- [`laws-and-codes`](./corpus/laws-and-codes/index.html) — the normative framework the behaviour is measured against
+  - [`primary-legislation`](./corpus/laws-and-codes/primary-legislation/index.html)
+  - [`statutory-instruments`](./corpus/laws-and-codes/statutory-instruments/index.html)
+  - [`eu-regulations`](./corpus/laws-and-codes/eu-regulations/index.html)
+  - [`eu-directives`](./corpus/laws-and-codes/eu-directives/index.html)
+  - [`codes-of-practice`](./corpus/laws-and-codes/codes-of-practice/index.html)
+
+### [`/semiotics`](./semiotics/index.html) — how reality is represented
+
+The layer of representation: what the corpus says, implies, and omits, independent of whether what it says is true.
+
+- [`signifiers`](./semiotics/signifiers/index.html) — recurring terms, labels, and framings
+- [`narratives`](./semiotics/narratives/index.html) — the stories the corpus tells about itself
+- [`metaphors`](./semiotics/metaphors/index.html) — figurative structures carrying argumentative weight
+- [`absences`](./semiotics/absences/index.html) — what is conspicuously not said
+- [`oppositions`](./semiotics/oppositions/index.html) — binary framings the corpus relies on
+
+### [`/behaviour`](./behaviour/index.html) — what the system actually does
+
+The observable record, stripped of framing: actions and non-actions as documented events, not as characterised by any party.
+
+- [`actions`](./behaviour/actions/index.html)
+- [`non-actions`](./behaviour/non-actions/index.html)
+- [`delays`](./behaviour/delays/index.html)
+- [`referrals`](./behaviour/referrals/index.html)
+- [`closures`](./behaviour/closures/index.html)
+
+### [`/posiwid`](./posiwid/index.html) — what function behaviour appears to produce
+
+*The Purpose Of a System Is What It Does.* This stage draws no conclusions about intent. It asks only: given the documented behaviour, and only the documented behaviour, what function does the system appear, structurally, to be performing?
+
+- [`system-observations`](./posiwid/system-observations/index.html)
+- [`purpose-inferred-from-behaviour`](./posiwid/purpose-inferred-from-behaviour/index.html)
+
+### [`/synthesis`](./synthesis/index.html) — where the stages are drawn together
+
+- [`system-analysis.md`](./synthesis/system-analysis.md)
+
+---
+
+## Epistemic Discipline
+
+Every claim in this project is held to one of five categories, and the category travels with the claim:
+
+| Category | What it means |
+|---|---|
+| **Observation** | Directly present in a corpus document |
+| **Interpretation** | A reading of what an observation represents |
+| **Inference** | A conclusion drawn from a pattern across observations |
+| **Hypothesis** | A proposed explanation not yet corroborated |
+| **Evidence gap** | A point where the corpus is silent and no claim is made |
+
+Nothing here is presented as an established institutional fact until it has been corroborated against a primary or independently verifiable source — dated correspondence, an official decision, committee minutes, legislation, regulation, or a court or Ombudsman record. Where the underlying record has not yet been consulted, that is stated rather than assumed. Overlap in wording or subject matter across corpus documents is not treated as independent corroboration of a claim.
+
+This is preparatory, provisional working material. No system-level conclusion is adopted before the corpus, semiotics, and behaviour stages have each been completed and cross-checked.
+
+---
+
+## Core Terminology
+
+structural inference • documentary evidence • normative framework • semiotic layer • signifier • narrative • absence • opposition • observed behaviour • non-action • procedural delay • referral • closure • POSIWID • purpose-from-behaviour • system observation • epistemic status • corroboration • provenance • evidence gap • synthesis
+
+---
+
+## Project Files
+
+- [`index.html`](./index.html) — landing page
+- [`CLAUDE.md`](./CLAUDE.md) — working notes and project instructions
