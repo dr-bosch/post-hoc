@@ -1,7 +1,9 @@
 # laws-and-codes: Technical Manual
 
-`post-hoc` / `corpus` / `laws-and-codes` / MANUAL
+`post-hoc` / `corpus` / `laws-and-codes` / manual
 **version 0.1 · September 2026 · post-hoc corpus · working document**
+
+[Technical Manual Landing Page](https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/manual.html) 
 
 This manual describes the structure, methodology, and working procedures of the `laws-and-codes/` corpus layer within the post-hoc analytical system. It is addressed to analysts who are adding documents, extracting atomic propositions, and applying the FSD ontology to normative source material. It is not an introduction to the FSD ontology itself; it assumes familiarity with the ontology's core concepts and focuses on how those concepts are applied to legal and regulatory texts.
 
@@ -33,7 +35,7 @@ The layer is divided into six subdirectories. Each subdirectory holds a class of
 
 ```
 laws-and-codes/
-├── MANUAL.html                    ← this document
+├── manual.html                    ← Technical Manual landing page
 ├── index.html                     ← directory overview and methodology statement
 ├── primary-legislation/           ← Acts and primary legislative texts
 ├── statutory-instruments/         ← regulations and orders under delegated authority
