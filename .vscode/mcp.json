@@ -7,6 +7,10 @@
     "ansvar": {
       "type": "http",
       "url": "https://gateway.ansvar.eu/mcp"
+    },
+    "irish-competition": {
+      "type": "http",
+      "url": "https://mcp.ansvar.eu/irish-competition/mcp"
     }
   }
 }
