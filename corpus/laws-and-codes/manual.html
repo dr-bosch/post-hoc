@@ -1,0 +1,436 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>MANUAL — laws-and-codes — post-hoc</title><style>
+body{font-family:Georgia,serif;max-width:900px;margin:0 auto;padding:24px;background:#fafaf7;color:#1a1a1a;line-height:1.6}
+h1{font-size:26px;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:4px}
+.version{font-family:monospace;font-size:12px;color:#777;margin-bottom:28px}
+h2{font-size:19px;margin-top:40px;color:#333;border-bottom:1px solid #e0e0d8;padding-bottom:4px}
+h3{font-size:15px;margin-top:26px;color:#444}
+h4{font-size:13px;margin-top:18px;color:#555;font-style:italic}
+nav{font-family:monospace;font-size:12px;margin-bottom:20px}
+nav a{color:#555}
+
+/* Tag system */
+.tag{display:inline-block;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.OBS{background:#dbe9ff;color:#1a3a6e}
+.INT{background:#ffe9c2;color:#6e4400}
+.INF{background:#f5d0d0;color:#6e1a1a}
+.HYP{background:#e3d0f5;color:#3d1a6e}
+
+/* Atom display */
+.atom{border:1px solid #ddd;border-radius:5px;padding:10px 14px;margin:10px 0;background:#fff}
+.atom p{margin:6px 0}
+
+/* Workflow steps */
+.step{border-left:3px solid #5570a0;padding:10px 14px;margin:12px 0;background:#f8f8fc}
+.step-num{font-family:monospace;font-size:11px;color:#5570a0;margin-bottom:4px}
+
+/* Gap / warning */
+.gap{font-size:13px;color:#8a4b00;background:#fdf6ec;border:1px solid #e8d8b8;border-radius:4px;padding:10px 14px;margin:14px 0}
+.gap strong{display:block;margin-bottom:4px}
+
+/* FSD panel */
+.fsd-class{border-left:3px solid #aaa;padding:10px 14px;margin-top:28px;background:#f5f5f2}
+.fsd-label{font-family:monospace;font-size:11px;color:#555;margin-bottom:6px}
+
+/* Source registry */
+.src-entry{border:1px solid #ddd;border-radius:4px;padding:10px 14px;margin:10px 0;background:#fff;font-size:13.5px}
+.src-entry .src-title{font-weight:bold;margin-bottom:4px}
+.src-entry .src-meta{font-family:monospace;font-size:11px;color:#777;line-height:1.8}
+
+/* Code / monospace blocks */
+pre{background:#f0f0ec;border:1px solid #ddd;border-radius:4px;padding:12px 14px;font-size:12px;overflow-x:auto;line-height:1.5}
+code{font-family:monospace;font-size:12px;background:#f0f0ec;padding:1px 4px;border-radius:2px}
+
+/* Section divider */
+.divider{border:none;border-top:1px solid #ddd;margin:36px 0}
+
+/* TOC */
+.toc{background:#f5f5f2;border:1px solid #e0e0d8;border-radius:4px;padding:14px 18px;margin:24px 0;font-size:13.5px}
+.toc ol{margin:6px 0;padding-left:20px}
+.toc li{margin:4px 0}
+.toc a{color:#333}
+
+footer{margin-top:48px;font-size:12px;color:#888;border-top:1px solid #ddd;padding-top:12px}
+</style></head><body>
+
+<nav><a href="https://dr-bosch.github.io/post-hoc/index.html">post-hoc</a> / <a href="https://dr-bosch.github.io/post-hoc/corpus/index.html">corpus</a> / <a href="https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/index.html">laws-and-codes</a> / MANUAL</nav>
+
+<h1>laws-and-codes: Technical Manual</h1>
+<div class="version">version 0.1 · September 2026 · post-hoc corpus · working document</div>
+
+<p>This manual describes the structure, methodology, and working procedures of the <code>laws-and-codes/</code> corpus layer within the post-hoc analytical system. It is addressed to analysts who are adding documents, extracting atomic propositions, and applying the FSD ontology to normative source material. It is not an introduction to the FSD ontology itself; it assumes familiarity with the ontology's core concepts and focuses on how those concepts are applied to legal and regulatory texts.</p>
+
+<div class="toc">
+<strong>Contents</strong>
+<ol>
+  <li><a href="#purpose">Purpose and scope of this layer</a></li>
+  <li><a href="#structure">Directory structure and document placement</a></li>
+  <li><a href="#epistemics">Epistemic framework: the four atom classes</a></li>
+  <li><a href="#normative-operative">The normative–operative distinction</a></li>
+  <li><a href="#workflow">Workflow: adding a document and extracting atoms</a></li>
+  <li><a href="#atom-extraction">Atom extraction from normative texts</a></li>
+  <li><a href="#worked-example">Worked example: Code of Conduct for Members of Dáil Éireann</a></li>
+  <li><a href="#source-registry">Source registry</a></li>
+  <li><a href="#conventions">Conventions and constraints</a></li>
+</ol>
+</div>
+
+<hr class="divider">
+
+<h2 id="purpose">1. Purpose and scope of this layer</h2>
+
+<p>The <code>laws-and-codes/</code> layer holds normative source material: legislation, regulations, codes, and related instruments. Its function is to constitute the normative reference layer — the set of prescriptions, authorisations, constraints, and definitions — against which institutional representations and observable behaviour are subsequently compared.</p>
+
+<p>The layer does not hold analysis. It holds sources, and the analytical apparatus applied to those sources: provision-by-provision breakdowns, FSD atomic propositions, enforcement architecture assessments, and cross-references to other layers of the corpus. Analysis is embedded in the index pages associated with each document, not in the documents themselves.</p>
+
+<p>The central analytical question this layer addresses is not "what does the law say?" but "what operative condition does the law establish, and can that condition be shown to have obtained in the circumstances under examination?" The distinction between normative validity and operative effect is the primary object of attention throughout.</p>
+
+<h2 id="structure">2. Directory structure and document placement</h2>
+
+<p>The layer is divided into six subdirectories. Each subdirectory holds a class of normative instrument and an index page describing the analytical method applied to that class.</p>
+
+<pre>laws-and-codes/
+├── MANUAL.html                    ← this document
+├── index.html                     ← directory overview and methodology statement
+├── primary-legislation/           ← Acts and primary legislative texts
+├── statutory-instruments/         ← regulations and orders under delegated authority
+├── eu-regulations/                ← directly applicable EU regulations
+├── eu-directives/                 ← EU directives requiring transposition
+├── codes-of-practice/             ← formal codes, guidance, procedural standards
+└── regulatory-frameworks/         ← composite multi-instrument frameworks</pre>
+
+<h3>Document placement rules</h3>
+
+<p>Place each document in the directory matching its primary instrument type. Where a document spans types — for example, a statutory instrument that implements an EU directive and is accompanied by a non-statutory code of practice — place the primary instrument in its correct directory and create cross-references in the other relevant directories.</p>
+
+<p>Composite frameworks (e.g. the ethics-in-public-office regime, which comprises primary legislation, a code of conduct, and institutional machinery) are assembled in <code>regulatory-frameworks/</code> with cross-references to the constituent instruments in their primary directories.</p>
+
+<h3>Naming convention</h3>
+
+<p>Files follow the Oireachtas <code>data.oireachtas.ie</code> naming convention where documents originate from that repository:</p>
+
+<pre>YYYY-MM-DD_descriptive-title_en.pdf</pre>
+
+<p>For documents from other sources, use:</p>
+
+<pre>YYYY-MM-DD_source-abbreviation_descriptive-title_en.pdf</pre>
+
+<p>Markdown working copies (for annotation and atom extraction) use the same base name with a <code>.md</code> extension.</p>
+
+<hr class="divider">
+
+<h2 id="epistemics">3. Epistemic framework: the four atom classes</h2>
+
+<p>All propositions in the corpus are assigned one of four epistemic classes. The class is not a judgment about the importance of the proposition; it is a claim about the epistemic status of the proposition — what kind of support it has and what would be required to challenge it.</p>
+
+<h3><span class="tag OBS">OBS</span> Observation</h3>
+
+<p>A proposition directly established by the source text or the documentary record, without requiring interpretation beyond the ordinary meaning of the words. An OBS atom from a normative text records what the text says. It is falsifiable by pointing to the text.</p>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> Article 6 of the Code of Conduct for Members of Dáil Éireann (non-officeholders) provides that Members "may not solicit, accept or receive any financial benefit or profit in exchange for promoting, or voting on, a Bill, a motion for a resolution or order or any question put to the Dáil or to any of its committees."</p>
+</div>
+
+<h3><span class="tag INT">INT</span> Interpretation</h3>
+
+<p>A proposition that follows from careful reading of the source text but requires interpretive judgment — identifying the implications of a drafting choice, the scope of a defined term, the relationship between two provisions, or the consequence of an ambiguity. An INT atom is contestable on interpretive grounds; a different reading of the same text could reach a different conclusion.</p>
+
+<div class="atom">
+  <p><span class="tag INT">INT</span> The definition of conflict of interest at article 5(i) of the Code requires three cumulative mental elements — knowledge, impropriety, and dishonesty. Negligent or reckless conduct does not satisfy the definition on its face. The threshold is materially higher than a strict-liability or negligence standard.</p>
+</div>
+
+<h3><span class="tag INF">INF</span> Inference</h3>
+
+<p>A proposition that follows logically from one or more OBS or INT atoms, or from the combination of a normative proposition and an established factual premise. An INF atom is the output of reasoning across sources; it is contestable by challenging either the premises or the inferential step.</p>
+
+<div class="atom">
+  <p><span class="tag INF">INF</span> Because Article 6 of the Code is an absolute prohibition without mental element qualification, and Article 5(i)'s high mental-element definition applies only to the conflict of interest provisions, conduct involving receipt of financial benefit for voting does not require proof of knowledge, impropriety, or dishonesty to satisfy Article 6. The two provisions operate on different evidential bases.</p>
+</div>
+
+<h3><span class="tag HYP">HYP</span> Hypothesis</h3>
+
+<p>A proposition that is analytically plausible given the normative architecture and the available evidence, but whose conditions have not yet been established against the documentary record in the specific circumstances under examination. A HYP atom is a candidate claim awaiting evidential grounding; it should be elevated to INF or OBS only when supporting evidence is identified and assessed.</p>
+
+<div class="atom">
+  <p><span class="tag HYP">HYP</span> Where a Member invokes the conscientious objection qualification at article 3(i) of the Code, there is no institutional mechanism capable of adjudicating the validity of that invocation. If the circumstances of a specific case involve such an invocation, the absence of an adjudicatory body may constitute an operative-condition failure with respect to that provision. This is a hypothesis; its conditions require factual grounding.</p>
+</div>
+
+<h3>Discipline rules for atom classification</h3>
+
+<ul>
+  <li>Do not elevate a HYP to INF without identifying the specific documentary evidence that grounds it.</li>
+  <li>Do not present an INT as an OBS: interpretation is not observation, even when the interpretation seems obvious.</li>
+  <li>Do not chain more than three inferential steps in a single INF atom without breaking the chain into intermediate atoms.</li>
+  <li>A finding of illegality, bad faith, negligence, or intentional obstruction is never an OBS or INT from a normative text alone. It is at best a HYP, and requires its own evidentiary pathway.</li>
+</ul>
+
+<hr class="divider">
+
+<h2 id="normative-operative">4. The normative–operative distinction</h2>
+
+<p>The foundational analytical distinction in this layer is between <strong>normative validity</strong> and <strong>operative effect</strong>. It is stated in the <a href="https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/index.html">laws-and-codes index</a> and repeated here because it governs every atom extraction exercise.</p>
+
+<p>A normative text is <em>valid</em> if it was lawfully made by a competent authority and has not been repealed. A normative provision has <em>operative effect</em> in a specific situation if the institutional mechanism through which the provision would be given effect was present, functioning, and applied to that situation.</p>
+
+<p>These are independent conditions. Both can be present; neither can be present; or one can be present without the other. The analytically significant cases are:</p>
+
+<div class="atom">
+  <p><strong>Normative validity + operative effect:</strong> the provision exists and there is documentary evidence that the mechanism through which it operates was applied. This is the normal case and requires no special analytical treatment.</p>
+  <p><strong>Normative validity + no operative effect:</strong> the provision exists but the mechanism through which it would be applied is absent, inoperative, or was not applied in the specific situation. This is the primary object of FSD analysis. It is not automatically evidence of illegality or bad faith; it is a structural observation requiring further characterisation.</p>
+  <p><strong>No normative validity + apparent operative effect:</strong> an institution purports to act under a provision that does not exist, has been repealed, or does not apply in the circumstances. Relevant where institutions misrepresent their legal authority.</p>
+  <p><strong>No normative validity + no operative effect:</strong> the provision does not exist and no action was taken. Analytically null; this case arises only when a party claims that action was taken under a non-existent provision.</p>
+</div>
+
+<h3>Applying the distinction in atom extraction</h3>
+
+<p>When extracting atoms from a normative text, each provision generates at minimum two atoms: one recording what the provision says (OBS), and one recording whether the operative condition for the provision's application can be identified from the documentary record (which may be OBS, INT, or HYP depending on what is known). The enforcement architecture of the provision — the institutional mechanism through which it would be given effect — is always an explicit analytical object.</p>
+
+<hr class="divider">
+
+<h2 id="workflow">5. Workflow: adding a document and extracting atoms</h2>
+
+<p>The following sequence applies to each new document added to the layer.</p>
+
+<div class="step">
+  <div class="step-num">Step 1</div>
+  <strong>Identify and verify the source.</strong> Confirm the authoritative online source — the Oireachtas data repository, the Irish Statute Book, EUR-Lex, or another primary publisher. Record the URL and the date of retrieval. Note any version or amendment issues: is this the text as enacted, as amended, or as operative at a specific date?
+</div>
+
+<div class="step">
+  <div class="step-num">Step 2</div>
+  <strong>Place the document in the correct subdirectory.</strong> Apply the naming convention. Create a markdown working copy from the PDF if annotation is needed.
+</div>
+
+<div class="step">
+  <div class="step-num">Step 3</div>
+  <strong>Identify the instrument's analytical categories.</strong> Before reading for atoms, identify which of the following the instrument establishes: competence, duty, discretion, procedure, remedy, exception. Record these in the index entry. They determine which FSD concepts are candidates for application.
+</div>
+
+<div class="step">
+  <div class="step-num">Step 4</div>
+  <strong>Read provision by provision.</strong> For each provision or sub-provision, extract the primary OBS atom (what does the text say?), the primary INT atom (what does careful reading establish?), and any INF or HYP atoms that follow. Record the enforcement architecture of each provision as a separate analytical block.
+</div>
+
+<div class="step">
+  <div class="step-num">Step 5</div>
+  <strong>Identify cross-cutting structural atoms.</strong> After the provision-by-provision analysis, step back and ask: what does the instrument establish as a whole? Are there internal tensions between provisions? Does the instrument depend on external mechanisms that are not constituted within it? Does it generate any evidence-production voids — provisions whose observance would produce no documentary residue?
+</div>
+
+<div class="step">
+  <div class="step-num">Step 6</div>
+  <strong>Apply FSD classifications tentatively.</strong> Identify which FSD concepts the instrument's structure makes candidates for application — competence vacancy, duty displacement, procedural displacement, transposition gap, structural failure, normative collapse. Record these as HYP atoms with explicit conditions. Do not apply FSD concepts as findings; they are analytical classifications awaiting evidential grounding.
+</div>
+
+<div class="step">
+  <div class="step-num">Step 7</div>
+  <strong>Update the index page.</strong> Add the document entry to the relevant subdirectory index. Include: doc-meta (title, date, authority, scope, source URLs), doc-abstract, provision table, enforcement architecture assessment, analytical classifications atom block, and FSD class panel.
+</div>
+
+<div class="step">
+  <div class="step-num">Step 8</div>
+  <strong>Register cross-references.</strong> Where the document intersects with documents in other subdirectories — for example, a code of practice that accompanies an Act, or a statutory instrument made under primary legislation already in the layer — add cross-reference links in both direction.
+</div>
+
+<div class="gap">
+  <strong>Evidence discipline throughout:</strong> at no step in this workflow does the existence of a normative provision establish that the provision was observed, applied, or given effect. Claims about institutional behaviour require corroborating documentary evidence from the administrative record. This constraint applies even when the normative provision is clear, unambiguous, and apparently mandatory.
+</div>
+
+<hr class="divider">
+
+<h2 id="atom-extraction">6. Atom extraction from normative texts: detailed guidance</h2>
+
+<h3>What a normative text can and cannot yield</h3>
+
+<p>A normative text yields OBS and INT atoms directly. It yields INF atoms when combined with other established propositions. It yields HYP atoms when the structure of the text reveals a gap, dependency, or condition that has not yet been grounded in the documentary record.</p>
+
+<p>A normative text cannot by itself yield atoms about what institutions actually did. The text prescribes; the documentary record establishes what occurred. The connection between the two is always an inferential or hypothetical step, not an observation.</p>
+
+<h3>Provision types and their characteristic atoms</h3>
+
+<h4>Absolute prohibitions</h4>
+<p>Generate a clear OBS (the prohibition exists), an INT (there is no mental element / no exception / scope of the prohibition), and often an INF (overlap or non-overlap with adjacent statutory or criminal provisions). The enforcement architecture question is whether any body is competent to determine a breach and what the consequence of a finding would be.</p>
+
+<h4>Qualified duties ("must," "shall," "are required to")</h4>
+<p>Generate an OBS (the duty exists), an INT (the standard — best efforts, strict, results-based — and whether qualifications narrow the scope), and a HYP (whether the duty was discharged in specific circumstances). The word "conscientiously" elevates the standard; "as soon as practicable" introduces a temporal qualification whose meaning requires contextual determination.</p>
+
+<h4>Definitional provisions</h4>
+<p>Generate an OBS (the definition), multiple INTs (threshold analysis — is the definition narrow or broad? what conduct does and does not satisfy it?), and INFs (consequences for adjacent provisions that use the defined term). High mental-element thresholds in definitions are analytically significant because they limit the reach of the provision at the classification stage, not only at the enforcement stage.</p>
+
+<h4>Exceptions and exclusions</h4>
+<p>Generate an OBS (the exception exists), an INT (the scope — what does the exception cover and what does it exclude?), and often a HYP (where the exception is undefined, its scope is determined by subsequent interpretation, generating an analytical indeterminacy that cannot be resolved from the text alone). Undefined exceptions are evidence-production voids: compliance cannot be assessed against an undetermined standard.</p>
+
+<h4>Procedural requirements</h4>
+<p>Generate an OBS (the requirement), an INT (whether it is mandatory or directory — what is the consequence of non-compliance?), and a HYP or INF (whether non-compliance produces nullity, irregularity, or no legal consequence). Procedural provisions are among the most tractable for documentary analysis: a specified form, deadline, or notification requirement either appears in the record or it does not.</p>
+
+<h4>Institutional designations</h4>
+<p>Generate an OBS (a body is designated to perform a function), an INT (the scope and limits of the designation), and a HYP (whether the body was constituted, operative, and applied its designated function in the circumstances). The absence of an institutional designation — a duty without a designated enforcer — is itself an OBS that generates a HYP about enforcement architecture failure.</p>
+
+<h3>Evidence-production voids</h3>
+
+<p>Some provisions are structured so that compliance would produce no documentary residue. A prohibition on receiving gifts, unaccompanied by a disclosure requirement, is an example: a Member who receives a prohibited gift leaves no trace in any required record. These provisions are analytically significant because non-compliance is only discoverable through external means. Identify them explicitly and flag them as evidence-production voids in the atom set.</p>
+
+<hr class="divider">
+
+<h2 id="worked-example">7. Worked example: Code of Conduct for Members of Dáil Éireann (non-officeholders)</h2>
+
+<p>This section summarises the atom set derived from the Code of Conduct in the form in which it would be held for cross-referencing against the Acts. The full provision-by-provision analysis, enforcement architecture assessment, and FSD classifications are in the <a href="https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/codes-of-practice/index.html">codes-of-practice index entry</a>. This summary presents the atom set in canonical form.</p>
+
+<p>Source: <a href="https://data.oireachtas.ie/ie/oireachtas/committee/dail/31/committee_on_members_interests_dail_eireann/termsOfReference/2012/2012-05-30_code-of-conduct-for-members-of-dail-eireann-non-officeholders_en.pdf" target="_blank">data.oireachtas.ie — 2012-05-30 Code of Conduct (non-officeholders)</a> · <a href="https://www.oireachtas.ie/en/committees/32/members-interests-dail/documents/" target="_blank">Oireachtas committee documents listing</a></p>
+
+<h3>Structural atoms (document-level)</h3>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> The Code was adopted by Members of Dáil Éireann under Article 15.10 of the Constitution and circulated in December 2011 as Appendix 2 of the Guidelines for Members of Dáil Éireann Who Are Not Office Holders. It was formally published on 30 May 2012 by the Committee on Members' Interests of Dáil Éireann.</p>
+  <p><span class="tag OBS">OBS</span> The Code applies to Members of Dáil Éireann other than office holders. Office holders are a separately governed class; their conduct is subject to different instruments including SIPO-administered codes.</p>
+  <p><span class="tag INT">INT</span> The Code designates no enforcement body. The preamble frames electoral accountability as the primary mechanism and explicitly limits the House's jurisdiction over Members' conduct to breaches of obligations placed on Members "by law, by Standing Orders or by Codes of Conduct established by the House." The enforcement architecture is entirely externalised.</p>
+  <p><span class="tag INT">INT</span> The Code contains no graduated response mechanism and specifies no consequence for breach beyond the general accountability structures of the House and the electorate.</p>
+  <p><span class="tag HYP">HYP</span> The Code's operative architecture — electoral accountability, parliamentary scrutiny, media exposure — is contingent on conditions (public knowledge of conduct, proximity of elections, continued membership of the House) that may not obtain in specific circumstances. Where those conditions are absent, the Code's obligations exist without an operative enforcement vehicle. This is a candidate structural finding for FSD analysis, requiring factual grounding in specific circumstances.</p>
+</div>
+
+<h3>Provision-level atom set (condensed)</h3>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 1:</strong> Members must in good faith strive to maintain public trust and exercise influence to advance the public interest. Best-efforts standard; not results-based.</p>
+  <p><span class="tag INT">INT</span> Non-achievement of the public interest is not a breach; absence of good faith or effort is required. Internal state is a necessary element, making standalone breach findings under Art. 1 analytically difficult without corroborating evidence.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 2:</strong> Members must comply with the provisions and spirit of the Code and must not bring the integrity of their office or the Dáil into serious disrepute.</p>
+  <p><span class="tag INT">INT</span> "Serious disrepute" is a threshold qualifier. Minor or technical departures from the Code's terms do not satisfy Art. 2 on its face. The threshold has no authoritative interpreter within the Code.</p>
+  <p><span class="tag INF">INF</span> Because no body is designated to determine what constitutes "serious disrepute," the threshold functions as a rhetorical constraint rather than a justiciable one in the absence of external enforcement machinery.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 3(i):</strong> Members must behave consistently with their role as public representative and legislator, save where there is a "legitimate and sustainable conscientious objection."</p>
+  <p><span class="tag INT">INT</span> "Legitimate" and "sustainable" are not synonyms. The former concerns whether the objection qualifies; the latter concerns whether it can be maintained under scrutiny. No procedure for raising or adjudicating either limb is provided.</p>
+  <p><span class="tag HYP">HYP</span> Art. 3(i) contains an evidence-production void: a Member may invoke the conscientious objection exception without any institutional mechanism being available to test its validity or reject it. The provision cannot be enforced or rebutted through the Code's own machinery.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 3(ii):</strong> Members must interact with public administration and law enforcement consistently with their role as public representative and legislator.</p>
+  <p><span class="tag INT">INT</span> The standard is role-defined, not conduct-defined. Its content depends on a prior account of what the role requires, which the Code does not supply.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Arts. 4(i)–(ii):</strong> Members must prevent conflicts of interest from arising, arrange their private financial affairs to prevent conflicts, and resolve any conflicts that arise quickly and in the public interest.</p>
+  <p><span class="tag INT">INT</span> The duty of prevention is higher than a duty of disclosure. A Member who passively acquires a conflicting interest without taking structural steps to prevent it may breach Art. 4(ii) even if no actual decision in conflict has yet been made.</p>
+  <p><span class="tag INT">INT</span> "Quickly" is time-qualified but undefined. No timeframe is specified; the obligation is determinable only in context by an authoritative resolver the Code does not designate.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 5(i):</strong> A conflict of interest exists where a Member participates in or makes a decision knowing it will improperly and dishonestly further private financial interest (their own or another's) directly or indirectly.</p>
+  <p><span class="tag INT">INT</span> Three cumulative mental elements: knowledge, impropriety, dishonesty. This is a composite threshold materially higher than a negligence or strict-liability standard. Naively self-interested or reckless conduct does not satisfy it.</p>
+  <p><span class="tag INF">INF</span> The definition at Art. 5(i) is narrower than the prevention duty at Art. 4. A Member may breach Art. 4 (by failing to prevent a structural conflict) without satisfying the Art. 5(i) definition (for want of the required mental elements). These provisions operate on different planes and must not be conflated.</p>
+  <p><span class="tag OBS">OBS</span> <strong>Art. 5(ii):</strong> Benefit as a member of the general public or a broad class of persons does not constitute a conflict of interest.</p>
+  <p><span class="tag INT">INT</span> "Broad class" is undefined. The scope of the exception is entirely open to interpretation; the Code provides no further guidance and designates no authoritative interpreter.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 6:</strong> Members may not solicit, accept, or receive any financial benefit or profit in exchange for promoting or voting on a Bill, motion, resolution, order, or any question put to the Dáil or its committees.</p>
+  <p><span class="tag INT">INT</span> Absolute prohibition. No mental element qualification; no exception. The transaction itself constitutes the breach regardless of whether conduct was altered.</p>
+  <p><span class="tag INF">INF</span> Art. 6 maps directly onto the corruption provisions of the Ethics Acts and related criminal law. It is the one provision in the Code where breach most directly implicates consequences available outside the Code's own enforcement architecture.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 7:</strong> Members must conscientiously fulfil requirements of the Dáil and the law regarding registration and declaration of interests and must familiarise themselves with guidelines from the Committee on Members' Interests and SIPO.</p>
+  <p><span class="tag INT">INT</span> "Conscientiously" elevates the standard above technical compliance. The familiarisation obligation is rolling and active: it is not discharged by a one-time reading; Members must update their knowledge as new guidelines are published.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Arts. 8(i)–(ii):</strong> Members must not accept gifts that may pose a conflict or might interfere with impartial exercise. Incidental gifts and customary hospitality are permitted.</p>
+  <p><span class="tag INT">INT</span> The prohibition triggers on potential, not actual, interference ("may," "might"). This is a lower bar than the Art. 5(i) conflict definition.</p>
+  <p><span class="tag HYP">HYP</span> Arts. 8(i)–(ii) constitute an evidence-production void: no disclosure requirement, no threshold value, no designated recipient for notification, no definition of "incidental" or "customary." Compliance with the gift regime generates no required documentary residue. Non-compliance is only discoverable through external means. This is structurally significant for any investigation of conduct under this provision.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 9:</strong> Members must apply public resources prudently and only for their intended purposes.</p>
+  <p><span class="tag INT">INT</span> "Intended purposes" is defined by the authorising instrument for each resource type, not by the Code. The obligation is derivative on external definitions the Code does not supply.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 10:</strong> Members must not use non-public official information, or information obtained in confidence in official duties, for personal gain or the gain of others.</p>
+  <p><span class="tag INT">INT</span> Two independent categories of information are covered. Information in the public domain but obtained in confidence remains covered by the second limb; the two limbs have independent scope.</p>
+  <p><span class="tag INT">INT</span> The prohibition extends to gain for others. It is not ego-bounded.</p>
+  <p><span class="tag INF">INF</span> Art. 10 is the most tractable provision in the Code for documentary tracing: if information can be established as non-public or confidentially obtained, and its use in a context producing gain can be shown, the inference of breach is direct, subject only to confirmation that the information was obtained in the course of official duties.</p>
+</div>
+
+<div class="atom">
+  <p><span class="tag OBS">OBS</span> <strong>Art. 11:</strong> Members must co-operate with Tribunals of Inquiry and other bodies inquiring into matters of public importance established by the Houses of the Oireachtas.</p>
+  <p><span class="tag INT">INT</span> The Code makes co-operation a professional obligation of the Member's role, supplementary to any legally enforceable compulsion. A Member who technically complies with a legal summons but obstructs the inquiry's substantive work may breach Art. 11 without breaching a legal obligation.</p>
+  <p><span class="tag HYP">HYP</span> Art. 11 has operative teeth only to the extent that the inquiry machinery itself is constituted and functional. Where an inquiry's terms of reference are narrowed or its powers are structurally limited, the duty to co-operate cannot produce the substantive accountability the provision assumes.</p>
+</div>
+
+<hr class="divider">
+
+<h2 id="source-registry">8. Source registry</h2>
+
+<p>This section records the canonical online sources for documents currently in the layer, with direct links. As new documents are added, their sources are registered here. The registry is the authoritative reference for provenance; individual document entries link to it.</p>
+
+<div class="src-entry">
+  <div class="src-title">Code of Conduct for Members of Dáil Éireann Other Than Office Holders (2012)</div>
+  <div class="src-meta">
+    Issuing body: Committee on Members' Interests of Dáil Éireann (31st Dáil)<br>
+    Date: 30 May 2012<br>
+    Accompanying instrument: Guidelines for Members of Dáil Éireann Who Are Not Office Holders concerning compliance with the Ethics in Public Office Acts 1995 and 2001<br>
+    Oireachtas listing: <a href="https://www.oireachtas.ie/en/committees/32/members-interests-dail/documents/" target="_blank">oireachtas.ie/en/committees/32/members-interests-dail/documents/</a><br>
+    Canonical PDF: <a href="https://data.oireachtas.ie/ie/oireachtas/committee/dail/31/committee_on_members_interests_dail_eireann/termsOfReference/2012/2012-05-30_code-of-conduct-for-members-of-dail-eireann-non-officeholders_en.pdf" target="_blank">data.oireachtas.ie · 2012-05-30_code-of-conduct-for-members-of-dail-eireann-non-officeholders_en.pdf</a><br>
+    Local file: <code>codes-of-practice/code-of-conduct-members-dail-eireann-2011.md</code><br>
+    Index entry: <a href="https://dr-bosch.github.io/post-hoc/corpus/laws-and-codes/codes-of-practice/index.html">codes-of-practice/index.html</a><br>
+    Atom set status: complete (provision-by-provision, structural, FSD classifications)<br>
+    Cross-references: Ethics in Public Office Act 1995 (pending); Standards in Public Office Act 2001 (pending)
+  </div>
+</div>
+
+<div class="src-entry">
+  <div class="src-title">Ethics in Public Office Act 1995</div>
+  <div class="src-meta">
+    Status: <em>pending upload</em><br>
+    Expected location: <code>primary-legislation/</code><br>
+    Irish Statute Book (revised): <a href="https://revisedacts.lawreform.ie/eli/1995/act/22/front/revised/en/html" target="_blank">revisedacts.lawreform.ie · 1995/act/22</a><br>
+    Oireachtas page: <a href="https://www.oireachtas.ie/en/working-in-parliament/ethics/ethics-in-public-office-acts/" target="_blank">oireachtas.ie · ethics-in-public-office-acts</a><br>
+    Cross-references: Code of Conduct (codes-of-practice); Standards in Public Office Act 2001 (primary-legislation, pending)
+  </div>
+</div>
+
+<div class="src-entry">
+  <div class="src-title">Standards in Public Office Act 2001</div>
+  <div class="src-meta">
+    Status: <em>pending upload</em><br>
+    Expected location: <code>primary-legislation/</code><br>
+    Irish Statute Book (revised): <a href="https://revisedacts.lawreform.ie/eli/2001/act/31/front/revised/en/html" target="_blank">revisedacts.lawreform.ie · 2001/act/31</a><br>
+    Cross-references: Code of Conduct (codes-of-practice); Ethics in Public Office Act 1995 (primary-legislation, pending)
+  </div>
+</div>
+
+<div class="gap">
+  <strong>Registry note:</strong> entries marked <em>pending upload</em> indicate documents whose online sources have been identified and verified but whose content has not yet been added to the corpus. Atom extraction for these documents begins on upload.
+</div>
+
+<hr class="divider">
+
+<h2 id="conventions">9. Conventions and constraints</h2>
+
+<h3>What this layer does not do</h3>
+
+<ul>
+  <li>It does not reach findings of illegality, bad faith, negligence, or intentional obstruction. Those are propositions for other layers of the corpus with their own evidentiary requirements.</li>
+  <li>It does not assume that a normative provision was known to, observed by, or applied by any institution. Knowledge and application are factual claims requiring documentary support.</li>
+  <li>It does not treat the presence of a code or guideline as evidence of its operative effect. A code may exist while being entirely unknown to the persons it governs, or while the enforcement machinery it assumes is non-functional.</li>
+  <li>It does not treat a HYP atom as established. HYP atoms are working hypotheses; they are revised, elevated, or abandoned as the documentary record develops.</li>
+</ul>
+
+<h3>Version control</h3>
+
+<p>Where a normative instrument has been amended, the version operative at the material time is the analytical reference. This manual and the index pages will note version history where it bears on interpretation. Where multiple versions of a document are in circulation, the version in this layer is identified by its date and, where applicable, its Oireachtas document ID.</p>
+
+<h3>The relationship between this layer and other corpus layers</h3>
+
+<p>This layer provides the normative reference against which documentary evidence from other layers is assessed. It does not stand alone. The analytical output of this layer — the atom sets — is consumed by the reasoning layer of the corpus, where normative atoms are combined with factual atoms from the documentary record to generate INF and HYP propositions about institutional conduct and operative effect.</p>
+
+<div class="fsd-class">
+<div class="fsd-label">FSD ontology: this layer and the normative–operative gap</div>
+<p>The FSD ontology emerged from the problem this layer addresses: a normative framework may be formally present while the institutional mechanisms through which its protections, duties, procedures, or remedies are made operative are absent, fragmented, displaced, or otherwise ineffective. This layer maps the normative side of that gap. The documentary record maps the operative side. The FSD concepts — competence vacancy, duty displacement, procedural displacement, transposition gap, structural failure, normative collapse — describe particular forms of gap between the two sides. They are applied as analytical classifications, not as findings, and their conditions must always be established against the evidence.</p>
+<div style="font-family:monospace;font-size:12px;color:#666;margin-top:8px">sources: FSD-Ontology-2026.md · FSD-Ontology-2026-Extended-Framework.md</div>
+</div>
+
+<footer>post-hoc · corpus · laws-and-codes · MANUAL · version 0.1</footer>
+</body></html>
