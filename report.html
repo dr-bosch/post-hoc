@@ -495,11 +495,11 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .dot-edge-row.e-dashed .dot-src,.dot-edge-row.e-dashed .dot-tgt{opacity:.6;}
 
 /* ─── MINISTERIAL RESPONSIBILITY REGISTER ─── */
-.mrr-wrap{overflow-x:auto;margin:18px 0 34px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);}
-.mrr{width:100%;min-width:1120px;border-collapse:collapse;font-size:13px;}
+.mrr-wrap{margin:18px 0 34px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);}
+.mrr{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
 .mrr thead tr{background:var(--surface3);}
-.mrr th{font-family:'IBM Plex Mono',monospace;font-size:7.2px;letter-spacing:.16em;text-transform:uppercase;padding:10px 9px;text-align:left;border-bottom:1px solid var(--rule-strong);color:var(--parchment-faint);font-weight:400;white-space:nowrap;}
-.mrr td{padding:9px;vertical-align:middle;border-bottom:1px solid var(--rule-dim);font-family:'EB Garamond',serif;font-size:13.5px;line-height:1.45;color:var(--parchment-dim);white-space:nowrap;}
+.mrr th{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.13em;text-transform:uppercase;padding:9px 7px;text-align:left;border-bottom:1px solid var(--rule-strong);color:var(--parchment-faint);font-weight:400;white-space:nowrap;overflow:hidden;}
+.mrr td{padding:8px 7px;vertical-align:middle;border-bottom:1px solid var(--rule-dim);font-family:'EB Garamond',serif;font-size:13px;line-height:1.4;color:var(--parchment-dim);word-break:break-word;}
 .mrr td:first-child{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:var(--dragonfly);letter-spacing:.025em;border-right:1px solid var(--rule);background:var(--surface2);}
 .mrr td:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--parchment-faint);}
 .mrr td strong{color:var(--parchment);font-weight:500;}
