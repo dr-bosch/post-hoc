@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "ckan": {
+      "type": "http",
+      "url": "https://ckan-mcp-server.andy-pr.workers.dev/mcp"
+    }
+  }
+}
