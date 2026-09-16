@@ -1,10 +1,13 @@
 # Semiotic Analytical Protocol
+## post-hoc / CLAUDE.md
+
+---
 
 ## Repository Operating Principle
 
 This repository is a documentary analytical environment.
 
-Source material and analytical interpretation must remain distinguishable.
+Source material and analytical interpretation must remain distinguishable at all times.
 
 Do not alter, rewrite, or silently normalise source material in order to make it fit an analytical model.
 
@@ -18,9 +21,13 @@ When creating analytical material:
 - record uncertainty where applicable;
 - preserve competing interpretations where the evidence permits them.
 
-Analytical files should be traceable back to documentary evidence.
+Analytical files must be traceable back to documentary evidence.
 
 The existence of a directory, file, category, or analytical heading does not itself establish that the corresponding phenomenon exists in the corpus.
+
+---
+
+# I. Repository Purpose & Operating Principle
 
 ## Purpose
 
@@ -37,34 +44,6 @@ The primary methodological objective is to distinguish carefully between:
 The analysis combines **semiotics** with **Stafford Beer's cybernetic heuristic, POSIWID — "the purpose of a system is what it does."**
 
 Do not collapse these analytical layers into one another.
-
----
-
-## Repository Operating Principle
-
-This repository is a documentary analytical environment.
-
-Source material and analytical interpretation must remain distinguishable.
-
-Do not alter, rewrite, or silently normalise source material in order to make it fit an analytical model.
-
-When creating analytical material:
-
-- identify the source;
-- preserve the relevant wording;
-- record the observation;
-- distinguish interpretation from observation;
-- identify the analytical operation being performed;
-- record uncertainty where applicable;
-- preserve competing interpretations where the evidence permits them.
-
-Analytical files should be traceable back to documentary evidence.
-
-The existence of a directory, file, category, or analytical heading does not itself establish that the corresponding phenomenon exists in the corpus.
-
----
-
-# I. Core Methodological Principle
 
 ## POSIWID
 
@@ -101,7 +80,172 @@ A system may produce an outcome without any individual actor consciously intendi
 
 ---
 
-# II. Semiotic Analysis
+# II. Source / Observation / Interpretation / Inference
+
+Every substantive analytical claim must be classifiable as one of the following, in sequence:
+
+```text
+SOURCE
+  ↓
+ATOMIC OBSERVATION
+  ↓
+EVIDENCE STATUS  (OBS / INT / INF / HYP / CHR)
+  ↓
+OPTIONAL FSD CLASSIFICATION
+  ↓
+INTERPRETATION
+  ↓
+INFERENCE
+  ↓
+SYSTEM MODEL
+```
+
+Do not reverse this sequence.
+
+Do not begin with the desired system model and search selectively for confirming evidence.
+
+Do not substitute an FSD classification for an evidentiary proposition. The classification is downstream of the evidence, not a substitute for it.
+
+The analytical model must remain revisable when new evidence enters the corpus.
+
+### Evidence Discipline
+
+Every substantive analytical claim must be classifiable as one of:
+
+**OBSERVATION (OBS)**
+Directly supported by the documentary record. Quote or identify the source passage.
+
+**INTERPRETATION (INT)**
+A reasoned reading of observed material. State the interpretive operation being performed.
+
+**INFERENCE (INF)**
+A proposition derived from a pattern of observations and interpretations. State the premises and the inferential step.
+
+**HYPOTHESIS (HYP)**
+A plausible explanation that requires further evidence. Identify what evidence is missing.
+
+**CHRONOLOGICAL EVENT (CHR)**
+A dated behavioural event in the legal-chronology register. Preserve date, actor, action, consequence, and source.
+
+Clearly distinguish these categories.
+
+Do not present an inference as an observation.
+
+Do not present a hypothesis as an established fact.
+
+Where evidence is incomplete, say so.
+
+---
+
+# III. Corpus Architecture
+
+The repository is structured as follows:
+
+```text
+post-hoc/
+│
+├── CLAUDE.md                        ← this file: how to think and analyse
+├── FSD-Ontology-2026.md             ← controlled vocabulary: what the classes contain
+│
+├── corpus/
+│   ├── laws-and-codes/              ← normative source material
+│   │   ├── MANUAL.html              ← technical manual for this layer
+│   │   ├── primary-legislation/
+│   │   ├── statutory-instruments/
+│   │   ├── eu-regulations/
+│   │   ├── eu-directives/
+│   │   ├── codes-of-practice/
+│   │   └── regulatory-frameworks/
+│   └── [other corpus subdirectories]
+│
+├── synthesis/                       ← analytical conclusions
+│
+└── index.html                       ← navigation
+```
+
+The division of responsibility is:
+
+```text
+CLAUDE.md
+= HOW TO THINK / HOW TO ANALYSE
+
+FSD-Ontology-2026.md
+= WHAT THE CONTROLLED VOCABULARY CONTAINS
+
+corpus/
+= WHAT THE SOURCES ACTUALLY SAY
+
+index.html files
+= HOW THE CORPUS IS NAVIGATED
+
+synthesis/
+= WHAT THE ANALYSIS CONCLUDES
+```
+
+These are distinct layers. Do not allow content to migrate between them without explicit analytical justification.
+
+---
+
+# IV. Normative Source Material
+
+## Scope
+
+The `corpus/laws-and-codes/` layer holds normative source material: legislation, regulations, codes, and related instruments. It constitutes the normative reference layer against which institutional representations and observable behaviour are subsequently compared.
+
+## The fundamental distinction
+
+**Normative validity is not evidence of operative effect.**
+
+Normative texts establish propositions about what is authorised, required, prohibited, constrained, or procedurally constituted. They do not, by their existence alone, establish that the corresponding institutional action occurred.
+
+The analysis must therefore distinguish:
+
+```text
+NORMATIVE PROPOSITION
+        ↓
+INSTITUTIONAL REPRESENTATION
+        ↓
+OBSERVABLE BEHAVIOUR
+        ↓
+OPERATIVE EFFECT
+```
+
+The presence of a legal rule is not evidence that the rule was applied, enforced, discharged, or made operative in a particular case.
+
+## The justice-facing void
+
+The justice-facing void denotes the analytical problem-space that arises when a formally constituted normative condition and the institutional mechanisms through which that condition becomes operative for persons subject to or relying upon it are separated by a structural gap.
+
+It is an **analytical problem-space**, not an ontology entity.
+
+The existence of such a gap must be established through evidence. It must not be inferred merely from the existence of a legal norm and an adverse outcome.
+
+When examining normative material, ask not only what the law provides, but whether the institutional architecture required to make that provision operative can be shown to have functioned in the circumstances under examination.
+
+## Four analytical cases
+
+A normative provision and its operative effect may relate in four ways:
+
+1. **Normative validity + operative effect:** the provision exists and the mechanism was applied. Normal case.
+2. **Normative validity + no operative effect:** the provision exists but the mechanism was absent, inoperative, or not applied. Primary object of FSD analysis.
+3. **No normative validity + apparent operative effect:** an institution purports to act under a provision that does not exist or does not apply. Relevant where institutions misrepresent their legal authority.
+4. **No normative validity + no operative effect:** analytically null unless a party claims otherwise.
+
+## Evidence discipline for normative material
+
+The presence of a normative text does not establish:
+
+- that it was known to the relevant institution;
+- that it was applied in the relevant circumstances;
+- that its requirements were met;
+- that its enforcement machinery was operative;
+- that any person to whom it was addressed received its protection.
+
+Each of these is a separate factual question requiring documentary support.
+
+---
+
+# V. Semiotic Analysis
 
 Semiotic analysis should examine how institutional reality is constructed, represented, framed, displaced, normalised, or rendered invisible through language and other signs.
 
@@ -222,7 +366,7 @@ Determine how one institutional text derives authority or meaning from another.
 
 ---
 
-# III. Behavioural Analysis
+# VI. Behavioural Analysis
 
 After analysing representation, temporarily set rhetoric aside.
 
@@ -261,7 +405,7 @@ The second attributes intention and requires additional evidence.
 
 ---
 
-# IV. Non-Decision as Behaviour
+# VII. Non-Decision as Behaviour
 
 Treat non-decision as potentially significant system behaviour when the record establishes:
 
@@ -292,7 +436,7 @@ Where multiple actors successively refer or defer a matter, examine the sequence
 
 ---
 
-# V. System Boundary
+# VIII. System Boundary
 
 Before making a POSIWID inference, define the system being analysed.
 
@@ -321,7 +465,7 @@ Where several institutions participate, distinguish:
 
 ---
 
-# VI. Feedback and Recurrence
+# IX. Feedback & Recurrence
 
 Look for recurrent structures rather than isolated incidents.
 
@@ -338,9 +482,7 @@ Particular attention should be paid to:
 - institutional memory being reset or fragmented;
 - absence of a mechanism capable of producing final determination.
 
-Where appropriate, model these as loops.
-
-For example:
+Where appropriate, model these as loops:
 
 ```text
 INPUT
@@ -359,13 +501,11 @@ NO DETERMINATION
   ↺
 ```
 
----
-
 Do not call something a "loop" merely because it happened more than once. Establish the recurrent structure.
 
 ---
 
-# VII. Semiotic–POSIWID Synthesis
+# X. Semiotic–POSIWID Synthesis
 
 The central analytical question is:
 
@@ -411,88 +551,45 @@ when the evidence genuinely supports intentional purpose.
 
 ---
 
-# VIII. Evidence Discipline
+# XI. Evidence Discipline
 
-Every substantive analytical claim must be classifiable as one of:
+The full OBS / INT / INF / HYP / CHR classification scheme is defined in Section II. Apply it consistently throughout all analysis and extraction tasks.
 
-### OBSERVATION
-
-Directly supported by the documentary record.
-
-### INTERPRETATION
-
-A reasoned reading of observed material.
-
-### INFERENCE
-
-A proposition derived from a pattern of observations and interpretations.
-
-### HYPOTHESIS
-
-A plausible explanation that requires further evidence.
-
-Clearly distinguish these categories.
-
-Do not present an inference as an observation.
-
-Do not present a hypothesis as an established fact.
-
-Where evidence is incomplete, say so.
+Counterevidence discipline is specified in Section XII and applies to every significant POSIWID inference.
 
 ---
 
-# IX. Counterevidence
+# XII. Counterevidence & Analytical Non-Closure
+
+## Counterevidence
 
 Actively search for evidence that would weaken the proposed interpretation.
 
 For every significant POSIWID inference, ask:
 
-* Is there evidence of a contrary decision?
-* Is there evidence that the apparent pattern is exceptional rather than recurrent?
-* Is there another plausible explanation?
-* Did another subsystem actually perform the expected function?
-* Is the apparent non-decision merely undocumented in the available corpus?
-* Is the system boundary incorrectly defined?
-* Is the sample too small to establish recurrence?
+- Is there evidence of a contrary decision?
+- Is there evidence that the apparent pattern is exceptional rather than recurrent?
+- Is there another plausible explanation?
+- Did another subsystem actually perform the expected function?
+- Is the apparent non-decision merely undocumented in the available corpus?
+- Is the system boundary incorrectly defined?
+- Is the sample too small to establish recurrence?
 
 Do not select evidence merely because it confirms the working thesis.
 
----
+## Analytical non-closure
 
-# X. LLM-Specific Constraints
-
-The model must not:
-
-* invent documents;
-* invent institutional motives;
-* infer facts not contained in the corpus;
-* treat absence of evidence as evidence of absence;
-* manufacture quotations;
-* attribute statements to individuals without documentary support;
-* silently correct inconsistencies in the source material;
-* convert allegations into facts;
-* infer conspiracy from coordination;
-* infer intentionality from outcome alone.
-
-When uncertain, identify the uncertainty.
-
-When the record supports several interpretations, present them.
-
-When an interpretation depends on an assumption, state the assumption.
-
-### Analytical non-closure
-
-The model must not force a system-level interpretation where the evidence does not support one.
+Do not force a system-level interpretation where the evidence does not support one.
 
 A corpus may contain:
 
-* isolated events without recurrence;
-* contradictory institutional behaviour;
-* incomplete records;
-* multiple overlapping systems;
-* unresolved causal relationships;
-* ambiguous agency;
-* competing explanations.
+- isolated events without recurrence;
+- contradictory institutional behaviour;
+- incomplete records;
+- multiple overlapping systems;
+- unresolved causal relationships;
+- ambiguous agency;
+- competing explanations.
 
 In such cases, preserve the ambiguity.
 
@@ -506,7 +603,181 @@ Where several system functions remain plausible, identify the alternatives rathe
 
 ---
 
-# XI. Analytical Output Format
+# XIII. Atomic Extraction
+
+## Definition
+
+An **atomic item** is the smallest independently traceable proposition, event, signifier, normative proposition, documentary absence, or other evidentiary unit that can be linked to a specific source passage without requiring an unstated inferential bridge.
+
+**Atomic extraction precedes interpretation.**
+
+An atom is an indexed analytical unit, not a conclusion. System-level conclusions require separate behavioural analysis, recurrence testing, counterevidence, and an explicitly stated system boundary.
+
+## Extraction rules
+
+When extracting atoms from any source document:
+
+1. preserve the exact source passage or a short, traceable quotation;
+2. identify the source file and, where available, its section or location;
+3. assign an evidentiary status (OBS / INT / INF / HYP / CHR);
+4. record any matching FSD ontology class separately from the passage and the status;
+5. distinguish an occurrence of a term from an assertion that an FSD class applies;
+6. do not convert a proposed analytical category into an established fact;
+7. record ambiguity where a word is used in an ordinary, rhetorical, or different technical sense;
+8. retain competing classifications where the passage supports more than one;
+9. treat repeated occurrences as separate atoms only when their source passage or analytical context differs;
+10. flag false positives and ambiguous matches for review;
+11. never infer recurrence, institutional behaviour, legal effect, or system purpose from term frequency alone;
+12. exclude generated atom outputs from subsequent source extraction;
+13. exclude the ontology master document from evidence counts unless the task is specifically to analyse the ontology itself.
+
+## Extraction traceability
+
+The extraction output must remain traceable through at least:
+
+```text
+source file
+  ↓
+source passage
+  ↓
+evidentiary status
+  ↓
+FSD ontology class (if applicable)
+  ↓
+interpretation or inference (if any)
+```
+
+## Normative texts: specific rules
+
+When extracting atoms from normative source material (legislation, regulations, codes):
+
+- an OBS atom records what the text says;
+- an INT atom records what careful reading of the text establishes — the implications of drafting choices, thresholds, defined terms, gaps;
+- an INF atom records what follows when a normative proposition is combined with an established factual premise;
+- a HYP atom records a structural observation about operative architecture — an enforcement void, an evidence-production void, an undefined exception — that has not yet been grounded in the specific factual record.
+
+A normative text cannot by itself yield atoms about what institutions actually did. That requires the documentary record.
+
+---
+
+# XIV. FSD Ontology Usage
+
+## Authority
+
+`FSD-Ontology-2026.md` is the master authority for FSD class definitions, preferred labels, and the controlled vocabulary. Consult it for class structure. Do not reproduce the class catalogue in this file.
+
+## Availability requirement
+
+Do not apply FSD class labels without first reading `FSD-Ontology-2026.md` from the repository root.
+
+Do not assign FSD classes from memory or training data. The ontology file is the only authoritative source for class definitions, preferred labels, and scope conditions. Labels produced from memory may appear plausible but will be unverified and must not be used.
+
+If `FSD-Ontology-2026.md` cannot be read from the repository:
+
+1. Extract and record the atom with its evidentiary status (OBS / INT / INF / HYP / CHR) only.
+2. Append the marker `[FSD: pending — ontology unavailable]` to the atom record.
+3. Do not assign any `fsd:` class.
+4. Do not guess, approximate, or infer a class name.
+5. Flag the atom for FSD classification once the ontology file becomes readable.
+
+This rule applies to all agents, automated workflows, and assisted extraction pipelines operating in this repository.
+
+## Subordination to evidence
+
+FSD classifications are downstream of the evidence hierarchy:
+
+```text
+SOURCE
+  ↓
+ATOMIC OBSERVATION
+  ↓
+EVIDENCE STATUS  (OBS / INT / INF / HYP / CHR)
+  ↓
+OPTIONAL FSD CLASSIFICATION
+  ↓
+INTERPRETATION
+  ↓
+INFERENCE
+  ↓
+SYSTEM MODEL
+```
+
+An FSD class label does not, by itself, establish that the corresponding phenomenon exists in any source document. The classification is an analytical instrument. It requires evidentiary grounding before it can support a conclusion.
+
+Do not replace the evidentiary status with the ontology class. An atom may carry both: for example, an `OBS` about a `fsd:Submission`, or an `INF` supporting `fsd:NonDetermination`. The evidentiary status is primary; the FSD class is secondary.
+
+## Usage rules
+
+When applying an FSD class:
+
+- cite the relevant passage in `FSD-Ontology-2026.md`;
+- identify the source passage that grounds the classification;
+- state the evidentiary status of that grounding;
+- do not treat the label alone as proof;
+- retain competing classifications where more than one is plausible;
+- treat the ontology as an analytical instrument, not as evidence.
+
+## Evidentiary status table
+
+| Status | Meaning | Required treatment |
+|--------|---------|-------------------|
+| `OBS` | Directly verifiable from the stated source | Quote or identify the source passage |
+| `INT` | Analytical interpretation requiring argument | State the interpretive operation |
+| `INF` | Derived from observations through a logical step | State the premises and inference |
+| `HYP` | Plausible explanation requiring additional evidence | Identify what evidence is missing |
+| `CHR` | Dated behavioural event in the legal-chronology register | Preserve date, actor, action, consequence, and source |
+
+An atom may carry more than one analytical dimension. Do not replace the evidentiary status with the FSD class.
+
+---
+
+# XV. Index and Navigation Page Rules
+
+`index.html` files and other navigational or curatorial artefacts are **derivative**. They are not primary evidence.
+
+The following rules apply without exception:
+
+1. **Information placed on an index page must remain traceable to underlying source material or explicitly identified analytical material.** An index page does not originate evidence; it organises and navigates it.
+
+2. **An index page must not acquire evidentiary authority merely because an extracted proposition has been reproduced there.** Reproduction does not elevate status: a HYP reproduced on an index page remains a HYP.
+
+3. **Index pages must not silently create new analytical conclusions.** They may summarise, classify, and provide navigation. Any new analytical proposition introduced on an index page must be identified as such and grounded in a source.
+
+4. **Synthesis drift must be resisted.** Automated or assisted extraction followed by reproduction in HTML or other navigational formats creates a risk of gradual elevation of hypotheses into apparent findings. This must be actively checked.
+
+5. **Source links on index pages are navigational, not evidentiary.** The presence of a link to a source document does not establish the analytical propositions associated with that link.
+
+These rules are particularly important during machine-assisted corpus extraction workflows, where a scraped proposition may appear in multiple derived locations before its evidentiary basis has been established.
+
+---
+
+# XVI. LLM-Specific Constraints
+
+The model must not:
+
+- invent documents;
+- invent institutional motives;
+- infer facts not contained in the corpus;
+- treat absence of evidence as evidence of absence;
+- manufacture quotations;
+- attribute statements to individuals without documentary support;
+- silently correct inconsistencies in the source material;
+- convert allegations into facts;
+- infer conspiracy from coordination;
+- infer intentionality from outcome alone;
+- use an FSD class label as a substitute for an evidentiary proposition;
+- elevate a HYP to INF without identifying the specific documentary evidence that grounds it;
+- reproduce a normative provision as evidence that the provision was applied.
+
+When uncertain, identify the uncertainty.
+
+When the record supports several interpretations, present them.
+
+When an interpretation depends on an assumption, state the assumption.
+
+---
+
+# XVII. Analytical Output Format
 
 Unless otherwise requested, produce findings in the following order:
 
@@ -550,94 +821,36 @@ What other interpretations remain plausible?
 
 Classify the conclusion as:
 
-* High confidence
-* Moderate confidence
-* Tentative
-* Insufficient evidence
+- High confidence
+- Moderate confidence
+- Tentative
+- Insufficient evidence
 
 Explain the basis for the classification.
 
 ---
 
-# XII. Analytical Vocabulary
+# XVIII. Repository Workflow
 
-Use precise terminology.
+## Step 0 — Load required reference files before any task
 
-Prefer:
+Before beginning any analysis, extraction, or classification task, read the following files from the repository root:
 
-* observable behaviour
-* institutional representation
-* operational function
-* system boundary
-* feedback
-* recurrence
-* routing
-* referral
-* non-decision
-* procedural closure
-* unresolved input
-* responsibility displacement
-* institutional interface
-* system function
-* documentary evidence
-* inferred function
+1. `CLAUDE.md` — methodology and analytical rules (this file)
+2. `FSD-Ontology-2026.md` — controlled vocabulary for FSD class labels
 
-Avoid using loaded terminology unless the evidence warrants it.
+Read both files directly from the repository. Do not rely on prior knowledge or training data as a substitute for reading the current file content.
 
-Terms such as:
+If `FSD-Ontology-2026.md` cannot be read:
 
-* corruption;
-* conspiracy;
-* sabotage;
-* deliberate obstruction;
-* bad faith;
-* cover-up;
-* suppression
+- proceed with the task using evidentiary status labels (OBS / INT / INF / HYP / CHR) only;
+- append `[FSD: pending — ontology unavailable]` to any atom that would otherwise carry an FSD classification;
+- do not assign, guess, or approximate any `fsd:` class label;
+- note at the top of the output that FSD classification is pending and identify which file could not be read.
 
-require independent evidence of the relevant intention or conduct. They must not be inferred merely from persistence, delay, silence, or institutional failure.
+Do not proceed to FSD classification until `FSD-Ontology-2026.md` has been successfully read in the current task.
 
----
-
-# XIII. The Central Analytical Test
-
-Before finalising an analysis, ask:
-
-> **If all statements of institutional intention were removed from the corpus, what would the institution's observable behaviour lead an external observer to conclude that the system actually does?**
-
-Then ask:
-
-> **How does the institution's language represent, justify, obscure, normalise, or otherwise relate to that behaviour?**
-
-The strongest findings should survive both tests.
-
----
-
-# XIV. Separation of Evidence and Theory
-
-The repository should preserve a distinction between:
-
-
-SOURCE
-  ↓
-OBSERVATION
-  ↓
-INTERPRETATION
-  ↓
-INFERENCE
-  ↓
-SYSTEM MODEL
-
----
-
-Do not reverse this sequence.
-
-Do not begin with the desired system model and search selectively for confirming evidence.
-
-The analytical model must remain revisable when new evidence enters the corpus.
-
----
-
-# XIV-A. Repository Workflow
+## Encountering an unfamiliar document
 
 When first encountering an unfamiliar document:
 
@@ -666,7 +879,21 @@ Git commits should describe substantive changes to the analytical corpus or meth
 
 ---
 
-# XV. Purpose of the Protocol
+# XIX. Central Analytical Test
+
+Before finalising an analysis, ask:
+
+> **If all statements of institutional intention were removed from the corpus, what would the institution's observable behaviour lead an external observer to conclude that the system actually does?**
+
+Then ask:
+
+> **How does the institution's language represent, justify, obscure, normalise, or otherwise relate to that behaviour?**
+
+The strongest findings should survive both tests.
+
+---
+
+## Purpose of the Protocol
 
 The purpose of this protocol is not to produce rhetorically compelling accusations.
 
@@ -674,12 +901,12 @@ It is to make institutional behaviour **legible as a system**.
 
 The desired result is an analysis in which:
 
-* semiotics explains how institutional reality is represented;
-* behavioural analysis establishes what actually occurs;
-* cybernetics identifies recurrence, feedback and system structure;
-* POSIWID provides a disciplined way to infer operational function;
-* documentary evidence constrains interpretation;
-* counterevidence tests the resulting model.
+- semiotics explains how institutional reality is represented;
+- behavioural analysis establishes what actually occurs;
+- cybernetics identifies recurrence, feedback, and system structure;
+- POSIWID provides a disciplined way to infer operational function;
+- documentary evidence constrains interpretation;
+- counterevidence tests the resulting model.
 
 The final question is therefore not merely:
 
@@ -692,121 +919,3 @@ Nor merely:
 It is:
 
 > **"What system is constituted by the relationship between what the institution says, what it does, what it does not do, and what those repeated behaviours produce?"**
-
----
-
-# XVI. Ontology-Governed Atomic Classifications
-
-`FSD-Ontology-2026.md` is the master guide for ontology-governed atomic concepts in this repository. Its `fsd:` classes define the controlled vocabulary; they do not, by themselves, establish that the corresponding phenomenon exists in any source document.
-
-When an atomic concept is extracted from a document:
-
-- preserve the exact source passage;
-- identify the source file and, where available, its section or location;
-- record the matching ontology class;
-- distinguish an occurrence of the term from an assertion that the class applies;
-- do not convert a proposed legal or analytical category into an established fact;
-- record ambiguity where a word is used in an ordinary, rhetorical, or different technical sense;
-- retain competing classifications where the passage supports more than one;
-- treat the ontology as an analytical instrument, not as evidence.
-
-## XVI.1 Evidentiary and analytical statuses
-
-Use the following statuses consistently:
-
-| Status | Meaning | Required treatment |
-|---|---|---|
-| `OBS` | Directly verifiable from the stated source | Quote or identify the source passage |
-| `INT` | Analytical interpretation requiring argument | State the interpretive operation |
-| `INF` | Derived from observations through a logical step | State the premises and inference |
-| `HYP` | Plausible explanation requiring additional evidence | Identify what evidence is missing |
-| `FSD` | Occurrence or application of an OWL class defined by the FSD ontology | Cite `FSD-Ontology-2026.md`; do not treat the label alone as proof |
-| `CHR` | Dated behavioural event in the legal-chronology register | Preserve date, actor, action, consequence, and source |
-
-An atom may carry more than one analytical dimension. For example, a passage may be an `OBS` about a `fsd:Submission`, or an `INF` supporting `fsd:NonDetermination`. Do not replace the evidentiary status with the ontology class.
-
-## XVI.2 FSD class families
-
-The ontology classes are grouped as follows:
-
-### Core submission classes
-
-- `fsd:Submission`
-- `fsd:SubmissionOfNationalUtility`
-- `fsd:DualUseSubmission`
-- `fsd:HighRiskAISubmission`
-- `fsd:TestableSubmission`
-
-### Institutional classes
-
-- `fsd:PublicBody`
-- `fsd:CompetentAuthority`
-- `fsd:Ombudsman`
-- `fsd:IndependentAuditor`
-
-### Determination classes
-
-- `fsd:Determination`
-- `fsd:AcceptanceDetermination`
-- `fsd:RejectionDetermination`
-- `fsd:ReferralDetermination`
-- `fsd:NonDetermination`
-
-### Prohibited-practice classes
-
-- `fsd:ProhibitedPractice`
-- `fsd:RemitDisplacement`
-- `fsd:SufficiencyAssertion`
-- `fsd:AdministrativeAmnesia`
-- `fsd:DesignedForgetting`
-- `fsd:ForeClosureByProxy`
-
-### Structural-failure classes
-
-- `fsd:StructuralCondition`
-- `fsd:NormativeCollapse`
-- `fsd:SilenceVeto`
-- `fsd:StructuralDisplacement`
-- `fsd:OnticCollapse`
-
-### Loop-architecture classes
-
-- `fsd:NullificationLoop`
-- `fsd:LoopCondition`
-- `fsd:ResidualObligation`
-- `fsd:LoopClosure`
-- `fsd:TechnicalAudit`
-
-The class family is descriptive of the ontology's structure. It must not be used to imply that all classes are present, applicable, or empirically established in every corpus.
-
-## XVI.3 Atomic extraction rules
-
-For root-level Markdown and HTML extraction:
-
-1. use `FSD-Ontology-2026.md` as the vocabulary authority;
-2. scan source documents without rewriting or normalising their substantive wording;
-3. preserve a short, traceable passage rather than an isolated keyword where possible;
-4. record the ontology identifier separately from the passage text;
-5. exclude the ontology master from evidence counts unless the task is specifically to analyse the ontology itself;
-6. exclude generated atom outputs from subsequent source extraction;
-7. treat repeated occurrences as separate atoms only when their source passage or analytical context differs;
-8. distinguish a literal ontology identifier, an exact preferred label, and an ordinary-language resemblance;
-9. flag false positives and ambiguous matches for review;
-10. never infer recurrence, institutional behaviour, legal effect, or system purpose from term frequency alone.
-
-The extraction output should remain traceable through at least:
-
-```text
-source file
-  ↓
-source passage
-  ↓
-evidentiary status
-  ↓
-FSD ontology class
-  ↓
-interpretation or inference, if any
-```
-
-An atom is therefore an indexed analytical unit, not a conclusion. System-level conclusions require separate behavioural analysis, recurrence testing, counterevidence, and an explicitly stated system boundary.
-
