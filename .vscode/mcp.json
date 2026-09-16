@@ -3,6 +3,10 @@
     "ckan": {
       "type": "http",
       "url": "https://ckan-mcp-server.andy-pr.workers.dev/mcp"
+    },
+    "ansvar": {
+      "type": "http",
+      "url": "https://gateway.ansvar.eu/mcp"
     }
   }
 }
