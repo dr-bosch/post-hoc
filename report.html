@@ -351,6 +351,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 @media(max-width:900px){
   .page{padding:0 20px 60px;}
   .rbar{padding:0 20px;}
+  .mrr-wrap{margin:18px -20px 34px;overflow-x:auto;}
   .rbar-routing{display:none;}
   .card-nav-inner{padding-right:0;}
   .cn-sidebar-col{position:static;width:100%;flex-direction:row;flex-wrap:wrap;margin-top:12px;}
@@ -495,11 +496,15 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .dot-edge-row.e-dashed .dot-src,.dot-edge-row.e-dashed .dot-tgt{opacity:.6;}
 
 /* ─── MINISTERIAL RESPONSIBILITY REGISTER ─── */
-.mrr-wrap{margin:18px 0 34px;border:1px solid var(--rule);border-radius:4px;background:var(--surface);}
+.mrr-wrap{margin:18px -36px 34px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--surface);}
 .mrr{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
+.mrr col.c-ref{width:152px;}
+.mrr col.c-date{width:84px;}
+.mrr col.c-name{width:122px;}
+.mrr col.c-ca{width:112px;}
 .mrr thead tr{background:var(--surface3);}
-.mrr th{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.13em;text-transform:uppercase;padding:9px 7px;text-align:left;border-bottom:1px solid var(--rule-strong);color:var(--parchment-faint);font-weight:400;white-space:nowrap;overflow:hidden;}
-.mrr td{padding:8px 7px;vertical-align:middle;border-bottom:1px solid var(--rule-dim);font-family:'EB Garamond',serif;font-size:13px;line-height:1.4;color:var(--parchment-dim);word-break:break-word;}
+.mrr th{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.13em;text-transform:uppercase;padding:9px 10px;text-align:left;border-bottom:1px solid var(--rule-strong);color:var(--parchment-faint);font-weight:400;white-space:nowrap;overflow:hidden;}
+.mrr td{padding:8px 10px;vertical-align:middle;border-bottom:1px solid var(--rule-dim);font-family:'EB Garamond',serif;font-size:13.5px;line-height:1.4;color:var(--parchment-dim);white-space:nowrap;}
 .mrr td:first-child{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:var(--dragonfly);letter-spacing:.025em;border-right:1px solid var(--rule);background:var(--surface2);}
 .mrr td:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--parchment-faint);}
 .mrr td strong{color:var(--parchment);font-weight:500;}
@@ -1734,6 +1739,12 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
   </div>
   <div class="mrr-wrap">
     <table class="mrr" aria-label="Ministerial responsibility register">
+      <colgroup>
+        <col class="c-ref"><col class="c-date">
+        <col class="c-name"><col class="c-name"><col class="c-name">
+        <col class="c-name"><col class="c-name"><col class="c-ca">
+        <col class="c-name"><col class="c-name">
+      </colgroup>
       <thead><tr><th>Reference</th><th>Date</th><th>Taoiseach</th><th>Tánaiste</th><th>DFA / DOD</th><th>Trade</th><th>Enterprise</th><th>Dual-Use CA</th><th>Finance</th><th>Transport / Energy</th></tr></thead>
       <tbody>
         <tr><td>DETE-MBURK-02755-2026</td><td>10 Sep 2026</td><td>Micheál Martin</td><td>Simon Harris</td><td>Helen McEntee</td><td>○</td><td class="mrr-hi"><strong>Peter Burke</strong></td><td>Enterprise / Trade</td><td>Simon Harris</td><td>Darragh O'Brien</td></tr>
@@ -1746,7 +1757,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
         <tr><td>DOT-TM25-01179-2025</td><td>10 Feb 2025</td><td class="mrr-hi"><strong>Micheál Martin</strong></td><td>Simon Harris</td><td>Helen McEntee →</td><td>○</td><td>Peter Burke</td><td>Enterprise / Trade</td><td>Paschal Donohoe</td><td>Darragh O'Brien</td></tr>
         <tr class="mrr-break"><td>—</td><td>4 Feb 2025</td><td>—</td><td>—</td><td><strong>Foreclosure by Proxy</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
         <tr><td>DOT-TH-11219-2024</td><td>4 Oct 2024</td><td class="mrr-hi"><strong>Simon Harris</strong></td><td>Micheál Martin →</td><td>○</td><td>Micheál Martin</td><td>Peter Burke</td><td>Enterprise / Trade</td><td>Paschal Donohoe</td><td>Eamon Ryan</td></tr>
-        <tr><td>DOD-MO-01206-2024</td><td>4 Sep 2024</td><td>Simon Harris</td><td>Micheál Martin</td><td>Micheál Martin</td><td>Micheál Martin</td><td>Peter Burke</td><td class="mrr-hi"><strong>Enterprise / Trade</strong></td><td>Jack Chambers</td><td>Eamon Ryan</td></tr>
+        <tr><td>DOD-MO-01206-2024</td><td>4 Sep 2024</td><td>Simon Harris</td><td>Micheál Martin</td><td class="mrr-hi"><strong>Micheál Martin</strong></td><td>Micheál Martin</td><td>Peter Burke</td><td class="mrr-hi"><strong>Enterprise / Trade</strong></td><td>Jack Chambers</td><td>Eamon Ryan</td></tr>
         <tr><td>DFA-TMO-05256-2024</td><td>30 Aug 2024</td><td>Simon Harris</td><td class="mrr-hi"><strong>Micheál Martin</strong> →</td><td>○</td><td>← <strong>Micheál Martin</strong></td><td>Peter Burke</td><td class="mrr-hi"><strong>DFA</strong></td><td>Jack Chambers</td><td>Eamon Ryan</td></tr>
         <tr><td>FIN-MO-03632-2024</td><td>23 Aug 2024</td><td>Simon Harris</td><td>Micheál Martin →</td><td>○</td><td>Micheál Martin</td><td>Peter Burke</td><td class="mrr-hi"><strong>DFA</strong></td><td class="mrr-hi"><strong>Jack Chambers</strong></td><td>Eamon Ryan</td></tr>
         <tr><td>DOT-TH-03856-2024</td><td>19 Jun 2024</td><td class="mrr-hi"><strong>Simon Harris</strong></td><td>Micheál Martin →</td><td>○</td><td>Micheál Martin</td><td>Peter Burke</td><td class="mrr-hi"><strong>DFA</strong></td><td>Michael McGrath</td><td>Eamon Ryan</td></tr>
