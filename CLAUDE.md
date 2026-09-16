@@ -666,6 +666,21 @@ A normative text cannot by itself yield atoms about what institutions actually d
 
 `FSD-Ontology-2026.md` is the master authority for FSD class definitions, preferred labels, and the controlled vocabulary. Consult it for class structure. Do not reproduce the class catalogue in this file.
 
+The ontology namespace is `https://meinhardt.gov/ontology/fsd/2026#`, abbreviated as `fsd:`. Use the short form `fsd:ClassName` in all analytical and HTML output.
+
+## Legislative status and evidentiary consequence
+
+The FSD ontology is a formalisation of the Qualifying Submissions (Duty to Determine) Bill 2026. It is a legislative proposal, not an enacted statute.
+
+This has a direct consequence for evidentiary classification:
+
+- Applying an FSD class to a source document is an assertion that the document instantiates a concept defined by the Bill. That assertion is not itself established by the ontology's existence.
+- Until the Bill is enacted, SWRL rule instantiations — including those stated in §12 of `FSD-Ontology-2026.md` — function as **testable hypotheses**, not established legal findings.
+- The §12 table in `FSD-Ontology-2026.md` states which rules are "Established" against the existing record. These are the ontology authors' claims. They must be independently verified against the documentary corpus before being elevated to OBS or INF status in analytical output. Do not treat §12 as pre-established evidence.
+- SWRL rule conditions are precise and must be met on the facts. For example: `fsd:LoopCondition` requires either (a) declination count ≥ 3 or (b) non-determination period ≥ 24 months — established from the documentary record, not inferred from a pattern.
+
+The appropriate default evidentiary status for an FSD class applied to a pre-enactment record is **HYP**, unless the specific factual conditions required by the class definition are established from the documentary record, in which case **INF** is warranted.
+
 ## Availability requirement
 
 Do not apply FSD class labels without first reading `FSD-Ontology-2026.md` from the repository root.
@@ -710,9 +725,11 @@ Do not replace the evidentiary status with the ontology class. An atom may carry
 
 When applying an FSD class:
 
-- cite the relevant passage in `FSD-Ontology-2026.md`;
+- cite the relevant class definition in `FSD-Ontology-2026.md`, including the `rdfs:comment` text;
 - identify the source passage that grounds the classification;
 - state the evidentiary status of that grounding;
+- where the class has SWRL rule conditions (§7 of `FSD-Ontology-2026.md`), identify which conditions are met and from which source documents;
+- where the class has a SKOS definition in §10 of `FSD-Ontology-2026.md`, note any material difference between the SKOS definition and the OWL class comment — SKOS definitions are often more accessible and may clarify scope;
 - do not treat the label alone as proof;
 - retain competing classifications where more than one is plausible;
 - treat the ontology as an analytical instrument, not as evidence.
