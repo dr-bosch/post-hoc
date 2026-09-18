@@ -402,14 +402,6 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .ac-step-arrow{font-size:13px;color:var(--parchment-faint);opacity:.2;text-align:center;padding-top:6px;}
 .ac-step:last-child .ac-step-arrow{display:none;}
 
-/* ─── PREV / NEXT ARGUMENT NAV ─── */
-.arg-nav{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);}
-.arg-nav-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;}
-.arg-nav-link{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--parchment-faint);opacity:.5;transition:color .15s,opacity .15s;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px;}
-.arg-nav-link:hover{color:var(--rivulet);opacity:1;}
-.arg-nav-link.disabled{opacity:.16;cursor:default;pointer-events:none;}
-.arg-nav-step{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--cosmic);opacity:.32;letter-spacing:.1em;white-space:nowrap;flex-shrink:0;}
-
 /* ─── TWEET THREAD ─── */
 .tt-grid{display:grid;gap:10px;margin-top:14px;}
 .tt-item{background:var(--surface2);border:1px solid var(--rule);border-radius:4px;padding:16px 20px;transition:border-color .15s;}
@@ -660,7 +652,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <a class="rp-item" href="#argument-chain">
 <span class="rp-num">02</span>
 <span class="rp-title">Follow the argument</span>
-<span class="rp-sub">The argument unwound — 28 sequential steps with prev/next</span>
+<span class="rp-sub">The argument unwound — 28 sequential steps</span>
 </a>
 <a class="rp-item" href="#node-index">
 <span class="rp-num">03</span>
@@ -2559,18 +2551,6 @@ document.addEventListener('DOMContentLoaded',function(){
     blk.onclick=function(e){e.stopPropagation();NAV('#operational');};
     blk.ondblclick=function(e){e.stopPropagation();MODAL(e,'operational');};
   }
-  /* ── Argument chain: prev/next navigation on every section in reading order ── */
-  var ARG_ORDER=['phenomenon','notice','martin','mechanism','epistemic','inst-comp','art403','art45','art93','fiduciary','fiduciary-frame','evid-policy','dem-comp','art45nj','tms','eowyn','eirgrid','transport','past-hyp','eu-overlay','presidency','eu-map','dod','foreclosure','tacit','hypotheses','operational','three-questions'];
-  var ARG_TITLES={'phenomenon':'The Phenomenon','notice':'Notice chain','martin':'Martin Foreknowledge','mechanism':'Five-Stage Mechanism','epistemic':'Epistemic Dimension','inst-comp':'Institutional competence','art403':'Article 40.3','art45':'Article 45','art93':'Art. 9.3 + Preamble','fiduciary':'Fiduciary steward','fiduciary-frame':'Fiduciary framing','evid-policy':'Evidence-based policy','dem-comp':'Democratised Computing','art45nj':'Art. 45 non-justiciable','tms':'TMS write-down','eowyn':'Storm Éowyn','eirgrid':'EirGrid pricing','transport':'Transport and Energy','past-hyp':'Past hypothetical','eu-overlay':'EU law overlay','presidency':'Presidency Paradox','eu-map':'EU Institutional Map','dod':'DOD foreclosure','foreclosure':'Foreclosure-by-Proxy','tacit':'Tacit consent','hypotheses':'Three Hypotheses','operational':'Operational formulation','three-questions':'The Three Questions'};
-  ARG_ORDER.forEach(function(id,i){
-    var el=document.getElementById(id);if(!el)return;
-    var nav=document.createElement('div');nav.className='arg-nav';
-    var pL=i>0?'<a class="arg-nav-link" href="#'+ARG_ORDER[i-1]+'">← '+ARG_TITLES[ARG_ORDER[i-1]]+'</a>':'<span class="arg-nav-link disabled">← beginning of record</span>';
-    var nL=i<ARG_ORDER.length-1?'<a class="arg-nav-link" href="#'+ARG_ORDER[i+1]+'">'+ARG_TITLES[ARG_ORDER[i+1]]+' →</a>':'<span class="arg-nav-link disabled">record complete →</span>';
-    var st='<span class="arg-nav-step">'+('0'+(i+1)).slice(-2)+' / '+ARG_ORDER.length+'</span>';
-    nav.innerHTML='<div class="arg-nav-inner">'+pL+st+nL+'</div>';
-    el.appendChild(nav);
-  });
   /* ── Auto-number argument chain steps ── */
   (function(){var steps=document.querySelectorAll('.arg-chain .ac-step-num');var n=steps.length;steps.forEach(function(el,i){el.textContent=('0'+(i+1)).slice(-2);});var hdr=document.querySelector('#argument-chain .sec-sub');if(hdr)hdr.textContent=hdr.textContent.replace(/\d+ steps/,n+' steps');})();
   /* ── Auto-number tweet thread entries ── */
