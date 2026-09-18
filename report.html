@@ -351,7 +351,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 @media(max-width:900px){
   .page{padding:0 20px 60px;}
   .rbar{padding:0 20px;}
-  .mrr-wrap{margin:18px -20px 34px;overflow-x:auto;}
+  .mrr-wrap{width:calc(100% + 40px);margin:18px -20px 34px;overflow-x:auto;}
   .rbar-routing{display:none;}
   .card-nav-inner{padding-right:0;}
   .cn-sidebar-col{position:static;width:100%;flex-direction:row;flex-wrap:wrap;margin-top:12px;}
@@ -496,7 +496,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .dot-edge-row.e-dashed .dot-src,.dot-edge-row.e-dashed .dot-tgt{opacity:.6;}
 
 /* ─── MINISTERIAL RESPONSIBILITY REGISTER ─── */
-.mrr-wrap{margin:18px -36px 34px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--surface);}
+.mrr-wrap{width:calc(100% + 72px);margin:18px -36px 34px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--surface);overflow-x:auto;}
 .mrr{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;}
 .mrr col.c-ref{width:152px;}
 .mrr col.c-date{width:84px;}
@@ -514,6 +514,11 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .mrr .mrr-break td:nth-child(2){color:var(--sandstone-lt);}
 .mrr-note{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.06em;color:var(--parchment-faint);line-height:1.7;margin:0 0 24px;opacity:.72;}
 .mrr-note strong{color:var(--parchment-dim);font-weight:400;}
+
+/* ─── TIMELINE WIDTH / BOOKMARK ─── */
+.timeline-anchor{scroll-margin-top:56px;height:0;}
+.tlt{width:100%;min-width:0;background:var(--surface);}
+.tlt tbody{background:var(--surface);}
 </style>
 </head>
 <body>
@@ -1948,7 +1953,8 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
     <div class="inset-txt"><strong>Blue</strong> — State / institutional response. <strong>Amber</strong> — DETE competent authority transfer, 22 August 2024. <strong>Gold</strong> — Pivot, 3 March 2026. <span style="color:var(--rivulet);">◉ Teal pip</span> — Contact Points 1–7 with JCEUA.</div>
   </div>
 
-  <table class="tlt" id="tl"><thead><tr><th>Date</th><th>Event / Document</th><th>EU / Legal dimension</th><th>Criticism of conduct</th></tr></thead>
+  <div id="timeline" class="timeline-anchor"></div>
+<table class="tlt" id="tl"><thead><tr><th>Date</th><th>Event / Document</th><th>EU / Legal dimension</th><th>Criticism of conduct</th></tr></thead>
   <tbody>
 
 <tr class="tlr" onclick="T('d06')"><td class="tdc"><span class="tdm">May–Nov. 2006</span><span class="tds">Initial → formal</span></td><td class="tc"><div class="tev"><strong>O.R. corpus presented.</strong> Initial presentation May 2006, formalised November 2006. Taoiseach Ahern acknowledged receipt verbally. DFA assumed custodial responsibility for approximately 26kg of proprietary O.R. material.</div><div class="exp">Read commentary</div></td><td class="tc"><div class="teu">EU Dual-Use Reg. 428/2009 (operative from 2009; DFA obligation crystallised from date of presentation). <strong>No evaluation, no rejection, no statutory determination in nineteen years.</strong></div></td><td class="tc"><div class="tma nt">—</div></td></tr>
