@@ -10,7 +10,7 @@
 | DOT-TM25-06516-2025    | 16 May 2025 | **[Micheál Martin]** | Simon Harris    | Simon Harris →           | ○     | Peter Burke       | Enterprise / Trade       | Paschal Donohoe  | Darragh O'Brien       |
 | DOT-TM25-01179-2025    | 10 Feb 2025 | **[Micheál Martin]** | Simon Harris    | Simon Harris →           | ○     | Peter Burke       | Enterprise / Trade       | Paschal Donohoe  | Darragh O'Brien       |
 | DOT-TH-11219-2024      | 4 Oct 2024  | **[Simon Harris]** | Micheál Martin    | Micheál Martin            | Micheál Martin     | Peter Burke       | Enterprise / Trade       | Paschal Donohoe  | Darragh O'Brien       |
-| DOD-MO-01206-2024      | 4 Sep 2024  | Simon Harris     | Micheál Martin     | **[Micheál Martin]**             | Micheál Martin    | Peter Burke       | **[Enterprise / Trade]** | Jack Chambers    | Eamon Ryan            |
+| DOD-MO-01206-2024      | 4 Sep 2024  | Simon Harris     | Micheál Martin     | ← **[Micheál Martin]**             | Micheál Martin    | Peter Burke       | **[Enterprise / Trade]** | Jack Chambers    | Eamon Ryan            |
 | DFA-TMO-05256-2024     | 30 Aug 2024 | Simon Harris     | **[Micheál Martin ]** →| ○                     | ← **[Micheál Martin]** | Peter Burke     | **[DFA]**                | Jack Chambers    | Eamon Ryan            |
 | FIN-MO-03632-2024      | 23 Aug 2024 | Simon Harris     | Micheál Martin →    | ○                        | Micheál Martin    | Peter Burke       | **[DFA]**                | **[Jack Chambers]** | Eamon Ryan         |
 | DOT-TH-03856-2024      | 19 Jun 2024 | **[Simon Harris]** | Micheál Martin →  | ○                        | Micheál Martin    | Peter Burke       | **[DFA]**                | Michael McGrath  | Eamon Ryan            |
