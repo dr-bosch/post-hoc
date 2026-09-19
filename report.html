@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Interregnum Nullificans · Post Hoc Report · 2006–2026</title>
+<title>Post Hoc Report · Interregnum Nullificans · 2006–2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@300;400;500&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -92,8 +92,8 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .sal em{font-style:italic;color:var(--abalone-lt);}
 
 /* ─── CARD NAVIGATOR ─── */
-.card-nav-inner{position:relative;padding-right:204px;}
-.cn-sidebar-col{position:absolute;right:0;top:0;width:192px;display:flex;flex-direction:column;gap:10px;}
+.card-nav-inner{position:relative;padding-right:272px;}
+.cn-sidebar-col{position:absolute;right:0;top:0;width:260px;display:flex;flex-direction:column;gap:10px;}
 .cn-row-label{font-family:'IBM Plex Mono',monospace;font-size:7.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--parchment-faint);opacity:.55;margin:14px 0 7px;}
 .cn-row-label.chain{color:var(--coral);opacity:.4;font-size:6.5px;letter-spacing:.1em;}
 .cn-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:4px;}
@@ -147,6 +147,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .transport-card-label{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);opacity:.65;margin-bottom:6px;}
 .transport-card-title{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--coral);line-height:1.3;margin-bottom:5px;}
 .transport-card-body{font-family:'EB Garamond',serif;font-size:11px;line-height:1.5;color:var(--coral);opacity:.65;}
+.transport-card-body strong{opacity:1;}
 
 /* ─── MODAL ─── */
 .modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(5,4,10,.85);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;}
@@ -421,6 +422,10 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .rp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;}
 .rp-item{display:flex;flex-direction:column;gap:4px;padding:11px 13px;background:var(--surface3);border:1px solid var(--rule);border-radius:3px;text-decoration:none;transition:border-color .15s,background .15s;}
 .rp-item:hover{border-color:rgba(56,200,184,.35);background:var(--surface);}
+.rp-part-index{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--parchment-faint);letter-spacing:.04em;}
+.rp-part-index a{color:var(--rivulet);text-decoration:none;border-bottom:1px solid rgba(56,200,184,.3);transition:border-color .15s,color .15s;}
+.rp-part-index a:hover{color:var(--parchment);border-color:var(--rivulet);}
+.rp-part-index a:visited{color:var(--rivulet);}
 .rp-num{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--cosmic);opacity:.45;letter-spacing:.1em;}
 .rp-title{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--parchment);line-height:1.2;}
 .rp-sub{font-family:'EB Garamond',serif;font-size:12px;font-style:italic;color:var(--parchment-dim);line-height:1.4;}
@@ -669,12 +674,12 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <span class="rp-title">Disseminate</span>
 <span class="rp-sub">The tweet thread — one entry per argument step</span>
 </a>
-<a class="rp-item" href="#owl-layer">
+<a class="rp-item" href="index.html#owl-layer">
 <span class="rp-num">06</span>
 <span class="rp-title">Navigate by relation</span>
 <span class="rp-sub">The OWL layer — 14 causal operators and provenance relations</span>
 </a>
-</div><div class="rp-part-index">Parts: <a href="#part-i-analytical">I Analytical</a> · <a href="#part-ii-documentary">II Documentary</a> · <a href="#part-iii-ontology">III Ontological</a> · <a href="#part-iv-live">IV Live</a></div>
+</div><div class="rp-part-index">Parts: <a href="#part-i-analytical">I Analytical</a> · <a href="#part-ii-documentary">II Documentary</a> · <a href="#part-iii-live">III Live</a></div>
 </div><section class="ds" id="constitutional-map">
 <div class="sec-label">Constitutional map · design_v46 · interactive</div>
 <h2 class="sec-h2">Navigate the <em>Record</em></h2>
@@ -694,7 +699,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <div class="transport-card" data-card="transport" onclick="NAV('#active-record')" ondblclick="MODAL(event,'transport')">
 <div class="transport-card-label">Transport and Energy</div>
 <div class="transport-card-title">O.R. corpus unassessed since 2006</div>
-<div class="transport-card-body">19 yr delay, compounding. EirGrid, haulier network, modal lock-in.</div>
+<div class="transport-card-body">19-year delay, compounding annually across two directly affected sectors. <strong>Transport:</strong> haulier network optimisation models sat in the corpus while modal lock-in — excess road freight relative to rail — continued unbenchmarked. <strong>Energy:</strong> EirGrid pricing and grid-optimisation models sat unused while the TMS write-down and ongoing grid infrastructure costs proceeded without an independent analytical benchmark. Each year of non-assessment locks in sub-optimal decisions at scale, raising the cost of eventual correction. Not a sunk cost.</div>
 </div>
 </div>
 <!-- Row 1: Constitutional Foundation -->
@@ -876,21 +881,21 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 </div>
 <div class="sec-label" style="margin-top:28px">OWL Relations · 14 bookmarks · causal operators and provenance chain</div>
 <div class="node-index">
-<a class="ni-item" href="#ignores"><span class="ni-anchor">#ignores</span><span class="ni-title">:ignores</span><span class="ni-sub">AdministrativeProcess → Submission · the initiating operator</span></a>
-<a class="ni-item" href="#suppresses"><span class="ni-anchor">#suppresses</span><span class="ni-title">:suppresses</span><span class="ni-sub">Actor → CivicSignal · designed forgetting · Art. 41 CFR</span></a>
-<a class="ni-item" href="#produces-failure"><span class="ni-anchor">#produces-failure</span><span class="ni-title">:producesFailure</span><span class="ni-sub">Process → FailureMode · personnel-independent · stable pathology</span></a>
-<a class="ni-item" href="#triggers"><span class="ni-anchor">#triggers</span><span class="ni-title">:triggers</span><span class="ni-sub">FailureMode → LegalCondition · Order 84 RSC · crystallisation</span></a>
-<a class="ni-item" href="#violates"><span class="ni-anchor">#violates</span><span class="ni-title">:violates</span><span class="ni-sub">Process → Right · four Art. 41 CFR guarantees independently breached</span></a>
-<a class="ni-item" href="#amplifies"><span class="ni-anchor">#amplifies</span><span class="ni-title">:amplifies</span><span class="ni-sub">Campaign → CivicSignal · record beyond institutional reach · CC0</span></a>
-<a class="ni-item" href="#derived-from"><span class="ni-anchor">#derived-from</span><span class="ni-title">:derivedFrom</span><span class="ni-sub">Instrument → LegalInstrument · hermeneutic chain · traceability</span></a>
-<a class="ni-item" href="#used"><span class="ni-anchor">#used</span><span class="ni-title">:used</span><span class="ni-sub">Activity → Instrument · appropriation · meaning beyond intent</span></a>
-<a class="ni-item" href="#attributed-to"><span class="ni-anchor">#attributed-to</span><span class="ni-title">:attributedTo</span><span class="ni-sub">Document → Person · named accountability · Hypothesis B</span></a>
-<a class="ni-item" href="#on-behalf-of"><span class="ni-anchor">#on-behalf-of</span><span class="ni-title">:onBehalfOf</span><span class="ni-sub">Person → Department · Art. 28.4.1 · collective executive responsibility</span></a>
-<a class="ni-item" href="#has-member"><span class="ni-anchor">#has-member</span><span class="ni-title">:hasMember</span><span class="ni-sub">Bundle → Instrument · requisite variety · legally coherent whole</span></a>
-<a class="ni-item" href="#generated-by"><span class="ni-anchor">#generated-by</span><span class="ni-title">:generatedBy</span><span class="ni-sub">Instrument → Activity · timestamps the act · performative crystallisation</span></a>
-<a class="ni-item" href="#associated-with"><span class="ni-anchor">#associated-with</span><span class="ni-title">:associatedWith</span><span class="ni-sub">Activity → Person · proximity without full attribution · open question</span></a>
-<a class="ni-item" href="#informed-by"><span class="ni-anchor">#informed-by</span><span class="ni-title">:informedBy</span><span class="ni-sub">Activity → PriorActivity · sequencing · record as history</span></a>
-<a class="ni-item" href="#no-determination"><span class="ni-anchor">#no-determination</span><span class="ni-title">:noDetermination</span><span class="ni-sub">NullDetermination → NullificationRecord · the constitutive absence</span></a>
+<a class="ni-item" href="index.html#ignores"><span class="ni-anchor">#ignores</span><span class="ni-title">:ignores</span><span class="ni-sub">AdministrativeProcess → Submission · the initiating operator</span></a>
+<a class="ni-item" href="index.html#suppresses"><span class="ni-anchor">#suppresses</span><span class="ni-title">:suppresses</span><span class="ni-sub">Actor → CivicSignal · designed forgetting · Art. 41 CFR</span></a>
+<a class="ni-item" href="index.html#produces-failure"><span class="ni-anchor">#produces-failure</span><span class="ni-title">:producesFailure</span><span class="ni-sub">Process → FailureMode · personnel-independent · stable pathology</span></a>
+<a class="ni-item" href="index.html#triggers"><span class="ni-anchor">#triggers</span><span class="ni-title">:triggers</span><span class="ni-sub">FailureMode → LegalCondition · Order 84 RSC · crystallisation</span></a>
+<a class="ni-item" href="index.html#violates"><span class="ni-anchor">#violates</span><span class="ni-title">:violates</span><span class="ni-sub">Process → Right · four Art. 41 CFR guarantees independently breached</span></a>
+<a class="ni-item" href="index.html#amplifies"><span class="ni-anchor">#amplifies</span><span class="ni-title">:amplifies</span><span class="ni-sub">Campaign → CivicSignal · record beyond institutional reach · CC0</span></a>
+<a class="ni-item" href="index.html#derived-from"><span class="ni-anchor">#derived-from</span><span class="ni-title">:derivedFrom</span><span class="ni-sub">Instrument → LegalInstrument · hermeneutic chain · traceability</span></a>
+<a class="ni-item" href="index.html#used"><span class="ni-anchor">#used</span><span class="ni-title">:used</span><span class="ni-sub">Activity → Instrument · appropriation · meaning beyond intent</span></a>
+<a class="ni-item" href="index.html#attributed-to"><span class="ni-anchor">#attributed-to</span><span class="ni-title">:attributedTo</span><span class="ni-sub">Document → Person · named accountability · Hypothesis B</span></a>
+<a class="ni-item" href="index.html#on-behalf-of"><span class="ni-anchor">#on-behalf-of</span><span class="ni-title">:onBehalfOf</span><span class="ni-sub">Person → Department · Art. 28.4.1 · collective executive responsibility</span></a>
+<a class="ni-item" href="index.html#has-member"><span class="ni-anchor">#has-member</span><span class="ni-title">:hasMember</span><span class="ni-sub">Bundle → Instrument · requisite variety · legally coherent whole</span></a>
+<a class="ni-item" href="index.html#generated-by"><span class="ni-anchor">#generated-by</span><span class="ni-title">:generatedBy</span><span class="ni-sub">Instrument → Activity · timestamps the act · performative crystallisation</span></a>
+<a class="ni-item" href="index.html#associated-with"><span class="ni-anchor">#associated-with</span><span class="ni-title">:associatedWith</span><span class="ni-sub">Activity → Person · proximity without full attribution · open question</span></a>
+<a class="ni-item" href="index.html#informed-by"><span class="ni-anchor">#informed-by</span><span class="ni-title">:informedBy</span><span class="ni-sub">Activity → PriorActivity · sequencing · record as history</span></a>
+<a class="ni-item" href="index.html#no-determination"><span class="ni-anchor">#no-determination</span><span class="ni-title">:noDetermination</span><span class="ni-sub">NullDetermination → NullificationRecord · the constitutive absence</span></a>
 </div>
 </section><section class="ds" id="argument-chain">
 <div class="sec-label">The argument unwound · 28 steps · read in order</div>
@@ -1897,289 +1902,8 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 </div>
 <div class="m-final">The request remains what it has always been: a determination.</div>
 </div>
-</section><div class="part-divider" id="part-iii-ontology"><div class="part-divider-label">Part III</div><div class="part-divider-title">Ontological Record · OWL Layer</div><div class="part-divider-sub">Ontology Relations · 14 directional mechanisms · provenance · redundancy assurance</div></div><section class="ds" id="owl-layer">
-<div class="sec-label">OWL 2 Object Properties · Provenance Relations · Lúba Neamhnithe</div>
-<h2 class="sec-h2">Ontology <em>Relations</em></h2>
-<p class="sec-sub">These are not labels. They are directional mechanisms — each grounded in a named act or omission on the record. Together they encode every link in the provenance chain of the Interregnum Nullificans corpus from May 2006 to the Presidency Paradox opening 1 July 2026.</p>
-<div class="owl-intro">
-    The relations divide into two registers. The <strong>OWL object properties</strong> — :ignores through :amplifies — encode the primary causal chain of the Nullification Loop: what the institution did to the submission, what the loop produced, and what the campaign made of the record. The <strong>provenance relations</strong> — :derivedFrom through :noDetermination — encode the evidentiary structure that makes the causal chain legally operable: who is responsible, when they acted, what the act generated, and what its absence means. A causal chain establishes that something happened. A provenance chain establishes who must answer for it. Both are required for the remedy to run.
-  </div>
-<!-- DOT CONSTITUTIONAL MAP -->
-<div class="dot-map">
-<div class="dot-map-label">Constitutional map · 06_constitutional_map_art40_3.dot · directed edge register</div>
-<div class="dot-cluster">
-<div class="dot-cluster-title">constitutional foundation → ex parte propositions</div>
-<div class="dot-edge-row"><span class="dot-src">Art40_3</span><span class="dot-rel">grounds →</span><span class="dot-tgt">InstitutionalCompetence · FiduciarySteward · EvidenceBasedPolicy</span></div>
-<div class="dot-edge-row e-dashed"><span class="dot-src">Art9_3 + Preamble</span><span class="dot-rel">- - →</span><span class="dot-tgt">FiduciarySteward</span></div>
-<div class="dot-edge-row e-dashed"><span class="dot-src">Art45</span><span class="dot-rel">- - →</span><span class="dot-tgt">Art45NonJusticiable</span></div>
-</div>
-<div class="dot-cluster">
-<div class="dot-cluster-title">ex parte propositions → record anchors</div>
-<div class="dot-edge-row"><span class="dot-src">InstitutionalCompetence</span><span class="dot-rel">→</span><span class="dot-tgt">TMSWriteDown</span></div>
-<div class="dot-edge-row"><span class="dot-src">FiduciarySteward</span><span class="dot-rel">→</span><span class="dot-tgt">DODForeclosure</span></div>
-<div class="dot-edge-row"><span class="dot-src">EvidenceBasedPolicy</span><span class="dot-rel">→</span><span class="dot-tgt">StormÉowyn · EirGridPricing</span></div>
-<div class="dot-edge-row e-dashed"><span class="dot-src">TMSWriteDown</span><span class="dot-rel">·····</span><span class="dot-tgt">TransportAndEnergy</span></div>
-</div>
-<div class="dot-cluster">
-<div class="dot-cluster-title">record anchors → consequences</div>
-<div class="dot-edge-row"><span class="dot-src">StormÉowyn</span><span class="dot-rel">→</span><span class="dot-tgt">PastHypothetical</span></div>
-<div class="dot-edge-row"><span class="dot-src">TransportAndEnergy</span><span class="dot-rel">→</span><span class="dot-tgt">NoticeChain</span></div>
-<div class="dot-edge-row"><span class="dot-src">DODForeclosure</span><span class="dot-rel">→</span><span class="dot-tgt">EULawOverlay</span></div>
-<div class="dot-edge-row"><span class="dot-src">PastHypothetical · NoticeChain · EULawOverlay</span><span class="dot-rel">→</span><span class="dot-tgt">ForeclosureByProxy</span></div>
-</div>
-<div class="dot-cluster">
-<div class="dot-cluster-title">convergence → constitutional contumacy [penwidth=2, color=red]</div>
-<div class="dot-edge-row e-red"><span class="dot-src">ForeclosureByProxy</span><span class="dot-rel">══→</span><span class="dot-tgt">TacitConsent</span></div>
-<div class="dot-edge-row e-dashed"><span class="dot-src">TacitConsent</span><span class="dot-rel">- - →</span><span class="dot-tgt">Art45NonJusticiable ↔ DemocratisedComputing</span></div>
-<div class="dot-edge-row e-red"><span class="dot-src">TacitConsent · DemocratisedComputing</span><span class="dot-rel">══→</span><span class="dot-tgt">FiduciaryFraming</span></div>
-<div class="dot-edge-row e-red"><span class="dot-src">FiduciaryFraming</span><span class="dot-rel">══→</span><span class="dot-tgt">OperationalFormulation</span></div>
-<div class="dot-edge-row e-red"><span class="dot-src">OperationalFormulation</span><span class="dot-rel">══→</span><span class="dot-tgt">ConstitutionalContumacy</span></div>
-</div>
-<div class="dot-cluster">
-<div class="dot-cluster-title">props register qualifications [orange dashed — open conditions, load-bearing]</div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop1 · McEntee certiorari</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">DODForeclosure</span></div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop2 · Limitation period</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">TMSWriteDown</span></div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop3 · PETI admissibility</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">EULawOverlay</span></div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop4 · Art. 26 evaluation scope</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">EULawOverlay</span></div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop5 · DFA s.7 file</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">FiduciaryFraming</span></div>
-<div class="dot-edge-row e-orange"><span class="dot-src">Prop6 · Presidency non-recusal</span><span class="dot-rel">- - ▷</span><span class="dot-tgt">OperationalFormulation</span></div>
-</div>
-</div><!-- /dot-map -->
-<!-- ── OWL OBJECT PROPERTIES ── -->
-<div class="sec-label" style="margin-top:32px">OWL Object Properties · Primary Causal Chain</div>
-<div class="owl-relation" id="ignores">
-<div class="owl-rel-name">:ignores</div>
-<div class="owl-rel-sig">AdministrativeProcess → Submission</div>
-<div class="owl-rel-body">
-      Every submission carries a demand — not merely to be received but to be answered. The demand is the condition of the submission's meaning within any governance relationship that claims legitimacy: the act of submitting is also the act of extending a claim to a body with the competence to adjudicate it. Where the submission is acknowledged but not processed, a relation has been performed without its substance. The administrative form of receipt has been enacted while the epistemic obligation — to read what was submitted on its own terms, to bring relevant knowledge to bear on it, and to produce a response on grounds that hold — has been withheld. Across nineteen years, each point in the notice chain was received in this mode: acknowledged, filed, and not read in the sense that reading requires. <strong>The loop's initiating operator is not the absence of action. It is the systematic substitution of the administrative form of engagement for its substance.</strong>
-</div>
-<div class="owl-rel-axiom">:ignores ⊑ :producesFailure NullificationLoop · Charter Arts. I–II · Re Haughey [1971] IR 217 · five Silence Veto instances: OEP 2006, Irish Aid 2009, five-department silence Sep 2024, JCEUA Oct 2025, McEntee Feb 2026</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure">Acknowledgement as closure</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination">Deferral without destination</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Tánaiste Enquiry 2024–25</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">NullificationRecord · McEnteeForeclosureActivity · GunnLetterActivity</a></div>
-</div>
-</div>
-<div class="owl-relation" id="suppresses">
-<div class="owl-rel-name">:suppresses</div>
-<div class="owl-rel-sig">Actor → CivicSignal</div>
-<div class="owl-rel-body">
-      Where :ignores describes non-processing, :suppresses names active institutional management of the record. Suppression is not passive — it requires a choice, and the choice leaves a trace. The JCEUA's deletion of formally received correspondence in October 2025 is the acute instance: a body charged with EU affairs oversight received a submission engaging ten EU-law dimensions and then, rather than forwarding or declining on stated grounds, erased the administrative trace. What remains — in the GitHub repositories, the drive archives, this page, before the European Ombudsman — is the record the institution tried to reduce to nothing. <strong>The trace outlasts the management. Every act of suppression generates its own evidence: the deletion is itself a datum.</strong> The record has grown in proportion to the effort made to contain it. That proportion is not accidental; it is the structural consequence of suppressing a publicly indexed corpus.
-    </div>
-<div class="owl-rel-axiom">:suppresses ⊑ :documents DesignedForgetting · Art. 41 CFR (right of access to file) · Charter Art. VI · JCEUA deletion October 2025 — primary Art. 41 CFR violation before European Ombudsman</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#record-suppression">Record suppression</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://github.com/dr-wojak/press" target="_blank">Press Archive</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">JCEUA · NullificationRecord · Feb4thForeclosure</a></div>
-</div>
-</div>
-<div class="owl-relation" id="produces-failure">
-<div class="owl-rel-name">:producesFailure</div>
-<div class="owl-rel-sig">Process → FailureMode</div>
-<div class="owl-rel-body">
-      The loop's diagnostic property is its personnel-independence. No individual bad faith is required; no single actor need have designed the outcome. Each node processes its own function correctly — the reference number is issued, the acknowledgement formatted, the deferral correctly routed — and the collective obligation fails. This is not malfunction. It is stable self-regulation producing a pathological output: a system that maintains equilibrium precisely by converting every epistemic input into administrative closure, while the corrective signal that would indicate the evaluation function has not been performed finds no path through the architecture. <strong>Where a viable governance system transmits signals of unmet function upward until they trigger corrective action, this architecture produces local validity at every node while the collective obligation evaporates.</strong> The same output — acknowledgement-without-determination — has been produced across six Taoisigh, four governments, and multiple institutional restructurings. The equilibrium is the pathology.
-    </div>
-<div class="owl-rel-axiom">:producesFailure ⊑ :triggers Maladministration · O'Keeffe [1993] 1 IR 39 · Charter Arts. I–VI · personnel-independence across 19 years distinguishes structural failure from individual lapse</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#remit-displacement">Remit displacement</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit">Sufficiency without audit</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Formal Complaint · 226 pages</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">NullificationRecord · OEPAdequacyResponse · McEnteeForeclosureActivity</a></div>
-</div>
-</div>
-<div class="owl-relation" id="triggers">
-<div class="owl-rel-name">:triggers</div>
-<div class="owl-rel-sig">FailureMode → LegalCondition</div>
-<div class="owl-rel-body">
-      A failure mode activates a legally cognisable condition not because it intends to, but because the law has named the output and prescribed a response. The McEntee Foreclosure of February 4th, 2026 is the instance: it converted the loop's cumulative output into a dated, attributable, reviewable act — the handle by which Order 84 RSC is engaged. The Foreclosure did not create the legal condition; it crystallised what the record already contained. Every acknowledgement-without-determination across nineteen years was already legally operative; the Foreclosure made the structure actionable by attaching it to a named decision by a named minister on a named date, within the judicial review window, on three independent irrationality grounds. <strong>The law does not require that an actor have known what they were triggering. It requires only that the triggering act be established and the grounds for review be shown.</strong> The act did what it did; the record shows what it was.
-    </div>
-<div class="owl-rel-axiom">:triggers ⊑ :enables judicial review · Order 84 RSC · Meadows [2010] 2 IR 701 · Charter Art. IX · McEntee Foreclosure = primary certiorari target on three independent irrationality grounds</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination">Deferral without destination</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1lvFwZwWpRR2tC4BwsdeR8X0Dxk2mmAwo" target="_blank">McEntee Foreclosure · DOD-MO-01201-2025</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">Feb4thForeclosure · GunnLetter · HighCourtTrack · CJEUTrack</a></div>
-</div>
-</div>
-<div class="owl-relation" id="violates">
-<div class="owl-rel-name">:violates</div>
-<div class="owl-rel-sig">Process → Right</div>
-<div class="owl-rel-body">
-      The duty to give reasons is not a procedural formality. It is the constitutional form of the governance condition that distinguishes a legitimate polity from mere administration: the obligation to address the person before you on grounds that are relevant, rather than on grounds of administrative convenience, and to do so in time to make a difference. Four Article 41 CFR guarantees are violated independently on the face of the record: impartial timely handling — nineteen years eliminates any claim to reasonable time; the right to be heard before any adverse measure — the Section 8(3) determination without hearing; the right of access to one's file — the JCEUA deletion; the obligation to give reasons — zero produced across the full period. <strong>Each guarantee is independent of the others. Together they constitute not an accumulation but a single condition: the State acted on the petitioner's submissions without having engaged them.</strong> The form of governance was performed. Its substance was not.
-    </div>
-<div class="owl-rel-axiom">:violates ⊑ :grounds certiorari / mandamus · Art. 41 CFR · Art. 40.3 Bunreacht · Charter Arts. I, IV, VI, IX · four independent CFR violations on the face of the record</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure">Acknowledgement as closure</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://github.com/dr-wojak/legal" target="_blank">Legal Repo</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">NullificationRecord · TairiscintMheinhardt · HighCourtTrack</a></div>
-</div>
-</div>
-<div class="owl-relation" id="amplifies">
-<div class="owl-rel-name">:amplifies</div>
-<div class="owl-rel-sig">Campaign → CivicSignal</div>
-<div class="owl-rel-body">
-      Amplification is the act that places the record beyond institutional reach. Where :suppresses names the institution's management of the record, :amplifies names the campaign's response: the conversion of what the institution sought to reduce to a private administrative exchange into a public datum — visible, arguable, criticisable. Each GitHub repository is a timestamped, CC0-licensed, permanently indexed entry in the public record. The institution can close a file. <strong>It cannot close a file that has been publicly indexed in fourteen EU languages and transmitted simultaneously to PETI, the European Ombudsman, and the Commission's mandatory evaluation.</strong> The asymmetry is structural: the campaign's cost of amplification is near zero; the institution's cost of suppressing an amplified record is near infinite. This is not an accident of the digital medium. It is the condition under which institutional silence becomes publicly legible as silence — and not merely as an absence that no one has noticed.
-    </div>
-<div class="owl-rel-axiom">:amplifies ⊑ :creates TimestampedPublicRecord · Protected Disclosures Act 2014 · Charter Art. IX · CC0 public record · 14 EU languages · GitHub repositories constitute permanent public index beyond domestic filtering</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">nullification-loops</a><a class="owl-cross-link owl-cl-inst" href="https://github.com/dr-wojak/press">press</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://dr-crunch.github.io/nullification-loops/" target="_blank">Main Record</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Graph nodes</div><a class="owl-cross-link owl-cl-graph" href="#owl-layer">nullification-loops · start-here · public-relations · press · econ · governmentality-2025 · redundancy-awareness</a></div>
-</div>
-</div>
-<!-- ── PROVENANCE RELATIONS ── -->
-<div class="sec-label" style="margin-top:32px">Provenance Relations · Evidentiary Structure · Semantic Map Edges</div>
-<div class="owl-relation prov" id="derived-from">
-<div class="owl-rel-name">:derivedFrom</div>
-<div class="owl-rel-sig">Instrument · Submission · Collection → LegalInstrument · Record · Document</div>
-<div class="owl-rel-body">
-      An instrument is derived from prior documents in the sense that it inherits their grounds — it draws its legal basis, its factual content, its analytical structure from what came before, and carries that inheritance as a verifiable chain. The Tairiscint Mheinhardt v10 is derived from the O.R. corpus, the Nullification Record, the McEntee Foreclosure, the Gunn Letter, the Memorandum to Government, and the case authorities O'Keeffe and Meadows — simultaneously, not sequentially. Each derivation is a point at which the instrument can be tested against its source: does the claim follow from the record? Is the ground established by the document it cites? The derivation chain is also the hermeneutic chain: <strong>the instrument takes what it has received, brings it into a new context — the context of legal remedy — and transforms it by that act of bringing.</strong> A derived instrument is not merely assembled from parts. It is an interpretation: it takes what came before and makes something new answerable to the same grounds.
-    </div>
-<div class="owl-rel-axiom">:derivedFrom ⊑ prov:wasDerivedFrom · establishes traceability · Charter Art. III (information fiduciary) · TairiscintMheinhardt ← ORCorpus, NullificationRecord, Feb4thForeclosure, GunnLetter, Memorandum, O'Keeffe, Meadows, EUReg2021/821</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">TairiscintMheinhardt ← ORCorpus</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">DualUse ← ForfásReport · EUReg2021/821</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Tairiscint Mheinhardt v10</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="used">
-<div class="owl-rel-name">:used</div>
-<div class="owl-rel-sig">Activity · EscalationTrack → Instrument · Record · LegalInstrument</div>
-<div class="owl-rel-body">
-      Where :derivedFrom produces a new instrument from prior material, :used activates an existing instrument as operative input in a context it did not anticipate. The High Court track uses the McEntee Foreclosure not to derive anything from it but to deploy it as a certiorari target — to make the document the object of legal action. The Foreclosure was generated as an act of administrative closure; it is used as the handle by which the Court's jurisdiction is engaged. The same text bears different meanings across different contexts of use, and <strong>the law does not restrict the meaning of a document to the intent of its author.</strong> The escalation tracks use the Tairiscint in the same way: they appropriate its grounds for purposes the drafting activity created but the institutions addressed did not invite. Use is the relation of appropriation — the document becomes more than was intended by the act of being taken up and deployed.
-    </div>
-<div class="owl-rel-axiom">:used ⊑ prov:used · activates operative instrument · Order 84 RSC · HighCourtTrack ← TairiscintMheinhardt, Feb4thForeclosure, GunnLetter · CJEUTrack ← TairiscintMheinhardt, EUReg2021/821</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">HighCourtTrack ← Tairiscint · Feb4thForeclosure · GunnLetter</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS">Formal Complaint</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="attributed-to">
-<div class="owl-rel-name">:attributedTo</div>
-<div class="owl-rel-sig">Document · Submission · Instrument → Person · Minister</div>
-<div class="owl-rel-body">
-      Attribution is what converts an institutional act into a reviewable act by a named person. Without attribution, a document belongs to a system, and a system has no accountability; with attribution, it belongs to a decision-maker who must answer for what was decided. The McEntee Foreclosure is attributed to Minister Helen McEntee — it is she whose decision is unreasoned on three independent grounds, she who is the certiorari target. The Martin Ballyphehane commitment of 2009 is attributed to Minister Micheál Martin — it is he whose unperformed obligation is the seventeen-and-a-half-year absence at the centre of the record. <strong>Attribution names the responsible actor within the institutional story in a way that makes individual accountability legible without reducing the systemic failure to individual misconduct.</strong> Both are present. The attribution chain holds both without collapsing them into each other.
-    </div>
-<div class="owl-rel-axiom">:attributedTo ⊑ prov:wasAttributedTo · names the responsible actor · Hypothesis B threshold · Meadows [2010] · Feb4thForeclosure → MinisterMcEntee · MartinCommitment2009 → MinisterMichaelMartin · GunnLetter → SecGenGunn</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">Feb4thForeclosure → MinisterMcEntee</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">MartinCommitment2009 → MinisterMichaelMartin</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/file/d/15QOrPw7TvHG-kqv86C8kD1Ahy9LicBSR/view?usp=drive_link">Martin Foreknowledge Timeline</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="on-behalf-of">
-<div class="owl-rel-name">:onBehalfOf</div>
-<div class="owl-rel-sig">Person · Minister · Official → Department · Organisation</div>
-<div class="owl-rel-body">
-      Acting on behalf of is the relation that makes institutional authority and individual responsibility simultaneously present — and simultaneously implicated. The minister acts on behalf of the State; the State acts on behalf of the public; the public is the beneficiary-public denied the analytical resource the corpus would have provided. The chain of representation that makes governance legitimate is also the chain through which its failure propagates: each link that substitutes procedural motion for substantive engagement reproduces the failure at the next level. <strong>What flows back through this relation is not only authority but the obligation that authority carries with it.</strong> Minister McEntee acts on behalf of DOD and DFA; her Foreclosure is therefore the departments' act; their act is the State's act; the State's act is the government's act. Seventeen and a half years of unperformed obligation are distributed across this relation, office by office, minister by minister, each acting correctly in their own procedural code, the collective obligation evaporating at every node.
-    </div>
-<div class="owl-rel-axiom">:onBehalfOf ⊑ prov:actedOnBehalfOf · activates Art. 28.4.1 Bunreacht · collective executive responsibility · MinisterMcEntee → DOD, DFA · MinisterMichaelMartin → DFA · PeterFinnegan → HousesOfOireachtas</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">MinisterMcEntee → DOD · DFA</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">MinisterMichaelMartin → DFA</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Ministerial correspondence record</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="has-member">
-<div class="owl-rel-name">:hasMember</div>
-<div class="owl-rel-sig">Bundle · Collection → Instrument · Submission · Record · Hypothesis · EscalationTrack</div>
-<div class="owl-rel-body">
-      The corpus is a bundle — not an archive, not a collection, but a legally coherent whole whose members establish the grounds of the claims by their collective presence. Each member is independently verifiable; their combination is not merely additive. The Tairiscint is derived from the bundle; the escalation tracks use it; the hypotheses are tested against it; the escalation tracks are themselves members. A bundle has a property that individual documents do not: it establishes proportionality between the variety of what is claimed and the variety of what is evidenced. <strong>The bundle must have at least as much internal variety as the system it diagnoses — it must be able to match, register, and characterise every dimension of the failure it describes.</strong> The Interregnum Nullificans corpus satisfies this condition: five failure modes, three remedy tracks, fourteen OWL relations, three interpretive hypotheses, and nineteen years of documented evidence constitute a structure capable of characterising what it contains.
-    </div>
-<div class="owl-rel-axiom">:hasMember ⊑ prov:hadMember · constitutes the corpus · Charter Art. III · Art. 40.3 Bunreacht · InterregnumNullificansCorpus → TairiscintMheinhardt, ORCorpus, DualUseTimeline, Feb4thForeclosure, GunnLetter, Memorandum, NullificationRecord, HypothesisA/B/C, HighCourtTrack, OmbudsmanComplaint, CJEUTrack</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key members</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">TairiscintMheinhardt · ORCorpus · DualUseTimeline · NullificationRecord · Feb4thForeclosure · GunnLetter · Memorandum</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://dr-crunch.github.io/nullification-loops/" target="_blank">Interregnum Nullificans — public index</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="generated-by">
-<div class="owl-rel-name">:generatedBy</div>
-<div class="owl-rel-sig">Instrument · Letter · Memorandum → Activity</div>
-<div class="owl-rel-body">
-      A document was generated by a named activity on a named date. This is the relation that timestamps institutional conduct and makes it answerable in a way that diffuse administrative process cannot be. The McEntee Foreclosure was generated by the McEntee Foreclosure Activity of 4 February 2026; the Gunn Letter by the Gunn Letter Activity of 24 February 2026. Both fall within the twelve-month judicial review window. Generation is a performative act: it does something in the world by happening, and what it does cannot be undone by closing the file. The activity can be reviewed independently of the document it produced; <strong>the document carries legal freight that the authoring activity did not consciously load into it.</strong> The act crystallises into a text, and the text carries more meaning than the act intended. That surplus of meaning is precisely what the remedy tracks deploy.
-    </div>
-<div class="owl-rel-axiom">:generatedBy ⊑ prov:wasGeneratedBy · timestamps the act · Order 84 RSC 12-month window · O'Keeffe [1993] · Feb4thForeclosure ← McEnteeForeclosureActivity (4 Feb 2026) · GunnLetter ← GunnLetterActivity (24 Feb 2026)</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">Feb4thForeclosure ← McEnteeForeclosureActivity (4 Feb 2026)</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">GunnLetter ← GunnLetterActivity (24 Feb 2026)</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">McEntee Foreclosure · DOD-MO-01201-2025</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="associated-with">
-<div class="owl-rel-name">:associatedWith</div>
-<div class="owl-rel-sig">Activity · FailureSpan · GovFailure → Person · Organisation · Record</div>
-<div class="owl-rel-body">
-      Association is the weaker form of provenance connection — less than attribution, more than coincidence, sufficient for the investigation that may establish attribution. The Martin Foreknowledge Span is associated with Minister Micheál Martin across four offices because the conditions of association are met: the time, the place, the office, the written commitment of 2009, and the seventeen-and-a-half years of subsequent silence. The association is documented in the record. What remains open — the load-bearing question of Hypothesis B — is whether the silence across four offices was designed or structural. That is precisely what the Section 7 demand in OMB-260331-CSD014 is directed at: <strong>the DFA internal file that will show what Minister Martin's office did with Director O'Leary's report commitment and Cronin's written undertaking in 2009.</strong> Association holds the question open. Attribution will answer it.
-    </div>
-<div class="owl-rel-axiom">:associatedWith ⊑ prov:wasAssociatedWith · contextualises Hypothesis B · misfeasance threshold question · MartinForeknowledgeSpan ↔ MinisterMichaelMartin (four offices, 2009–2026) · NullificationRecord ↔ IrishGovernment · DFA · DETE</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">MartinForeknowledgeSpan ↔ MinisterMichaelMartin</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">NullificationRecord ↔ IrishGovernment · DFA · DETE</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Martin Foreknowledge Timeline · Part I</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="informed-by">
-<div class="owl-rel-name">:informedBy</div>
-<div class="owl-rel-sig">Activity · Transfer → PriorActivity · Record</div>
-<div class="owl-rel-body">
-      An activity is informed by a prior act in the sense that it operates within the context that act established — it reads the situation through what came before without fully deriving a new instrument from it. The Gunn Letter Activity was informed by the McEntee Foreclosure Activity: the Gunn Letter cannot be read without the Foreclosure as background, and its own reviewability is compounded by the sequence in which they appear. The competent authority transfer of August 2024 was informed by — but did not discharge — the Nullification Record: it operated against a background of unprocessed obligation without acknowledging that background, and this non-acknowledgement is itself a feature of the record. <strong>Being informed by is the relation of sequencing made legally visible: it is what allows the record to be read as a history rather than as a collection of isolated acts.</strong> The sequence is the argument. The sequence is also the evidence.
-    </div>
-<div class="owl-rel-axiom">:informedBy ⊑ prov:wasInformedBy · establishes sequencing · compounds the Nullification Loop · GunnLetterActivity ← McEnteeForeclosureActivity · CompetentAuthorityTransfer2024 ← NullificationRecord (transfer-without-discharge)</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Key instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">GunnLetterActivity ← McEnteeForeclosureActivity</a><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/">CompetentAuthorityTransfer2024 ← NullificationRecord</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Part III — EU Primary Law</a></div>
-</div>
-</div>
-<div class="owl-relation prov" id="no-determination">
-<div class="owl-rel-name">:noDetermination</div>
-<div class="owl-rel-sig">NullDetermination → NullificationRecord</div>
-<div class="owl-rel-body">
-      The null determination is the document that was required and never generated. Its non-existence is the central provenance fact of the corpus — not a gap in the record but the record's constitutive absence, the thing around which everything else is arranged. Nineteen years. Zero statutory determinations. The silence is not neutral: under Charter Article IV the absence of a determination within the defined period, with no lawful account of inapplicability, creates a rebuttable presumption that the submission is accepted for the purpose of establishing a reviewable duty to evaluate. Every acknowledgement issued, every reference number generated, every deferral correctly routed across nineteen years testifies to the absence it surrounded. <strong>They are the circle of procedural motion drawn around what was not done. The circle names the centre.</strong> The institution produced everything a governance system produces except the one thing that a governance system exists to produce: a reasoned determination.
-    </div>
-<div class="owl-rel-axiom">:noDetermination ⊑ :constitutes SilenceVeto · Heaney v Ireland [1994] 3 IR 593 · Charter Art. IV · Art. 41 CFR · Meadows [2010] · NullDetermination2006–2025 → NullificationRecord2006–2025 · zero determinations across 19 years, five governments, six Taoisigh</div>
-<div class="owl-cross-links">
-<div class="owl-cross-group"><div class="owl-cross-label">Instances</div><a class="owl-cross-link owl-cl-inst" href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html">NullDetermination 2006–2025 — zero determinations across 19 years</a></div>
-<div class="owl-cross-group"><div class="owl-cross-label">Evidence</div><a class="owl-cross-link owl-cl-evid" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Part I — Constitutional Contumacy table</a></div>
-</div>
-</div>
-<!-- INTERPRETATION -->
-<div class="sec-label" style="margin-top:32px">Interpretation · The Full Causal Chain</div>
-<div class="owl-interpretive">
-<div class="owl-rel-body">
-      The OWL object properties encode the primary causal chain:
-      <div class="owl-chain-row">
-<a class="owl-chain-link" href="#ignores">:ignores</a>
-<span class="owl-chain-sep">→</span>
-<a class="owl-chain-link" href="#produces-failure">:producesFailure</a>
-<span class="owl-chain-sep">→</span>
-<a class="owl-chain-link" href="#triggers">:triggers</a>
-<span class="owl-chain-sep">→</span>
-<a class="owl-chain-link" href="#violates">:violates</a>
-</div>
-      The provenance relations encode the evidentiary structure that makes the causal chain legally operable:
-      <div class="owl-chain-row">
-<a class="owl-chain-link amber" href="#attributed-to">:attributedTo</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#on-behalf-of">:onBehalfOf</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#generated-by">:generatedBy</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#derived-from">:derivedFrom</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#used">:used</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#informed-by">:informedBy</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#associated-with">:associatedWith</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#has-member">:hasMember</a>
-<span class="owl-chain-sep">·</span>
-<a class="owl-chain-link amber" href="#no-determination">:noDetermination</a>
-</div>
-      The suppression and amplification operators complete the loop:
-      <div class="owl-chain-row">
-<a class="owl-chain-link green" href="#suppresses">:suppresses</a>
-<span class="owl-chain-sep"> — what the institution does to the civic signal ·</span>
-<a class="owl-chain-link green" href="#amplifies">:amplifies</a>
-<span class="owl-chain-sep"> — what the campaign does to place the record beyond institutional reach</span>
-</div>
-      Together, the fourteen relations cover every directional mechanism in the Lúba Neamhnithe graph: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026. The petitioner throughout this record is <strong>Brøek Meinhardt</strong>. The instrument through which the duty to reason will be compelled is the <strong>Tairiscint Mheinhardt</strong>.
-    </div>
-</div>
-</section><div class="part-divider" id="part-iv-live"><div class="part-divider-label">Part IV</div><div class="part-divider-title">Live Record · Sections IX–X</div><div class="part-divider-sub">Active Record · Questions Before the Record</div></div><section class="ds" id="active-record"><span class="bookmark-url">#active-record · dr-crunch.github.io/post-hoc/index#active-record</span>
+</section>
+<div class="part-divider" id="part-iii-live"><div class="part-divider-label">Part III</div><div class="part-divider-title">Live Record · Sections IX–X</div><div class="part-divider-sub">Active Record · Questions Before the Record</div></div><section class="ds" id="active-record"><span class="bookmark-url">#active-record · dr-crunch.github.io/post-hoc/index#active-record</span>
 <div class="sec-label">Section IX · #active-record · as at June 2026</div>
 <h2 class="sec-h2">The Active <em>Record</em></h2>
 <p class="sec-sub">Current live status of each escalation track. This table is the record the Post Hoc Report does not argue from — it describes.</p>
