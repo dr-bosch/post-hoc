@@ -142,12 +142,12 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 .props-item:last-child{border-bottom:none;}
 .props-item strong{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--citron);opacity:.7;display:inline-block;min-width:18px;}
 .props-item span{color:var(--parchment-dim);}
-.transport-card{background:rgba(28,14,12,.9);border:1px solid rgba(200,120,112,.28);border-radius:4px;padding:14px 15px;cursor:pointer;transition:border-color .15s;}
-.transport-card:hover{border-color:rgba(200,120,112,.5);}
-.transport-card-label{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);opacity:.65;margin-bottom:6px;}
-.transport-card-title{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--coral);line-height:1.3;margin-bottom:5px;}
-.transport-card-body{font-family:'EB Garamond',serif;font-size:11px;line-height:1.5;color:var(--coral);opacity:.65;}
-.transport-card-body strong{opacity:1;}
+.-card{background:rgba(28,14,12,.9);border:1px solid rgba(200,120,112,.28);border-radius:4px;padding:14px 15px;cursor:pointer;transition:border-color .15s;}
+.-card:hover{border-color:rgba(200,120,112,.5);}
+.-card-label{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);opacity:.65;margin-bottom:6px;}
+.-card-title{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--coral);line-height:1.3;margin-bottom:5px;}
+.-card-body{font-family:'EB Garamond',serif;font-size:11px;line-height:1.5;color:var(--coral);opacity:.65;}
+.-card-body strong{opacity:1;}
 
 /* ─── MODAL ─── */
 .modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(5,4,10,.85);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;}
@@ -699,7 +699,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <div class="transport-card" data-card="transport" onclick="NAV('#active-record')" ondblclick="MODAL(event,'transport')">
 <div class="transport-card-label">Transport and Energy</div>
 <div class="transport-card-title">O.R. corpus unassessed since 2006</div>
-<div class="transport-card-body">19-year delay, compounding annually across two directly affected sectors. <strong>Transport:</strong> haulier network optimisation models sat in the corpus while modal lock-in — excess road freight relative to rail — continued unbenchmarked. <strong>Energy:</strong> EirGrid pricing and grid-optimisation models sat unused while the TMS write-down and ongoing grid infrastructure costs proceeded without an independent analytical benchmark. Each year of non-assessment locks in sub-optimal decisions at scale, raising the cost of eventual correction. Not a sunk cost.</div>
+<div class="transport-card-body">20-year delay, compounding annually across two directly affected sectors. <strong>Transport:</strong> haulier network optimisation models sat in the corpus while modal lock-in — excess road freight relative to rail — continued unbenchmarked. <strong>Energy:</strong> EirGrid pricing and grid-optimisation models sat unused while the TMS write-down and ongoing grid infrastructure costs proceeded without an independent analytical benchmark. Each year of non-assessment locks in sub-optimal decisions at scale, raising the cost of eventual correction. Not a sunk cost.</div>
 </div>
 </div>
 <!-- Row 1: Constitutional Foundation -->
@@ -1063,7 +1063,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <div class="ac-step-body">
 <div class="ac-step-top"><a class="ac-step-anchor" href="#transport">#transport</a><span class="ac-step-connector">compounding through</span></div>
 <div class="ac-step-title"><a href="#transport" style="color:inherit;text-decoration:none;">Transport and Energy</a></div>
-<div class="ac-step-premise">Haulier network optimisation and grid management — two sectors where the compounding cost of non-assessment is structurally quantifiable. Each year of non-assessment is a year in which sub-optimal decisions are locked in at scale, making subsequent correction more expensive. <strong>The 19-year delay is not a sunk cost. It is an ongoing, compounding, annually quantifiable loss.</strong></div>
+<div class="ac-step-premise">Haulier network optimisation and grid management — two sectors where the compounding cost of non-assessment is structurally quantifiable. Each year of non-assessment is a year in which sub-optimal decisions are locked in at scale, making subsequent correction more expensive. <strong>The 20-year delay is not a sunk cost. It is an ongoing, compounding, annually quantifiable loss.</strong></div>
 </div>
 <div class="ac-step-arrow">↓</div>
 </div><div class="ac-step">
@@ -1386,11 +1386,11 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 <span class="bookmark-url">#transport · dr-bosch.github.io/post-hoc/index#transport</span>
 <div class="sec-label">Transport and Energy · Sidebar · from the constitutional map</div>
 <h2 class="sec-h2">Transport and Energy</h2>
-<p class="sec-sub">O.R. corpus unassessed since 2006. 19-year delay, compounding annually. EirGrid, haulier network, modal lock-in.</p>
+<p class="sec-sub">O.R. corpus unassessed since 2006. 20-year delay, compounding annually. EirGrid, haulier network, modal lock-in.</p>
 <div class="sal">
 <p>The Transport and Energy sidebar names the two sectors where the compounding cost of non-assessment is most precisely quantified and most directly linked to public welfare. The key property of the cost in both sectors is that it is not sunk — it is ongoing, compounding, and increasing with each subsequent infrastructure decision made without the analytical tool.</p>
 <p><strong>In Transport:</strong> the O.R. corpus contained haulier network optimisation models — methodologies for identifying modal efficiency frontiers and sub-optimal freight routing at network scale. In the twenty years since the corpus was submitted, modal lock-in (the excess concentration of freight in road transport relative to rail and sea) has continued to compound. Each year of non-assessment is a year in which the sub-optimal modal mix was locked in by investment decisions made without the O.R. benchmark. The compounding cost is structural and increases with each subsequent capital commitment.</p>
-<p><strong>In Energy:</strong> the O.R. corpus contained grid-optimisation models directly applicable to EirGrid's dispatch and pricing functions. The TMS write-down is the headline figure. But the broader cost includes every inefficient dispatch decision, every sub-optimal capital allocation, and every pricing outcome that would have been improved by an independent network-optimisation benchmark. <strong>The 19-year delay is not a sunk cost. It is an ongoing, compounding, annually quantifiable loss</strong> — the cost of operating a complex national infrastructure without the analytical tools that were in State custody and available for use.</p>
+<p><strong>In Energy:</strong> the O.R. corpus contained grid-optimisation models directly applicable to EirGrid's dispatch and pricing functions. The TMS write-down is the headline figure. But the broader cost includes every inefficient dispatch decision, every sub-optimal capital allocation, and every pricing outcome that would have been improved by an independent network-optimisation benchmark. <strong>The 20-year delay is not a sunk cost. It is an ongoing, compounding, annually quantifiable loss</strong> — the cost of operating a complex national infrastructure without the analytical tools that were in State custody and available for use.</p>
 </div>
 <a class="back-to-map" href="#constitutional-map">Constitutional map</a>
 </section><div class="part-divider" id="part-i-analytical"><div class="part-divider-label">Part I</div><div class="part-divider-title">Analytical Record · Sections I–VIII</div><div class="part-divider-sub">Phenomenon · Mechanism · Epistemic · Constitutional · Foreknowledge · Presidency · EU Law · Hypotheses</div></div><section class="ds" id="phenomenon"><span class="bookmark-url">#phenomenon · dr-bosch.github.io/post-hoc/index#phenomenon</span>
