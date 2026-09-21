@@ -8,8 +8,8 @@
 ### Landing Pages
 - [dr-bosch.github.io/](https://dr-bosch.github.io/)
   - [intro](https://dr-bosch.github.io/intro)
-  - [report](https://dr-bosch.github.io/report)
-  - [feasible-region](https://dr-bosch.github.io/feasible-region)  
+  - [post-hoc/report](https://dr-bosch.github.io/post-hocreport)
+  - [post-hoc/feasible-region](https://dr-bosch.github.io/post-hoc/feasible-region)  
 
 ---
 
