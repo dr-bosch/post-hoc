@@ -121,5 +121,4 @@ structural inference • documentary evidence • normative framework • semiot
 
 ## Project Files
 
-- [`index.html`](https://dr-bosch.github.io/post-hoc/index.html) — landing page
 - [`CLAUDE.md`](./CLAUDE.md) — working notes and project instructions
