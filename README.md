@@ -5,6 +5,12 @@
 
 *post hoc*, Latin: "after the fact." This project does not argue about intentions, motives, or what an institution says it exists to do. It works backward from what a system **produced** — the corpus, the record, the trail — to what that system's behaviour, considered as a whole, functioned to accomplish.
 
+### Landing Pages
+- [dr-bosch.github.io/](https://dr-bosch.github.io/)
+  - [intro](https://dr-bosch.github.io/intro)
+  - [report](https://dr-bosch.github.io/report)
+  - [feasible-region](https://dr-bosch.github.io/feasible-region)  
+
 ---
 
 ## The Method
