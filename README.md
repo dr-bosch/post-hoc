@@ -46,7 +46,7 @@ Five stages, each with its own working directory and its own `index.html`. Each 
 
 ---
 
-## Site Map
+## Semiotic Analytial Layer
 
 ### [`/corpus`](https://dr-bosch.github.io/post-hoc/corpus/index.html) — the documentary base
 
