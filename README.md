@@ -128,3 +128,20 @@ structural inference • documentary evidence • normative framework • semiot
 ## Project Files
 
 - [`CLAUDE.md`](./CLAUDE.md) — working notes and project instructions
+
+## PDF Links
+
+- http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf
+- http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans.pdf
+- http://dr-bosch.github.io/post-hoc/Political-Risk-Report-2026-MAR-GLOBAL.pdf
+
+## SVG Links
+
+- http://dr-bosch.github.io/post-hoc/Constitutional-Map_Article-40-3_revised.svg
+- http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans-constitutional-mapping.svg
+
+## PNG Links
+
+- http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a2.png
+- http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-back.png
+- http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-front.png
