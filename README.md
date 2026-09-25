@@ -13,18 +13,18 @@
   - [post-hoc/fsd-ontology](https://dr-bosch.github.io/post-hoc/fsd-ontology)  
 
 ### PDF Links
-- [ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf](http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination)
-- [Interregnum-Nullificans](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans.pdf)
-- [Political-Risk-Report-2026-MAR-GLOBAL (Marsh)](http://dr-bosch.github.io/post-hoc/Political-Risk-Report-2026-MAR-GLOBAL.pdf)
+- [Operations Research Corpus - Competent Authority Determination](http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination)
+- [Interregnum Nullificans](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans.pdf)
+- [Political Risk Report 2026 (Marsh Global)](http://dr-bosch.github.io/post-hoc/Political-Risk-Report-2026-MAR-GLOBAL.pdf)
 
 ### SVG Links
-- [Constitutional Map_Article 40.3](http://dr-bosch.github.io/post-hoc/Constitutional-Map_Article-40-3_revised.svg)
-- [Interregnum Nullificans: constitutional mapping](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans-constitutional-mapping.svg)
+- [Constitutional Map - Article 40.3](http://dr-bosch.github.io/post-hoc/Constitutional-Map_Article-40-3_revised.svg)
+- [Interregnum Nullificans - constitutional mapping](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans-constitutional-mapping.svg)
 
 ### PNG Links
-- [fsd-ontology-poster-a2](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a2.png)
-- [fsd-ontology-poster-a3-front](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-front.png)
-- [fsd-ontology-poster-a3-back](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-back.png)
+- [FSD Ontology (A2 poster)](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a2.png)
+- [FSD Ontology (A3 poster, front)](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-front.png)
+- [FSD Ontology (A3 poster, back)](http://dr-bosch.github.io/post-hoc/fsd-ontology-poster-a3-back.png)
 
 
 ---
