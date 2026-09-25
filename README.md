@@ -12,6 +12,11 @@
   - [post-hoc/feasible-region](https://dr-bosch.github.io/post-hoc/feasible-region)  
   - [post-hoc/fsd-ontology](https://dr-bosch.github.io/post-hoc/fsd-ontology)  
 
+### PDF Documents
+ - http://dr-bosch.github.io/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf
+ - http://dr-bosch.github.io/Interregnum-Nullificans.pdf
+ - http://dr-bosch.github.io/Political-Risk-Report-2026-MAR-GLOBAL.pdf
+
 ---
 
 ## The Method
