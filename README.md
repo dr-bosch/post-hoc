@@ -13,7 +13,7 @@
   - [post-hoc/fsd-ontology](https://dr-bosch.github.io/post-hoc/fsd-ontology)  
 
 ### PDF Links
-- [Operations Research Corpus - Competent Authority Determination](http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination)
+- [Operations Research Corpus - Competent Authority Determination](http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf)
 - [Interregnum Nullificans](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans.pdf)
 - [Political Risk Report 2026 (Marsh Global)](http://dr-bosch.github.io/post-hoc/Political-Risk-Report-2026-MAR-GLOBAL.pdf)
 
