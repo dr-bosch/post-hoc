@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "description": "Authoritative scope for the post-hoc atom export and build-status process. Patterns are expanded recursively at build time so newly added matching files enter the build without editing this manifest.",
+  "build_control_files": [
+    "atom-build-manifest.json",
+    "build-atoms.sh",
+    "sync-atoms.sh",
+    "scrape-atoms.py",
+    "requirements-build.txt",
+    "ATOM-BUILD.md",
+    "tests/test_scrape_atoms.py",
+    ".github/workflows/pages.yml",
+    "CLAUDE.md"
+  ],
+  "input_scope": {
+    "include": [
+      "corpus/**",
+      "semiotics/**",
+      "behaviour/**",
+      "posiwid/**",
+      "synthesis/**",
+      "*.md",
+      "*.html",
+      "*.pdf",
+      "*.txt",
+      "*.svg",
+      "*.dot"
+    ],
+    "exclude": [
+      "CLAUDE.md",
+      "atoms.json",
+      "atoms.csv",
+      "atoms.md",
+      "requirements-build.txt",
+      "build/**"
+    ]
+  },
+  "manual_review_scope": {
+    "include": [
+      "corpus/**",
+      "semiotics/**",
+      "behaviour/**",
+      "posiwid/**",
+      "synthesis/**",
+      "*.md",
+      "*.html",
+      "*.pdf",
+      "*.txt",
+      "*.svg",
+      "*.dot"
+    ],
+    "exclude": [
+      "**/index.html",
+      "README.md",
+      "CLAUDE.md",
+      "ATOM-BUILD.md",
+      "FSD-Ontology-2026.md",
+      "FSD-Ontology-2026-Extended-Framework.md",
+      "root-corpus-atomic-inventory.md",
+      "copilot-corpus-selection.md",
+      "corpus/README.md",
+      "corpus/laws-and-codes/README.md",
+      "corpus/laws-and-codes/manual.html",
+      "atoms.md",
+      "build/**"
+    ]
+  },
+  "parsers": {
+    "structured_html_atoms": {
+      "include": [
+        "index.html",
+        "**/index.html"
+      ],
+      "exclude": [
+        "build/**"
+      ],
+      "description": "Extracts explicitly tagged .atom, .fsd-class, and .chrono blocks from HTML index pages. Each tagged paragraph is emitted as a separate record."
+    },
+    "ontology_term_occurrences": {
+      "include": [
+        "*.md",
+        "*.html",
+        "corpus/**/*.md",
+        "corpus/**/*.html"
+      ],
+      "exclude": [
+        "README.md",
+        "CLAUDE.md",
+        "FSD-Ontology-2026.md",
+        "FSD-Ontology-2026-Extended-Framework.md",
+        "ATOM-BUILD.md",
+        "root-corpus-atomic-inventory.md",
+        "copilot-corpus-selection.md",
+        "corpus/README.md",
+        "corpus/laws-and-codes/README.md",
+        "corpus/laws-and-codes/manual.html",
+        "atoms.md",
+        "**/index.html",
+        "build/**"
+      ],
+      "description": "Finds literal FSD class names or labels in eligible text files. Results are TERM occurrences, not FSD classifications or evidence that a class applies."
+    }
+  },
+  "outputs": [
+    "atoms.json",
+    "atoms.csv",
+    "atoms.md",
+    "build/atom-build-status.json",
+    "build/atom-build-status.md"
+  ]
+}

@@ -384,6 +384,38 @@ At the end of a global operation, report:
 - links verified or flagged for verification;
 - any `[FSD: pending — ontology unavailable]` markers left in output.
 
+## MCP-assisted source discovery
+
+Follow the canonical protocol in `CLAUDE.md` → **MCP-assisted source
+discovery**. Treat `.vscode/mcp.json` as endpoint configuration only: a listed
+server is not necessarily connected or available, and configuration does not
+mean that a server reads or parses this repository.
+
+For each MCP batch:
+
+1. Start with a repository layer or specific evidence gap; formulate bounded
+   questions and use only a server/tool whose capability is verified.
+2. Minimise transmitted data. Never send credentials, tokens, private
+   correspondence, personal data, or other non-public/restricted corpus
+   material to external services. If a source question requires restricted
+   material, do not send it to a remote service. Never put secrets in the MCP
+   JSON, prompts, logs, or committed files.
+3. Record retrieval date, server and tool, target source, query and filters,
+   date range, result count, source/resource identifiers and URLs, and any
+   errors or limits. Redact sensitive query content.
+4. Treat search results, metadata, snippets, rankings, and zero-result
+   responses as source leads only. Verify the underlying primary document and
+   passage before extracting atoms or making substantive claims.
+5. Preserve source → passage → evidence status (OBS / INT / INF / HYP / CHR)
+   → optional FSD classification → interpretation/inference. Read the
+   ontology before using any FSD class.
+6. Scope negative results to the exact query and endpoint; a search miss does
+   not establish that a record or event does not exist. Seek counterevidence
+   and do not infer recurrence or system function from catalog results.
+7. Do not automatically import MCP responses into `atoms.json`, HTML indexes,
+   or other analytical outputs. Keep discovery separate from extraction and
+   synthesis unless a documented, reviewable ingestion process is introduced.
+
 ---
 
 ## 8. HTML indexes and navigation pages

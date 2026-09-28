@@ -867,6 +867,103 @@ If `FSD-Ontology-2026.md` cannot be read:
 
 Do not proceed to FSD classification until `FSD-Ontology-2026.md` has been successfully read in the current task.
 
+## MCP-assisted source discovery
+
+MCP servers are external research interfaces. Their configuration in
+`.vscode/mcp.json` identifies endpoints; it does not establish that a server
+is connected, available, authenticated, or able to read this repository. Do
+not assume an MCP server automatically parses the repository's HTML pages,
+follows its atom network, or imports records into the corpus. No such
+repository-to-server integration is established by the configuration alone.
+
+Use MCP calls to discover candidate sources, inspect catalog metadata, or
+retrieve source material where the server supports it. MCP output is not a
+substitute for the underlying documentary source and does not by itself
+establish that a catalog description is accurate, a record is complete, a
+norm was applied, or an event occurred.
+
+### Batch procedure
+
+For each research batch:
+
+1. Identify the repository layer, specific source references, and the
+   unresolved evidence question. Do not start from an assumed system-level
+   conclusion.
+2. Formulate bounded questions that name the relevant institution, document
+   or data type, subject terms, date range, and jurisdiction where known.
+   Split distinct source needs across suitable servers instead of treating
+   one broad query as comprehensive.
+3. Select the configured server and tool appropriate to the source need.
+   Record when an endpoint, tool, or authentication flow was not available;
+   do not describe an untested server capability as verified.
+4. Minimise the information sent. Never send credentials, tokens, private
+   correspondence, personal data, or other non-public/restricted corpus
+   material to external MCP services. Use only public, non-sensitive query
+   terms; if a source question requires restricted material, do not send it
+   to a remote service. Never place secrets in `.vscode/mcp.json`, prompts,
+   logs, or committed files.
+5. Preserve the retrieval context: retrieval date, configured server name,
+   tool name, target portal or source, exact non-sensitive query and filters,
+   date range, result count, resource/document identifiers and URLs, and
+   errors or limitations. Record whether the output is a catalog result,
+   metadata, schema, table row, search excerpt, or full source text.
+6. Treat returned descriptions, summaries, snippets, search rankings, and
+   zero-result outcomes as discovery results. Inspect the underlying primary
+   source (or identify why it could not be obtained) before extracting
+   substantive documentary atoms. Check the source's provenance, version,
+   date, relevant passage, and any cited authority.
+7. Extract only traceable source propositions. Preserve the exact passage or
+   a short quotation and source location; assign OBS / INT / INF / HYP / CHR
+   according to the evidentiary operation. Apply FSD classification only
+   after the required ontology check and only when the source-grounded
+   conditions are met.
+8. Seek counterevidence and report the search boundary. A query returning no
+   results means only that the stated query against the stated endpoint,
+   resource, and filters returned none; it does not establish that a record
+   or event does not exist.
+
+### Preserve analytical boundaries
+
+- **Corpus:** use external services to locate or retrieve source documents
+  and data. Keep catalog metadata distinct from the content of those sources.
+- **Semiotics:** compare external material with identifiable signifiers and
+  passages in repository documents. A server does not determine what a
+  signifier means.
+- **Behaviour:** establish actions, referrals, delays, decisions, and
+  non-decisions from relevant records. Organization histories and general
+  datasets are context unless they document the specific event at issue.
+- **POSIWID and synthesis:** use verified records to test recurrence,
+  boundaries, alternatives, and counterevidence. Do not infer a system
+  function from search frequency, catalog metadata, or an isolated result.
+
+Do not automatically import MCP responses into `atoms.json`, HTML indexes,
+or other analytical outputs. Generated or derivative atom files are not
+primary sources; trace their contents to original documents before using
+them as evidence. If an automated ingestion workflow is later introduced,
+document its provenance, source preservation, deduplication, error handling,
+and review process before treating its output as corpus material.
+
+## Atom build
+
+`atom-build-manifest.json` is the authoritative scope for the generated atom
+exports. After repository files change, run `./sync-atoms.sh` to
+update changed inputs, or run `./build-atoms.sh` to force a full rebuild.
+Incremental sync requires the previous export and build status as its
+baseline; a full build establishes or resets that baseline. The script can
+be called from any working directory. Install dependencies with
+`python3 -m pip install -r requirements-build.txt` the first time, and run
+`python3 -m unittest discover -s tests -v` when changing the build code. See
+`ATOM-BUILD.md` for outputs, review steps, and GitHub Actions options. Each
+build writes UTC timestamped Markdown and JSON status reports, including
+changed inputs and a manual-review queue.
+
+The build extracts authored structured records from HTML index pages and
+literal ontology term occurrences from eligible text documents. It does not
+perform semantic extraction from arbitrary documents. Literal `TERM`
+occurrences are not FSD classifications or evidence. Newly added or changed
+source documents require human verification and atomization under this
+protocol; a successful build does not mean that manual review is complete.
+
 ## Encountering an unfamiliar document
 
 When first encountering an unfamiliar document:

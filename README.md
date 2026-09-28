@@ -109,6 +109,62 @@ The observable record, stripped of framing: actions and non-actions as documente
 
 - [`system-analysis.md`](https://github.com/dr-bosch/post-hoc/blob/main/synthesis/system-analysis.md)
 
+## Build and validate
+
+The atom build regenerates the structured exports from the files listed by
+[`atom-build-manifest.json`](./atom-build-manifest.json). Use incremental sync
+for changed inputs or a full rebuild to reprocess the entire manifest scope.
+
+### Run locally
+
+The first time you build locally, install the build dependency:
+
+```sh
+python3 -m pip install -r requirements-build.txt
+```
+
+After changing repository files, run this from the repository folder to sync
+only changed inputs:
+
+```sh
+./sync-atoms.sh
+```
+
+The first run after installing or updating the build process should be a full
+build to establish the sync baseline. To force a full rebuild at any time,
+run `./build-atoms.sh`. If you change the build code, run its tests before
+rebuilding:
+
+```sh
+python3 -m unittest discover -s tests -v
+./build-atoms.sh
+```
+
+Both modes write `atoms.json`, `atoms.csv`, and `atoms.md`, plus a timestamped
+status report in `build/atom-build-status.md` and
+`build/atom-build-status.json`. Review the report's synchronized/changed files
+and manual-review queue. The script can be called from another directory. The
+detailed steps and parser limits are in [`ATOM-BUILD.md`](./ATOM-BUILD.md).
+
+### GitHub Actions
+
+Pushes to `main` sync changed inputs using the saved build state; if no state
+is available yet, the workflow performs a full build to establish it. To
+select a mode manually, open **Actions → Deploy to GitHub Pages → Run
+workflow**, choose the branch and select **sync** or **full** under
+**build_mode**, then select **Run workflow**. The workflow tests the atom
+builder and deploys the site and status report; it does not commit generated
+files back to the branch.
+
+### What the build does—and does not do
+
+The parser collects authored, tagged records from HTML index pages and
+literal FSD term occurrences from eligible text files. Term occurrences and
+authored FSD panels are not proof that a classification applies. It does not
+semantically atomize new source documents or read PDF contents; new or edited
+sources still need human verification and atomization under the repository
+protocol.
+
 ---
 
 ## Epistemic Discipline
@@ -138,3 +194,5 @@ structural inference • documentary evidence • normative framework • semiot
 ## Project Files
 
 - [`CLAUDE.md`](./CLAUDE.md) — working notes and project instructions
+- [`ATOM-BUILD.md`](./ATOM-BUILD.md) — how to invoke and review the atom build
+- [`atom-build-manifest.json`](./atom-build-manifest.json) — authoritative file scope and parser modes
