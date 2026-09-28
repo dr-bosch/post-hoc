@@ -1,6 +1,6 @@
 {
   "status": "SUCCESS",
-  "generated_at_utc": "2026-09-28T21:18:59Z",
+  "generated_at_utc": "2026-09-28T23:58:47Z",
   "trigger": "content fingerprints since previous build",
   "build_mode": "sync",
   "full_rebuild": false,
@@ -71,59 +71,25 @@
   "changed_inputs": [
     {
       "status": "M",
-      "path": "README.md",
+      "path": "fsd-ontology.html",
       "scope": "input"
     }
   ],
-  "changed_build_controls": [
+  "changed_build_controls": [],
+  "synchronized_inputs": [
     {
       "status": "M",
-      "path": ".github/workflows/pages.yml",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "ATOM-BUILD.md",
-      "scope": "build-control"
-    },
-    {
-      "status": "M",
-      "path": "CLAUDE.md",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "atom-build-manifest.json",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "build-atoms.sh",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "requirements-build.txt",
-      "scope": "build-control"
-    },
-    {
-      "status": "M",
-      "path": "scrape-atoms.py",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "sync-atoms.sh",
-      "scope": "build-control"
-    },
-    {
-      "status": "A",
-      "path": "tests/test_scrape_atoms.py",
-      "scope": "build-control"
+      "path": "fsd-ontology.html",
+      "scope": "input"
     }
   ],
-  "synchronized_inputs": [],
-  "manual_review_required": [],
+  "manual_review_required": [
+    {
+      "status": "M",
+      "path": "fsd-ontology.html",
+      "scope": "input"
+    }
+  ],
   "sync_state": {
     "input_sha256": {
       "ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf": "92f74c97c2fa907774441a5602e4691b940e97eec724dd4196af8f2e2a31fcb8",
@@ -166,7 +132,7 @@
       "corpus/laws-and-codes/statutory-instruments/index.html": "eff5db702894be722510d259ec42c25a866cb9e41753014d7e41ba5eac79fe49",
       "corpus/statements/index.html": "fb27a75ec8591c3c4fdb2e06b674cfe1d281ba1bb8d1313358671881a7ef2408",
       "feasible-region.html": "7875640fc6ece2a3ce0755d06363805b163f992241463d849f7d0d022a309b49",
-      "fsd-ontology.html": "515654840da48fd126163588723b367c8b39c4c2184d7e101a0168b7ebe7cb72",
+      "fsd-ontology.html": "ee879d0f25b1c67dc0d4c859ea013f3bea0483a30adb590222bcdb25e0567673",
       "gov-ref-rubric.md": "89224ed8261d95552d663e0b28b75be64a73ca09db82cbf7bd5c79507d16b432",
       "index.html": "7d9edc122cd665a00fe84d921a7fe3cd201d6ca92723f99944da346eb60aa396",
       "knowledge-reserve-duty-to-determine.md": "965126b7ee88ffe7c9f4bd975911b811b7b426b75140e6099ded1956d343eb21",

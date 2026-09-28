@@ -89,6 +89,18 @@
     font-family: var(--mono); font-size:11.5px; padding:4px 11px;
     border:1px solid var(--rule-md); background: var(--cloud-dancer); color: var(--ink-60);
   }
+  .ontology-bridge{
+    padding:12px 56px; border-bottom:1px solid var(--rule);
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px;
+    font-family:var(--mono); font-size:11px;
+  }
+  .ontology-bridge-label{
+    color:var(--ink-38); letter-spacing:.1em; text-transform:uppercase;
+  }
+  .ontology-bridge a{
+    color:var(--ink); text-decoration:none; border-bottom:1px solid var(--deckle-dim);
+  }
+  .ontology-bridge a:hover{ color:var(--deckle-dim); }
 
   /* ========== SECTION SCAFFOLD (nz- pattern) ========== */
   .section{ padding: 32px 56px 4px; }
@@ -245,15 +257,21 @@
     <span class="fw-chip">EIF — interoperability layers</span>
   </div>
 
+  <nav class="ontology-bridge" aria-label="Related ontology pages">
+    <span class="ontology-bridge-label">Related ontology page</span>
+    <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html">Ontology Relations · OWL properties and provenance map</a>
+    <span>Jump to <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores">:ignores</a> · <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">:producesFailure</a> · <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#suppresses">:suppresses</a></span>
+  </nav>
+
   <!-- 4. CLASS HIERARCHY -->
-  <div class="section">
+  <div class="section" id="class-hierarchy">
     <div class="nz-eyebrow">§4 · Class Hierarchy</div>
     <div class="nz-title">Six groups, one ontology</div>
     <div class="nz-sub">Namespace <code>fsd:</code> = https://meinhardt.gov/ontology/fsd/2026# — classes with no LKIF/SEMIC/ELI/Akoma mapping (marked in §8) are the ontology's genuine contributions. Paper Doctrine governs: one stock, one role.</div>
 
     <div class="groups">
 
-      <div class="group t-cloud">
+      <div class="group t-cloud" id="core-submission-classes">
         <div class="group-head"><span>4.1 CORE SUBMISSION</span><span class="ref">s.2</span></div>
         <div class="cls"><span class="name">fsd:Submission</span><span class="label">Aighneacht</span>
           <div class="desc">Formal written communication to a public body identifying the submitter, setting out material of potential national utility, inviting determination. ⊑ <b>lkif:LegalDocument</b>, min-cardinality 1 on <b>hasSubmitter</b>.</div></div>
@@ -267,7 +285,7 @@
           <div class="desc">Has an operational / executable / testable component. s.5A: no sufficiency assertion available without a prior arranged testing opportunity.</div></div>
       </div>
 
-      <div class="group t-glaze">
+      <div class="group t-glaze" id="institutional-classes">
         <div class="group-head"><span>4.2 INSTITUTIONAL</span><span class="ref">s.1</span></div>
         <div class="cls"><span class="name">fsd:PublicBody</span><span class="label">Comhlacht Poiblí</span>
           <div class="desc">Any body bearing a determination obligation: ministers, departments, statutory bodies, Oireachtas clerks (Art.15 savings), designated competent authorities. ⊑ <b>cpv:PublicOrganisation</b>, <b>lkif:PublicBody</b>.</div></div>
@@ -279,7 +297,7 @@
           <div class="desc">s.5C appointee for technical audits. ⊑ <b>foaf:Agent</b>. Independence conditions s.5B — no financial, contractual, or institutional interest.</div></div>
       </div>
 
-      <div class="group t-usq">
+      <div class="group t-usq" id="determination-classes">
         <div class="group-head"><span>4.3 DETERMINATION</span><span class="ref">s.3</span></div>
         <div class="cls"><span class="name">fsd:Determination</span><span class="label">Cinneadh</span>
           <div class="desc">Written act: acceptance / rejection-with-reasons / referral-with-legal-basis. Silence, acknowledgement, sufficiency assertion excluded by s.3(3). <b>owl:disjointWith NonDetermination.</b></div></div>
@@ -293,7 +311,7 @@
           <div class="desc">No determination within the s.3(1) period — established regardless of conduct form (silence / ack / sufficiency / amnesia).</div></div>
       </div>
 
-      <div class="group t-deckledim">
+      <div class="group t-deckledim" id="prohibited-practice-classes">
         <div class="group-head"><span>4.4 PROHIBITED PRACTICES</span><span class="ref">Pts II–III</span></div>
         <div class="cls"><span class="name">fsd:ProhibitedPractice</span><span class="label">Cleachtas Toirmiscthe</span>
           <div class="desc">Superclass of five prohibited acts. Each is categorically wrong, not a lesser determination — none can satisfy the s.3 duty.</div></div>
@@ -309,7 +327,7 @@
           <div class="desc">Determination issued by a body lacking CA designation, relying on another non-CA body's conclusions. Instance: <i>DOD-MO-01201-2025, 4 Feb 2026.</i> s.8A.</div></div>
       </div>
 
-      <div class="group t-quire">
+      <div class="group t-quire" id="structural-condition-classes">
         <div class="group-head"><span>4.5 STRUCTURAL CONDITIONS</span><span class="ref">s.2A</span></div>
         <div class="cls"><span class="name">fsd:StructuralCondition</span><span class="label">Coinníoll Struchtúrach</span>
           <div class="desc">Systemic capacity failure. Four types defined by s.2A — mutually reinforcing, not mutually exclusive.</div></div>
@@ -323,7 +341,7 @@
           <div class="desc">Acute StructuralDisplacement: no body holds full competence <b>and</b> no mechanism assembles the parts. Identifies the level of intervention (legislative/executive) required. s.2A(1A).</div></div>
       </div>
 
-      <div class="group t-aqua">
+      <div class="group t-aqua" id="loop-architecture-classes">
         <div class="group-head"><span>4.6 LOOP ARCHITECTURE</span><span class="ref">Part VI</span></div>
         <div class="cls"><span class="name">fsd:NullificationLoop</span><span class="label">Lúba Neamhnithe</span>
           <div class="desc">5-stage attractor, personnel-independent: <b>Acknowledgement → Deferral → Remit Displacement → Sufficiency Assertion → Record Suppression.</b> Output invariant: no determination.</div></div>
@@ -341,7 +359,7 @@
   </div>
 
   <!-- 5–6. PROPERTIES -->
-  <div class="section">
+  <div class="section" id="object-properties">
     <div class="nz-eyebrow">§5–6 · Object &amp; Data Properties</div>
     <div class="nz-title">The relations that bind the classes</div>
     <div class="props-wrap">
@@ -378,7 +396,7 @@
   </div>
 
   <!-- 7. SWRL RULES -->
-  <div class="section">
+  <div class="section" id="swrl-rules">
     <div class="nz-eyebrow">§7 · SWRL Rules</div>
     <div class="nz-title">Loop condition logic</div>
     <div class="rules">
@@ -434,7 +452,7 @@
   </div>
 
   <!-- 8. ALIGNMENT TABLE -->
-  <div class="section">
+  <div class="section" id="framework-alignment">
     <div class="nz-eyebrow">§8 · European Framework Alignment</div>
     <div class="nz-title">Where the bill's concepts already have a European home</div>
     <div class="nz-sub">Blank cells = genuine ontological contributions — no equivalent exists in prior European legal ontologies.</div>
@@ -461,7 +479,7 @@
   </div>
 
   <!-- FOOTER TRIO -->
-  <div class="section">
+  <div class="section" id="linked-data">
     <div class="nz-eyebrow">§9–11 · EIF Layers · SKOS Lexicon · Linked Data</div>
     <div class="nz-title">Interoperability, vocabulary, integration</div>
     <div class="trio">
@@ -498,7 +516,7 @@
   </div>
 
   <!-- §12 GOVERNANCE / RECORD -->
-  <div class="section">
+  <div class="section" id="governance-record">
     <div class="nz-eyebrow">§12 · Governance Note &amp; Record Instantiation</div>
     <div class="nz-title">Applied to the existing record</div>
     <div class="nz-sub">Pre-enactment status: the ontology is a <b>semantic specification</b>; the SWRL rules are <b>testable hypotheses</b>; the SKOS scheme is the canonical vocabulary for PETI / Ombudsman / CJEU filings.</div>

@@ -1,7 +1,7 @@
 # Atom build status
 
 - **Status:** SUCCESS
-- **Generated (UTC):** 2026-09-28T21:18:59Z
+- **Generated (UTC):** 2026-09-28T23:58:47Z
 - **Trigger/reference:** content fingerprints since previous build
 - **Build mode:** incremental sync
 - **Manifest:** `atom-build-manifest.json`
@@ -21,27 +21,19 @@
 
 ## Changed inputs
 
-- `M` `README.md`
+- `M` `fsd-ontology.html`
 
 ## Changed build controls
 
-- `M` `.github/workflows/pages.yml`
-- `A` `ATOM-BUILD.md`
-- `M` `CLAUDE.md`
-- `A` `atom-build-manifest.json`
-- `A` `build-atoms.sh`
-- `A` `requirements-build.txt`
-- `M` `scrape-atoms.py`
-- `A` `sync-atoms.sh`
-- `A` `tests/test_scrape_atoms.py`
+- No build-control changes detected.
 
 ## Synchronized inputs
 
-- No input content changes detected.
+- `M` `fsd-ontology.html`
 
 ## Manual atomization/review queue
 
-- No changed non-index inputs detected.
+- `M` `fsd-ontology.html`
 
 ## Expanded manifest inventory
 
