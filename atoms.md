@@ -3287,6 +3287,117 @@ _source: FSD-Ontology-2026.md — Public Body (term occurrence only; not a class
 _source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
 
 
+## ontology-relations.html
+
+**[TERM]** fsd:Submission
+> AdministrativeProcess → Submission
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Non-processing of a formally received submission.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:NullificationLoop
+> The initiating operator of the Nullification Loop.
+_source: FSD-Ontology-2026.md — Nullification Loop (term occurrence only; not a classification)_
+
+**[TERM]** fsd:SilenceVeto
+> Each of the five Silence Veto events in the record (OEP 2006, Irish Aid 2009, five-department silence September 2024, JCEUA October 2025, McEntee February 2026) is an instance of this relation.
+_source: FSD-Ontology-2026.md — Silence Veto (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> Determination classes
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Submission/body properties
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> The Loop's diagnostic property: the same output — acknowledgement-without-determination — is produced across six Taoisigh, four governments, and multiple institutional restructurings.
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:RemitDisplacement
+> Remit displacement
+_source: FSD-Ontology-2026.md — Remit Displacement (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> A failure mode activates a legally cognisable condition: maladministration, breach of the duty to give reasons, irrationality, or a reviewable determination.
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> Four Article 41 CFR guarantees are violated independently on the face of the record: impartial timely handling (twenty years eliminates 'reasonable time' entirely); the right to be heard before any adverse measure (the Section 8(3) determination without hearing); the right of access to one's file (JCEUA deletion); and the obligation to give reasons (zero in twenty years).
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Instrument · Submission · Collection → LegalInstrument · Record · Document
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> An instrument or submission is derived from a prior document — it draws its legal grounding, factual basis, or analytical content from that source.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> submission corpus, the Nullification Record, the McEntee Foreclosure, the Gunn Letter, the Memorandum to Government, and the operative case authorities O'Keeffe and Meadows — all simultaneously.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Document · Submission · Instrument → Person · Minister
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> A document, submission, or instrument is attributed to the named person who authored, issued, or bears named responsibility for it.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Bundle · Collection → Instrument · Submission · Record · Hypothesis · EscalationTrack
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> Used where the association is documented but the specific causal role requires further determination — the primary context for Hypothesis B analysis.
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:CompetentAuthority
+> The competent authority transfer was informed by (but did not discharge) the Nullification Record.
+_source: FSD-Ontology-2026.md — Competent Authority (term occurrence only; not a classification)_
+
+**[TERM]** fsd:NullificationLoop
+> informedBy ⊑ prov:wasInformedBy · establishes sequencing · compounds the Nullification Loop
+_source: FSD-Ontology-2026.md — Nullification Loop (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> The Null Determination of 2006–2025 is the determination that was legally required but never generated.
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Under Charter Article IV (deemed acceptance doctrine), the absence of a determination within the defined period — with no lawful account of inapplicability — creates a rebuttable presumption that the submission is accepted for the purpose of establishing a reviewable duty to evaluate.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> Under Charter Article IV (deemed acceptance doctrine), the absence of a determination within the defined period — with no lawful account of inapplicability — creates a rebuttable presumption that the submission is accepted for the purpose of establishing a reviewable duty to evaluate.
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Determination
+> Determination classes
+_source: FSD-Ontology-2026.md — Determination (term occurrence only; not a classification)_
+
+**[TERM]** fsd:NullificationLoop
+> The OWL object properties encode the primary causal chain of the Nullification Loop:
+_source: FSD-Ontology-2026.md — Nullification Loop (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Submission
+> Together, the fourteen relations cover every directional mechanism in the Lúba Neamhnithe graph above: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026.
+_source: FSD-Ontology-2026.md — Submission (term occurrence only; not a classification)_
+
+**[TERM]** fsd:Ombudsman
+> Together, the fourteen relations cover every directional mechanism in the Lúba Neamhnithe graph above: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026.
+_source: FSD-Ontology-2026.md — Ombudsman (term occurrence only; not a classification)_
+
+**[TERM]** fsd:SilenceVeto
+> Together, the fourteen relations cover every directional mechanism in the Lúba Neamhnithe graph above: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026.
+_source: FSD-Ontology-2026.md — Silence Veto (term occurrence only; not a classification)_
+
+
 ## posiwid/index.html
 
 **[FSD_PANEL]**

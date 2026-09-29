@@ -1,6 +1,6 @@
 {
   "status": "SUCCESS",
-  "generated_at_utc": "2026-09-28T23:58:47Z",
+  "generated_at_utc": "2026-09-29T00:07:14Z",
   "trigger": "content fingerprints since previous build",
   "build_mode": "sync",
   "full_rebuild": false,
@@ -50,6 +50,7 @@
     "gov-ref-rubric.md",
     "index.html",
     "knowledge-reserve-duty-to-determine.md",
+    "ontology-relations.html",
     "pdf-links.txt",
     "png-links.txt",
     "posiwid/index.html",
@@ -67,26 +68,26 @@
     "synthesis/index.html",
     "synthesis/system-analysis.md"
   ],
-  "discovered_input_count": 60,
+  "discovered_input_count": 61,
   "changed_inputs": [
     {
-      "status": "M",
-      "path": "fsd-ontology.html",
+      "status": "A",
+      "path": "ontology-relations.html",
       "scope": "input"
     }
   ],
   "changed_build_controls": [],
   "synchronized_inputs": [
     {
-      "status": "M",
-      "path": "fsd-ontology.html",
+      "status": "A",
+      "path": "ontology-relations.html",
       "scope": "input"
     }
   ],
   "manual_review_required": [
     {
-      "status": "M",
-      "path": "fsd-ontology.html",
+      "status": "A",
+      "path": "ontology-relations.html",
       "scope": "input"
     }
   ],
@@ -136,6 +137,7 @@
       "gov-ref-rubric.md": "89224ed8261d95552d663e0b28b75be64a73ca09db82cbf7bd5c79507d16b432",
       "index.html": "7d9edc122cd665a00fe84d921a7fe3cd201d6ca92723f99944da346eb60aa396",
       "knowledge-reserve-duty-to-determine.md": "965126b7ee88ffe7c9f4bd975911b811b7b426b75140e6099ded1956d343eb21",
+      "ontology-relations.html": "54d8d68513367a23a585dd5c086c1d38043ebb77bbedfd1d3b8145ae16b18396",
       "pdf-links.txt": "09f14903c38b9a2b7c8f3411a385707b50b51dde8d4611fcca08c9cc58d13e6f",
       "png-links.txt": "22429f034c6cf15aa4543c8fb149a3cf52c36a030904cd30060b4f73e7087cb7",
       "posiwid/index.html": "f4d96c26a82849abd3fd1988d763d231b768a9269c47a1d0a40be88fe65a9466",
@@ -195,6 +197,7 @@
       "fsd-ontology.html",
       "gov-ref-rubric.md",
       "knowledge-reserve-duty-to-determine.md",
+      "ontology-relations.html",
       "report.html"
     ],
     "parser_contract_sha256": {
@@ -202,7 +205,7 @@
       "scrape-atoms.py": "a738eda56d0932a460b71ddcf35e15172d0217b0ba38bad78dd2f5731a625bae",
       "FSD-Ontology-2026.md": "1c3043b1b7d044810cec07c951953f27b5344eb807bdfe3da5fc11ba7b148c50"
     },
-    "atom_export_sha256": "274790a2d09a3de384a084d954d0d5d59ab665ddc7ad4275ce8913f9557d41f9"
+    "atom_export_sha256": "3eef244ec12d5d0a0a4f9d4ce15a4b7471541f9f29b56d9ddc6e037f91353ba7"
   },
   "parser_inputs": {
     "structured_html_atoms": [
@@ -247,6 +250,7 @@
       "fsd-ontology.html",
       "gov-ref-rubric.md",
       "knowledge-reserve-duty-to-determine.md",
+      "ontology-relations.html",
       "report.html"
     ]
   },
@@ -257,9 +261,9 @@
     "INT": 29,
     "HYP": 3,
     "INF": 3,
-    "TERM": 900
+    "TERM": 927
   },
-  "total_records": 1041,
+  "total_records": 1068,
   "outputs": [
     "atoms.json",
     "atoms.csv",

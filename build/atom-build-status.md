@@ -1,12 +1,12 @@
 # Atom build status
 
 - **Status:** SUCCESS
-- **Generated (UTC):** 2026-09-28T23:58:47Z
+- **Generated (UTC):** 2026-09-29T00:07:14Z
 - **Trigger/reference:** content fingerprints since previous build
 - **Build mode:** incremental sync
 - **Manifest:** `atom-build-manifest.json`
-- **Discovered inputs:** 60
-- **Output records:** 1041
+- **Discovered inputs:** 61
+- **Output records:** 1068
 - **Generated files:** `atoms.json`, `atoms.csv`, `atoms.md`, `build/atom-build-status.md`, `build/atom-build-status.json`
 
 ## Record counts by type
@@ -17,11 +17,11 @@
 - `INF`: 3
 - `INT`: 29
 - `OBS`: 39
-- `TERM`: 900
+- `TERM`: 927
 
 ## Changed inputs
 
-- `M` `fsd-ontology.html`
+- `A` `ontology-relations.html`
 
 ## Changed build controls
 
@@ -29,11 +29,11 @@
 
 ## Synchronized inputs
 
-- `M` `fsd-ontology.html`
+- `A` `ontology-relations.html`
 
 ## Manual atomization/review queue
 
-- `M` `fsd-ontology.html`
+- `A` `ontology-relations.html`
 
 ## Expanded manifest inventory
 
@@ -81,6 +81,7 @@
 - `gov-ref-rubric.md`
 - `index.html`
 - `knowledge-reserve-duty-to-determine.md`
+- `ontology-relations.html`
 - `pdf-links.txt`
 - `png-links.txt`
 - `posiwid/index.html`

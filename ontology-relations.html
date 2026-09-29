@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<!-- Local reference copy of https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html
+     Retrieved 2026-09-29. Original descriptive content is retained; local additions are
+     the provenance notice and navigational links to the post-hoc FSD ontology. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ontology Relations · OWL Layer · Meinhardt Initiative</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="Ontology Relations — the nullifications. How the Meinhardt Initiative addresses the territory." />
+<meta property="og:title" content="Meinhardt Initiative · Ontology Relations · Interregnum Nullificans" />
+<meta property="og:description" content="Ontology Relations — Nullification Map — Nullication loops, disregulation, phainocratic placement within the territory." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html" />
+<meta property="og:site_name" content="Deontological Differences — the ontology of dissemination." />
+<meta property="og:image" content="https://dr-bosch.github.io/redundancy-awareness/og-image-territory.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ontology Relations" />
+<meta name="twitter:description" content="Nullification as territory." />
+<meta name="twitter:image" content="https://dr-bosch.github.io/redundancy-awareness/og-image-territory.jpg" />
+
+<style>
+:root {
+  --ink:#0c0b09;
+  --surface:#141210;
+  --surface2:#1c1a17;
+  --parchment:#e8e3d4;
+  --parchment-dim:#9e9887;
+  --purple:#8b83e8;
+  --purple-dark:#534ab7;
+  --green:#2fb882;
+  --green-bg:#0d1f1a;
+  --blue:#4a9fe0;
+  --blue-bg:#0c1929;
+  --amber:#c9a84c;
+  --amber-bg:#1e1509;
+  --rule:rgba(232,227,212,0.12);
+
+  /* semantic map theme tokens — mapped to our dark parchment palette */
+  --font-sans: 'IBM Plex Mono', monospace;
+  --border-radius-lg: 6px;
+  --border-radius-md: 4px;
+  --color-border-tertiary: rgba(232,227,212,0.10);
+  --color-border-secondary: rgba(232,227,212,0.18);
+  --color-border-primary: rgba(139,131,232,0.55);
+  --color-background-primary: #1c1a17;
+  --color-background-secondary: #141210;
+  --color-text-primary: #e8e3d4;
+  --color-text-secondary: #9e9887;
+  --color-text-tertiary: #6a6859;
+  --color-background-success: #0d1f1a;
+  --color-text-success: #2fb882;
+  --color-background-danger: #2a0a0a;
+  --color-text-danger: #e24b4a;
+  --color-background-warning: #1e1509;
+  --color-text-warning: #c9a84c;
+  --color-background-info: #0c1929;
+  --color-text-info: #4a9fe0;
+}
+
+/* ── Cluster nav ── */
+.cluster-nav {
+  background:rgba(26,24,48,0.6);
+  border-bottom:1px solid rgba(139,131,232,0.2);
+  padding:8px 32px;
+  display:flex; align-items:center; gap:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
+  flex-wrap:wrap;
+}
+.cluster-nav-label { color:rgba(139,131,232,0.45); margin-right:18px; white-space:nowrap; }
+.cluster-nav-sep { color:rgba(158,152,135,0.3); margin:0 10px; }
+.cluster-nav a { color:#9e9887; text-decoration:none; padding:2px 0;
+  border-bottom:1px solid transparent; transition:color 0.15s, border-color 0.15s; }
+.cluster-nav a:hover { color:#e8e3d4; border-bottom-color:#9e9887; }
+.cluster-nav .current { color:var(--purple); border-bottom:1px solid #534ab7; cursor:default; }
+
+body {
+  margin:0;
+  background:var(--ink);
+  color:var(--parchment);
+  font-family:'Cormorant Garamond', serif;
+}
+
+.container {
+  max-width:960px;
+  margin:0 auto;
+  padding:56px 32px;
+}
+
+.nav {
+  margin-bottom:28px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+}
+
+.nav a {
+  color:var(--parchment-dim);
+  text-decoration:none;
+  margin-right:18px;
+}
+
+.nav a:hover { color:var(--parchment); }
+
+h1 {
+  font-weight:300;
+  font-size:56px;
+  margin-bottom:8px;
+}
+
+.subtitle {
+  font-style:italic;
+  color:var(--parchment-dim);
+  margin-bottom:40px;
+  max-width:680px;
+}
+
+.section-label {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--parchment-dim);
+  margin-bottom:18px;
+}
+
+.relation {
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--purple);
+  border-radius:4px;
+  padding:20px 22px;
+  margin-bottom:18px;
+}
+
+.rel-name {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  color:var(--purple);
+  margin-bottom:6px;
+}
+
+.rel-signature {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  color:var(--amber);
+  margin-bottom:10px;
+}
+
+.rel-body {
+  font-family:'EB Garamond', serif;
+  font-size:16px;
+  line-height:1.65;
+}
+
+.rel-axiom {
+  margin-top:10px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--green);
+}
+
+.cross-links {
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.cross-group {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+.cross-label {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:var(--parchment-dim);
+  text-transform:uppercase;
+  min-width:75px;
+}
+
+.cross-link {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  text-decoration:none;
+  padding:3px 8px;
+  border-radius:3px;
+  border:1px solid;
+}
+
+.instance {
+  color:var(--green);
+  border-color:#0f6e56;
+  background:var(--green-bg);
+}
+
+.evidence {
+  color:var(--blue);
+  border-color:#185fa5;
+  background:var(--blue-bg);
+}
+
+.graph {
+  color:var(--amber);
+  border-color:#854f0b;
+  background:var(--amber-bg);
+}
+
+.fsd-reference {
+  color:var(--purple);
+  border-color:var(--purple-dark);
+  background:rgba(83,74,183,0.12);
+}
+
+.cross-link:hover { opacity:0.85; }
+
+.local-copy-note {
+  margin-bottom:22px;
+  padding:10px 14px;
+  border:1px solid var(--rule);
+  border-left:3px solid var(--purple);
+  color:var(--parchment-dim);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  line-height:1.6;
+}
+
+.local-copy-note a {
+  color:var(--purple);
+}
+
+.interpretive {
+  background:var(--surface2);
+  border-left:3px solid var(--purple);
+}
+
+/* ── Semantic map section wrapper ── */
+.graph-section {
+  margin:48px 0;
+}
+
+.graph-section .section-label {
+  margin-bottom:14px;
+}
+
+.graph-caption {
+  font-family:'EB Garamond', serif;
+  font-size:15px;
+  color:var(--parchment-dim);
+  font-style:italic;
+  margin-bottom:20px;
+  line-height:1.55;
+}
+
+.graph-frame {
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  overflow:hidden;
+}
+
+/* ── Semantic map internals ── */
+.graph-frame * { box-sizing:border-box; }
+
+#app {
+  display:flex;
+  height:680px;
+  gap:0;
+}
+
+#sidebar {
+  width:220px;
+  min-width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:10px;
+  border-right:0.5px solid var(--color-border-tertiary);
+  overflow-y:auto;
+}
+
+#graph-area {
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+svg#g {
+  width:100%;
+  height:100%;
+  cursor:grab;
+}
+
+svg#g:active { cursor:grabbing; }
+
+.link { fill:none; stroke-opacity:0.45; stroke-width:1.2; }
+.link.highlighted { stroke-opacity:1; stroke-width:2; }
+.link.dimmed { stroke-opacity:0.06; }
+
+.node circle { stroke-width:1.5; transition:r 0.15s; }
+.node text {
+  font-size:10px;
+  fill:var(--color-text-secondary);
+  pointer-events:none;
+  user-select:none;
+}
+.node.highlighted circle { stroke-width:3; }
+.node.dimmed { opacity:0.1; }
+
+#detail {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  max-width:360px;
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-secondary);
+  border-radius:var(--border-radius-lg);
+  padding:12px 14px;
+  font-size:12px;
+  display:none;
+  pointer-events:none;
+  font-family:'IBM Plex Mono', monospace;
+}
+
+#detail h3 {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:4px;
+  line-height:1.3;
+}
+
+#detail .dtype {
+  font-size:10px;
+  color:var(--color-text-tertiary);
+  margin-bottom:6px;
+}
+
+#detail .dcomment {
+  color:var(--color-text-secondary);
+  line-height:1.5;
+  margin-bottom:4px;
+}
+
+#detail .dstatus {
+  font-size:10px;
+  padding:3px 7px;
+  border-radius:4px;
+  display:inline-block;
+}
+
+.status-strong  { background:var(--color-background-success); color:var(--color-text-success); }
+.status-risk    { background:var(--color-background-danger);  color:var(--color-text-danger); }
+.status-partial { background:var(--color-background-warning); color:var(--color-text-warning); }
+.status-needs   { background:var(--color-background-warning); color:var(--color-text-warning); }
+.status-ready   { background:var(--color-background-info);    color:var(--color-text-info); }
+.status-pending { background:var(--color-background-secondary); color:var(--color-text-secondary); }
+
+#search {
+  width:100%;
+  padding:5px 8px;
+  font-size:12px;
+  border:0.5px solid var(--color-border-secondary);
+  border-radius:var(--border-radius-md);
+  background:var(--color-background-secondary);
+  color:var(--color-text-primary);
+  font-family:'IBM Plex Mono', monospace;
+}
+
+#search:focus { outline:none; border-color:var(--color-border-primary); }
+
+.filter-label {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  font-weight:500;
+  color:var(--color-text-secondary);
+  margin-top:4px;
+}
+
+.filter-item {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:3px 0;
+  cursor:pointer;
+  font-size:11px;
+  font-family:'IBM Plex Mono', monospace;
+  color:var(--color-text-primary);
+}
+
+.filter-item input { cursor:pointer; }
+
+.dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+
+#edge-legend {
+  margin-top:6px;
+  border-top:0.5px solid var(--color-border-tertiary);
+  padding-top:8px;
+}
+
+.edge-item {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+  font-family:'IBM Plex Mono', monospace;
+  color:var(--color-text-secondary);
+  padding:2px 0;
+}
+
+.edge-line { height:2px; width:18px; border-radius:1px; }
+
+#ctrl { display:flex; gap:4px; margin-bottom:2px; }
+
+button.tb {
+  font-size:10px;
+  padding:3px 7px;
+  border:0.5px solid var(--color-border-secondary);
+  border-radius:var(--border-radius-md);
+  background:var(--color-background-secondary);
+  color:var(--color-text-secondary);
+  cursor:pointer;
+  font-family:'IBM Plex Mono', monospace;
+}
+
+button.tb:hover { background:var(--color-background-primary); color:var(--color-text-primary); }
+
+#tooltip {
+  position:absolute;
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-secondary);
+  border-radius:6px;
+  padding:5px 9px;
+  font-size:11px;
+  font-family:'IBM Plex Mono', monospace;
+  color:var(--color-text-primary);
+  pointer-events:none;
+  display:none;
+  max-width:200px;
+  line-height:1.4;
+  z-index:10;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="cluster-nav">
+  <span class="cluster-nav-label">Ontology layer · 4 pages</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences#graph">Graph</a>
+  <span class="cluster-nav-sep">·</span>
+  <span class="current">Relations</span>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html">FSD Ontology</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map">Semantic Map</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/sitemap#site-link-map">Sitemap</a>
+</nav>
+
+<div class="container">
+
+<div class="local-copy-note">
+  <strong>Local reference copy · retrieved 29 September 2026.</strong>
+  Source: <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html">published Ontology Relations page</a>.
+  This copy retains its source content and adds navigation to the <a href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html">FSD ontology reference</a>.
+  The cross-links are navigational context, not assertions that the two ontologies define equivalent terms or relations.
+</div>
+
+<h1>Ontology Relations</h1>
+<div class="subtitle">
+  Object properties of the OWL 2 ontology and provenance relations of the <em>Interregnum Nullificans</em> corpus — causal operators and evidentiary links connecting actors, instruments, failure modes, and escalation tracks. These are not labels. They are directional mechanisms, each grounded in a named act or omission on the record.
+</div>
+
+<!-- ═══════════════════════════════════════════
+     INTERACTIVE SEMANTIC MAP
+═══════════════════════════════════════════ -->
+
+<div class="graph-section">
+  <div class="section-label">Lúba Neamhnithe — Nullification Territory</div>
+  <p class="graph-caption">
+    Force-directed provenance graph of the <em>Interregnum Nullificans</em> corpus — Interregnum Nullficans, 2006–2026.
+    Each node is an actor, instrument, failure mode, escalation track, or hypothesis drawn from the Tairiscint Mheinhardt.
+    Each edge is a directional relation defined in the register below.
+    Click any node to highlight its connections · drag to reposition · scroll to zoom · filter by type in the sidebar.
+  </p>
+
+  <div class="graph-frame">
+    <div id="app">
+      <div id="sidebar">
+        <input id="search" placeholder="Search nodes…" autocomplete="off"/>
+        <div id="ctrl">
+          <button class="tb" onclick="resetView()">reset</button>
+          <button class="tb" onclick="toggleLabels()">labels</button>
+          <button class="tb" onclick="clearSel()">clear</button>
+        </div>
+        <div class="filter-label">filter by type</div>
+        <div id="filters"></div>
+        <div id="edge-legend">
+          <div class="filter-label">relations</div>
+          <div id="edge-items"></div>
+        </div>
+      </div>
+      <div id="graph-area">
+        <svg id="g"></svg>
+        <div id="detail"></div>
+        <div id="tooltip"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     OWL OBJECT PROPERTIES
+═══════════════════════════════════════════ -->
+
+<div class="section-label">OWL Object Properties · Causal Operators</div>
+
+<!-- ignores -->
+<div id="ignores" class="relation">
+  <div class="rel-name">:ignores</div>
+  <div class="rel-signature">AdministrativeProcess → Submission</div>
+  <div class="rel-body">
+    Non-processing of a formally received submission. Not absence of receipt — failure to act despite acknowledgement. The initiating operator of the Nullification Loop. Each of the five Silence Veto events in the record (OEP 2006, Irish Aid 2009, five-department silence September 2024, JCEUA October 2025, McEntee February 2026) is an instance of this relation.
+  </div>
+  <div class="rel-axiom">ignores ⊑ producesFailure NullificationLoop · Charter Arts. I–II · Re Haughey [1971] IR 217</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure">Acknowledgement as closure</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination">Deferral without destination</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Tánaiste Enquiry 2024–25</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · McEnteeForeclosureActivity · GunnLetterActivity</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#determination-classes">Determination classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Submission/body properties</a>
+    </div>
+  </div>
+</div>
+
+<!-- suppresses -->
+<div id="suppresses" class="relation">
+  <div class="rel-name">:suppresses</div>
+  <div class="rel-signature">Actor → CivicSignal</div>
+  <div class="rel-body">
+    Attenuation of a civic signal such that it fails to propagate through institutional channels. Distinguished from <em>ignores</em> in that suppression involves active institutional management of the record — including deletion. The JCEUA's deletion of formally received correspondence in October 2025 is the most acute instance: not a failure to forward, but destruction of the forwarded record.
+  </div>
+  <div class="rel-axiom">suppresses ⊑ documents DesignedForgetting · Art. 41 CFR (right of access to file) · Charter Art. VI</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#record-suppression">Record suppression</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://github.com/dr-wojak/press" target="_blank">Press Archive</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">JCEUA · NullificationRecord · Feb4thForeclosure</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#prohibited-practice-classes">Prohibited-practice classes</a>
+    </div>
+  </div>
+</div>
+
+<!-- producesFailure -->
+<div id="produces-failure" class="relation">
+  <div class="rel-name">:producesFailure</div>
+  <div class="rel-signature">Process → FailureMode</div>
+  <div class="rel-body">
+    Links an administrative or governmental process to the failure mode it systematically generates. The Loop's diagnostic property: the same output — acknowledgement-without-determination — is produced across six Taoisigh, four governments, and multiple institutional restructurings. Personnel-independence is what distinguishes a failure mode from an individual lapse.
+  </div>
+  <div class="rel-axiom">producesFailure ⊑ triggers Maladministration · O'Keeffe [1993] 1 IR 39 · Charter Arts. I–VI</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#remit-displacement">Remit displacement</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit">Sufficiency without audit</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Formal Complaint · 226 pages</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · OEPAdequacyResponse · McEnteeForeclosureActivity</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#structural-condition-classes">Structural-condition classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#loop-architecture-classes">Loop architecture</a>
+    </div>
+  </div>
+</div>
+
+<!-- triggers -->
+<div id="triggers" class="relation">
+  <div class="rel-name">:triggers</div>
+  <div class="rel-signature">FailureMode → LegalCondition</div>
+  <div class="rel-body">
+    A failure mode activates a legally cognisable condition: maladministration, breach of the duty to give reasons, irrationality, or a reviewable determination. The McEntee Foreclosure of 4 February 2026 is an instance: it converts the Loop's output into a named, dated, reviewable act — the handle by which Order 84 RSC is engaged.
+  </div>
+  <div class="rel-axiom">triggers ⊑ enables judicial review · Order 84 RSC · Meadows [2010] 2 IR 701 · Charter Art. IX</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination">Deferral without destination</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">McEntee Foreclosure · DOD-MO-01201-2025</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · HighCourtTrack · CJEUTrack</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#swrl-rules">SWRL rule logic</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#loop-architecture-classes">Loop-condition classes</a>
+    </div>
+  </div>
+</div>
+
+<!-- violates -->
+<div id="violates" class="relation">
+  <div class="rel-name">:violates</div>
+  <div class="rel-signature">Process → Right</div>
+  <div class="rel-body">
+    Breach of a protected procedural or fundamental right arising from institutional conduct. Four Article 41 CFR guarantees are violated independently on the face of the record: impartial timely handling (twenty years eliminates 'reasonable time' entirely); the right to be heard before any adverse measure (the Section 8(3) determination without hearing); the right of access to one's file (JCEUA deletion); and the obligation to give reasons (zero in twenty years).
+  </div>
+  <div class="rel-axiom">violates ⊑ grounds certiorari / mandamus · Art. 41 CFR · Art. 40.3 Bunreacht · Charter Arts. I, IV, VI, IX</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure">Acknowledgement as closure</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://github.com/dr-wojak/legal" target="_blank">Legal Repo</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · TairiscintMheinhardt · HighCourtTrack</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#prohibited-practice-classes">Prohibited-practice classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#framework-alignment">Framework alignment</a>
+    </div>
+  </div>
+</div>
+
+<!-- amplifies -->
+<div id="amplifies" class="relation">
+  <div class="rel-name">:amplifies</div>
+  <div class="rel-signature">Campaign → CivicSignal</div>
+  <div class="rel-body">
+    A campaign node converts the evidentiary record into a public signal, distributing it across dissemination channels so that institutional silence can no longer serve as a record-management strategy. Amplification creates the public indexing that generates timestamped accountability — each GitHub repository in the corpus constitutes a permanent, CC0-licensed entry in the public record.
+  </div>
+  <div class="rel-axiom">amplifies ⊑ creates TimestampedPublicRecord · Protected Disclosures Act 2014 · Charter Art. IX</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">nullification-loops</a>
+      <a class="cross-link instance" href="https://github.com/dr-wojak/press">press</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://dr-bosch.github.io/nullification-loops/" >Main Record</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">nullification-loops · start-here · public-relations · press · econ · governmentality-2025 · redundancy-awareness</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PROVENANCE RELATIONS (from semantic map)
+═══════════════════════════════════════════ -->
+
+<div class="section-label" style="margin-top:48px">Provenance Relations · Semantic Map Edges</div>
+
+<!-- derived from -->
+<div id="derived-from" class="relation">
+  <div class="rel-name">:derivedFrom</div>
+  <div class="rel-signature">Instrument · Submission · Collection → LegalInstrument · Record · Document</div>
+  <div class="rel-body">
+    An instrument or submission is derived from a prior document — it draws its legal grounding, factual basis, or analytical content from that source. The Tairiscint Mheinhardt v10 is derived from the O.R. submission corpus, the Nullification Record, the McEntee Foreclosure, the Gunn Letter, the Memorandum to Government, and the operative case authorities O'Keeffe and Meadows — all simultaneously. Derivation is the provenance chain that makes each instrument's grounds independently verifiable.
+  </div>
+  <div class="rel-axiom">derivedFrom ⊑ prov:wasDerivedFrom · establishes traceability · Charter Art. III (information fiduciary)</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">TairiscintMheinhardt ← ORCorpus</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">DualUseTimeline ← ForfasReport · EUReg2021/821</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Tairiscint Mheinhardt v10</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">TairiscintMheinhardt → ORCorpus, NullificationRecord, Feb4thForeclosure, GunnLetter, Memorandum, O'Keeffe, Meadows, EUReg2021/821</a>
+    </div>
+  </div>
+</div>
+
+<!-- used -->
+<div id="used" class="relation">
+  <div class="rel-name">:used</div>
+  <div class="rel-signature">Activity · EscalationTrack → Instrument · Record · LegalInstrument</div>
+  <div class="rel-body">
+    An activity or escalation track uses a document as operative input — deploying it, relying on it, or building from it without the derivation chain that would make a new instrument. Where an escalation track uses the Tairiscint, the Tairiscint's own derivation chain is thereby incorporated by reference into that track's evidentiary base. The High Court track uses the McEntee Foreclosure as its certiorari target, the Gunn Letter as an independent target, and the Tairiscint as the operative instrument.
+  </div>
+  <div class="rel-axiom">used ⊑ prov:used · activates operative instrument · Order 84 RSC</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">HighCourtTrack ← TairiscintMheinhardt · Feb4thForeclosure · GunnLetter</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">CJEUTrack ← TairiscintMheinhardt · EUReg2021/821</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Formal Complaint</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">HighCourtTrack · CJEUTrack · OmbudsmanComplaint · TairiscintDraftingActivity</a>
+    </div>
+  </div>
+</div>
+
+<!-- attributed to -->
+<div id="attributed-to" class="relation">
+  <div class="rel-name">:attributedTo</div>
+  <div class="rel-signature">Document · Submission · Instrument → Person · Minister</div>
+  <div class="rel-body">
+    A document, submission, or instrument is attributed to the named person who authored, issued, or bears named responsibility for it. Attribution is legally operative: it is what converts an institutional act into a reviewable act by a named decision-maker, and it is what activates the misfeasance analysis under Hypothesis B of the Tairiscint. The Martin Ballyphehane commitment of 2009 is attributed to Minister Micheál Martin; the McEntee Foreclosure is attributed to Minister Helen McEntee; the Gunn Letter to Secretary General Gunn.
+  </div>
+  <div class="rel-axiom">attributedTo ⊑ prov:wasAttributedTo · names the responsible actor · Hypothesis B · Meadows [2010]</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">Feb4thForeclosure → MinisterMcEntee</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">MartinCommitment2009 → MinisterMichaelMartin</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">GunnLetter → SecGenGunn</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Martin Foreknowledge Timeline</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · MartinCommitment · ORCorpus · TairiscintMheinhardt · InterregnumNullificansCorpus</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#institutional-classes">Institutional classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Object properties</a>
+    </div>
+  </div>
+</div>
+
+<!-- on behalf of -->
+<div id="on-behalf-of" class="relation">
+  <div class="rel-name">:onBehalfOf</div>
+  <div class="rel-signature">Person · Minister · Official → Department · Organisation</div>
+  <div class="rel-body">
+    A named individual acts in the exercise of a public function on behalf of a department or institution. This relation is the constitutional link that makes ministerial and official acts attributable to the State: it is what converts a named act into collective executive responsibility under Article 28.4.1 Bunreacht na hÉireann. Where an official acts on behalf of a department, the department's statutory obligations flow back through that link to the individual. Seventeen and a half years of unperformed obligation are distributed across this relation.
+  </div>
+  <div class="rel-axiom">onBehalfOf ⊑ prov:actedOnBehalfOf · activates Art. 28.4.1 · collective executive responsibility</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">MinisterMcEntee → DOD · DFA</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">MinisterMichaelMartin → DFA</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">PeterFinnegan → HousesOfOireachtas</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Ministerial correspondence record</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">All Minister → Department · Official → Organisation edges</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#institutional-classes">Institutional classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Object properties</a>
+    </div>
+  </div>
+</div>
+
+<!-- has member -->
+<div id="has-member" class="relation">
+  <div class="rel-name">:hasMember</div>
+  <div class="rel-signature">Bundle · Collection → Instrument · Submission · Record · Hypothesis · EscalationTrack</div>
+  <div class="rel-body">
+    The Interregnum Nullificans corpus is a bundle: a provenance-tracked collection of instruments, submissions, records, hypotheses, and escalation tracks. Each member of the bundle is independently verifiable; their collective membership constitutes the evidentiary whole from which the irrationality grounds, the mandamus grounds, and the damages claims are derived. The bundle relation is what makes the corpus legally coherent rather than merely voluminous.
+  </div>
+  <div class="rel-axiom">hasMember ⊑ prov:hadMember · constitutes the corpus · Charter Art. III · Art. 40.3 Bunreacht</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key members</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">TairiscintMheinhardt · ORCorpus · DualUseTimeline · NullificationRecord · Feb4thForeclosure · GunnLetter · Memorandum</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://dr-bosch.github.io/nullification-loops/" target="_blank">Interregnum Nullificans — public index</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">InterregnumNullificansCorpus → all member nodes</a>
+    </div>
+  </div>
+</div>
+
+<!-- generated by -->
+<div id="generated-by" class="relation">
+  <div class="rel-name">:generatedBy</div>
+  <div class="rel-signature">Instrument · Letter · Memorandum → Activity</div>
+  <div class="rel-body">
+    A document was generated by a named activity: a drafting act, a foreclosure act, a transmittal act. This is the relation that timestamps institutional conduct — it is what distinguishes a document as the output of a discrete, datable act rather than as an ambient record. The McEntee Foreclosure was generated by the McEntee Foreclosure Activity of 4 February 2026; the Gunn Letter by the Gunn Letter Activity of 24 February 2026. Both activities are reviewable under Order 84 RSC within the 12-month window.
+  </div>
+  <div class="rel-axiom">generatedBy ⊑ prov:wasGeneratedBy · timestamps the act · Order 84 RSC 12-month window · O'Keeffe [1993]</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">Feb4thForeclosure ← McEnteeForeclosureActivity (4 Feb 2026)</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">GunnLetter ← GunnLetterActivity (24 Feb 2026)</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">TairiscintMheinhardt ← TairiscintDraftingActivity</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">McEntee Foreclosure · DOD-MO-01201-2025</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · MemorandumToGovernment · TairiscintMheinhardt → their generating activities</a>
+    </div>
+  </div>
+</div>
+
+<!-- associated with -->
+<div id="associated-with" class="relation">
+  <div class="rel-name">:associatedWith</div>
+  <div class="rel-signature">Activity · FailureSpan · GovFailure → Person · Organisation · Record</div>
+  <div class="rel-body">
+    An activity, failure span, or governance failure is associated with a named actor or record without the directional attribution that :attributedTo carries. Used where the association is documented but the specific causal role requires further determination — the primary context for Hypothesis B analysis. The Martin Foreknowledge Span (2009–2026) is associated with Minister Micheál Martin across four offices; the Nullification Record is associated with the Irish Government, DFA, and DETE.
+  </div>
+  <div class="rel-axiom">associatedWith ⊑ prov:wasAssociatedWith · contextualises Hypothesis B · misfeasance threshold question</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">MartinForeknowledgeSpan ↔ MinisterMichaelMartin</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">NullificationRecord ↔ IrishGovernment · DFA · DETE</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Martin Foreknowledge Timeline · Part I</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">MartinForeknowledgeSpan · McEnteeForeclosureActivity · GunnLetterActivity · MemorandumTransmittalActivity</a>
+    </div>
+  </div>
+</div>
+
+<!-- informed by -->
+<div id="informed-by" class="relation">
+  <div class="rel-name">:informedBy</div>
+  <div class="rel-signature">Activity · Transfer → PriorActivity · Record</div>
+  <div class="rel-body">
+    An activity is informed by a prior act in the record — it draws factual or procedural context from it without the full derivation chain. This relation is what makes sequencing visible: the Gunn Letter Activity was informed by the McEntee Foreclosure Activity, meaning the Gunn Letter must be read against the foreclosure as background. The competent authority transfer was informed by (but did not discharge) the Nullification Record. The distinction between <em>informedBy</em> and <em>derivedFrom</em> is that derivation produces a new instrument; being informed by produces a contexted act.
+  </div>
+  <div class="rel-axiom">informedBy ⊑ prov:wasInformedBy · establishes sequencing · compounds the Nullification Loop</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Key instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">GunnLetterActivity ← McEnteeForeclosureActivity</a>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/">CompetentAuthorityTransfer2024 ← NullificationRecord (transfer-without-discharge)</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Part III — EU Primary Law</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph edges</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">GunnLetterActivity · MemorandumTransmittalActivity · CompetentAuthorityTransfer2024</a>
+    </div>
+  </div>
+</div>
+
+<!-- no determination -->
+<div id="no-determination" class="relation">
+  <div class="rel-name">:noDetermination</div>
+  <div class="rel-signature">NullDetermination → NullificationRecord</div>
+  <div class="rel-body">
+    The unique negative relation in the ontology: the relation whose instance is an absence. The Null Determination of 2006–2025 is the determination that was legally required but never generated. Its non-existence is the central provenance fact of the corpus. Under Charter Article IV (deemed acceptance doctrine), the absence of a determination within the defined period — with no lawful account of inapplicability — creates a rebuttable presumption that the submission is accepted for the purpose of establishing a reviewable duty to evaluate. Silence is not a neutral state. It is a legally charged non-act.
+  </div>
+  <div class="rel-axiom">noDetermination ⊑ constitutes SilenceVeto · Heaney [1994] 3 IR 593 · Charter Art. IV · Art. 41 CFR · Meadows [2010]</div>
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html">NullDetermination 2006–2025 (zero determinations across 19 years)</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Part I — Constitutional Contumacy table</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph nodes</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullDetermination2006–2025 → NullificationRecord2006–2025</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#determination-classes">Determination classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#swrl-rules">SWRL rule logic</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     INTERPRETATION
+═══════════════════════════════════════════ -->
+
+<div class="section-label" style="margin-top:48px">Interpretation · The Full Causal Chain</div>
+
+<div class="relation interpretive">
+  <div class="rel-body">
+    The OWL object properties encode the primary causal chain of the Nullification Loop:
+    <br><br>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#ignores" style="color:var(--purple);text-decoration:none;font-weight:500">:ignores</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#produces-failure" style="color:var(--purple);text-decoration:none;font-weight:500">:producesFailure</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#triggers" style="color:var(--purple);text-decoration:none;font-weight:500">:triggers</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#violates" style="color:var(--purple);text-decoration:none;font-weight:500">:violates</a>
+    <br><br>
+    The provenance relations encode the evidentiary structure that makes the causal chain legally operable:
+    <br><br>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#attributed-to" style="color:var(--amber);text-decoration:none;font-weight:500">:attributedTo</a>
+    names the responsible actor ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#on-behalf-of" style="color:var(--amber);text-decoration:none;font-weight:500">:onBehalfOf</a>
+    binds the actor to the institution ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#generated-by" style="color:var(--amber);text-decoration:none;font-weight:500">:generatedBy</a>
+    timestamps the act ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#derived-from" style="color:var(--amber);text-decoration:none;font-weight:500">:derivedFrom</a>
+    establishes the instrument's grounds ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#used" style="color:var(--amber);text-decoration:none;font-weight:500">:used</a>
+    activates the remedy track ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#informed-by" style="color:var(--amber);text-decoration:none;font-weight:500">:informedBy</a>
+    sequences the acts ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#associated-with" style="color:var(--amber);text-decoration:none;font-weight:500">:associatedWith</a>
+    contextualises the foreknowledge span ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#has-member" style="color:var(--amber);text-decoration:none;font-weight:500">:hasMember</a>
+    constitutes the corpus ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#no-determination" style="color:var(--amber);text-decoration:none;font-weight:500">:noDetermination</a>
+    is the absence at the centre of the record
+    <br><br>
+    The suppression and amplification operators complete the loop:
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#suppresses" style="color:var(--green);text-decoration:none;font-weight:500">:suppresses</a>
+    is what the institution does to the civic signal ·
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#amplifies" style="color:var(--green);text-decoration:none;font-weight:500">:amplifies</a>
+    is what the campaign does to place the record beyond institutional reach.
+    <br><br>
+    Together, the fourteen relations cover every directional mechanism in the <em>Lúba Neamhnithe</em> graph above: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026.
+    <br><br>
+    The petitioner throughout this record is <strong style="color:var(--parchment);font-weight:500">Brøek Meinhardt</strong>.
+    The instrument through which the duty to reason will be compelled is the <strong style="color:var(--parchment);font-weight:500">Tairiscint Mheinhardt</strong>.
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<footer style="max-width:960px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#9e9887;border-top:1px solid rgba(232,227,212,0.08);">
+  <div>
+    <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences#graph" style="color:#9e9887;text-decoration:none">Graph</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html" style="color:#9e9887;text-decoration:none">Failure Modes</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map" style="color:#9e9887;text-decoration:none">Semantic Map</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/nullification-loops/" style="color:#9e9887;text-decoration:none">Main Record</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/sitemap#site-link-map" style="color:#9e9887;text-decoration:none">Sitemap</a>
+  </div>
+  <div style="color:rgba(158,152,135,0.4);text-align:right">Ontology Relations · OWL Layer<br>Meinhardt Initiative · 2006–2026</div>
+</footer>
+
+<!-- D3 + semantic map logic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const RAW = {"nodes":[{"id":"BreokMeinhardt","label":"Brøek Meinhardt","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Petitioner; primary O.R. researcher; subject of the record.","auditStatus":""},{"id":"BrøekMeinhardt","label":"Brøek Meinhardt","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Petitioner; O.R. researcher; author of corpus documents.","auditStatus":""},{"id":"IrishGovernment","label":"Irish Government","color":"#5F5E5A","group":"Organisation","types":["prov:Organization"],"comment":"","auditStatus":""},{"id":"DFA","label":"Department of Foreign Affairs","color":"#5F5E5A","group":"Department","types":["im:CompetentAuthority","im:Department"],"comment":"Held mandatory consultation authority 2000–2007 and formal EU competent authority designation 2008–2024. Oireachtas confirmation: 19 January 2022 debate, Q. 80.","auditStatus":""},{"id":"DETE","label":"Department of Enterprise, Trade and Employment","color":"#5F5E5A","group":"Department","types":["im:CompetentAuthority","im:Department"],"comment":"Operated the Export Licensing Unit (ELU) throughout the record. Received formal competent authority transfer from DFA under the Control of Exports Act 2023 (commenced 22 August 2024).","auditStatus":""},{"id":"DOD","label":"Department of Defence","color":"#5F5E5A","group":"Department","types":["im:Department"],"comment":"","auditStatus":""},{"id":"HousesOfOireachtas","label":"Houses of the Oireachtas","color":"#5F5E5A","group":"Organisation","types":["prov:Organization"],"comment":"","auditStatus":""},{"id":"JCEUA","label":"Joint Committee on EU Affairs","color":"#5F5E5A","group":"Organisation","types":["prov:Organization"],"comment":"","auditStatus":""},{"id":"OEP","label":"Office of Emergency Planning","color":"#5F5E5A","group":"Organisation","types":["prov:Organization"],"comment":"","auditStatus":""},{"id":"MinisterMcEntee","label":"Minister Helen McEntee","color":"#0C447C","group":"Minister","types":["im:Minister"],"comment":"Minister for Foreign Affairs and Defence (from November 2025). Issued DOD-MO-01201-2025 (McEntee Foreclosure, 4 February 2026). Primary certiorari target under the Tairiscint Mheinhardt.","auditStatus":""},{"id":"MinisterMichaelMartin","label":"Taoiseach / Minister Micheál Martin","color":"#0C447C","group":"Minister","types":["im:Minister"],"comment":"Made written and verbal commitment to a ministerial report on the O.R. submissions at Ballyphehane, 2009. Unperformed across four successive offices through to Taoiseach (2026).","auditStatus":""},{"id":"MinisterRichmond","label":"Minister of State Neale Richmond","color":"#0C447C","group":"Minister","types":["im:Minister"],"comment":"Minister of State, DFA. Non-responsive across 3 formal letters and 6 portal submissions.","auditStatus":""},{"id":"PeterFinnegan","label":"Peter Finnegan","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Clerk of the Dáil. Issued s.8(3) determination; non-responsive since 12 December 2025.","auditStatus":""},{"id":"SecGenCallinan","label":"Secretary General Callinan","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"","auditStatus":""},{"id":"SecGenGunn","label":"Secretary General Gunn","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"","auditStatus":""},{"id":"CommissionerMcGrath","label":"EU Commissioner Michael McGrath","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Non-responsive ×3. As TD (from 2020) had prior knowledge of the submission record before assuming EU Commissioner role.","auditStatus":""},{"id":"MrMcMoreland","label":"Mr McMoreland (OEP)","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Issued OEP adequacy letter, 1 June 2025: asserted OR methods already in use. Rebuttal issued; never answered. Internal contradiction with Kelliher 2009 response unresolved.","auditStatus":""},{"id":"SenatorMcDowell","label":"Senator Michael McDowell","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"Internal parliamentary witness. Cabinet cross-notification procedure not replicated across committees: noted March 3rd, 2026.","auditStatus":""},{"id":"BarryWardTD","label":"Barry Ward TD (Cathaoirleach, JCEUA)","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"","auditStatus":""},{"id":"IvanFarmer","label":"Ivan Farmer (Clerk, JCEUA)","color":"#185FA5","group":"Person","types":["prov:Person"],"comment":"","auditStatus":""},{"id":"ForfasReport_2004","label":"Forfás Report 2004","color":"#3B6D11","group":"Source document","types":["im:PrimarySupportingDocument"],"comment":"Confirmed DFA mandatory consultation authority on sensitive dual-use applications.","auditStatus":""},{"id":"OireachtasDebate_19Jan2022","label":"Oireachtas Debate Q.80, 19 Jan 2022","color":"#3B6D11","group":"Source document","types":["im:PrimarySupportingDocument"],"comment":"Confirmed DFA as formal EU competent authority designate under Reg. 2021/821.","auditStatus":""},{"id":"ControlOfExportsAct2023","label":"Control of Exports Act 2023","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Signed 26 October 2023; commenced 22 August 2024. Transferred competent authority from DFA to DETE. No public record of handover documentation for unprocessed 2006–2024 submission record.","auditStatus":""},{"id":"EUReg_2021_821","label":"EU Regulation 2021/821","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"EU dual-use export control regulation. Art. 4 catch-all; Art. 9 competent authority.","auditStatus":""},{"id":"EUReg_428_2009","label":"EU Regulation 428/2009","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Predecessor dual-use regulation; DFA designated competent authority under same.","auditStatus":""},{"id":"ControlOfExportsOrder2000","label":"Control of Exports Order 2000","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Established DFA mandatory consultation authority on sensitive dual-use applications.","auditStatus":""},{"id":"OKeeffe_v_ABordPleanala_1993","label":"O'Keeffe v An Bord Pleanála [1993]","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Irrationality ground: three-limb test. Deployed three times in the Tairiscint Mheinhardt.","auditStatus":""},{"id":"Meadows_v_Minister_2010","label":"Meadows v Minister for Justice [2010]","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Proportionality in review of rights-engaging decisions. Cited in Tairiscint legal grounds.","auditStatus":""},{"id":"WassenaarDualUseList_Cat4","label":"Wassenaar Cat 4 (Computers) 4.E.1","color":"#3B6D11","group":"Source document","types":["im:PrimarySupportingDocument"],"comment":"O.R. methodologies situated within this classification.","auditStatus":""},{"id":"PwCIreland_2025","label":"PwC Ireland 2025","color":"#3B6D11","group":"Source document","types":["im:PrimarySupportingDocument"],"comment":"","auditStatus":""},{"id":"ORCorpus","label":"O.R. submission corpus","color":"#1D9E75","group":"Record","types":["im:CorrespondenceRecord"],"comment":"The cumulative body of O.R. submissions conveying crisis governance methodologies with recognised dual-use characteristics across civil protection, emergency planning, and national security — all four simultaneously.","auditStatus":"PARTIAL — Wassenaar 4.E.1 characterisation requires instrument-derived proof (OI-01)"},{"id":"ORSubmission_May2006","label":"First O.R. submission, May 2006","color":"#1D9E75","group":"Submission","types":["im:Submission"],"comment":"First submission received. Zero evaluations produced from this date across 19 years, five governments, six Taoisigh.","auditStatus":""},{"id":"NullificationRecord_2006_2025","label":"Nullification record 2006–2025","color":"#A32D2D","group":"Governance failure","types":["im:NullificationLoop"],"comment":"19-year governance failure. Zero determinations produced across five governments, six Taoisigh, and the full period of DFA competent authority designation. Constitutional contumacy: the systematic performance of governance without its discharge.","auditStatus":"STRONG — evidentiary density high"},{"id":"NullDetermination_2006_2025","label":"Null determination 2006–2025","color":"#A32D2D","group":"Null determination","types":["im:NullDetermination"],"comment":"The determination that was required but never generated. Its non-existence is the central provenance fact of this corpus.","auditStatus":""},{"id":"MartinCommitment_2009","label":"Martin Ballyphehane commitment, 2009","color":"#1D9E75","group":"Submission","types":["im:Submission"],"comment":"Written and verbal commitment by Micheál Martin to produce a ministerial report on the O.R. submissions. Unperformed across four successive offices.","auditStatus":"STRONG — Hypothesis B hook"},{"id":"MartinForeknowledge_Span","label":"Martin foreknowledge span 2009–2026","color":"#C04040","group":"Governance failure","types":["im:GovernanceFailure"],"comment":"17.5 years; four offices; named obligation unperformed.","auditStatus":""},{"id":"OEPAdequacyResponse_1Jun2025","label":"OEP adequacy response, 1 Jun 2025","color":"#BA7517","group":"Cluster response","types":["im:ClusterResponse"],"comment":"Mr McMoreland (OEP): asserted O.R. methods already in use across all sectors. Issued five months after Storm Éowyn. Internal contradiction with Kelliher 2009 response. Rebuttal issued; never answered.","auditStatus":""},{"id":"Feb4thForeclosure","label":"McEntee Foreclosure — DOD-MO-01201-2025","color":"#BA7517","group":"Cluster response","types":["im:ClusterResponse","im:LegalInstrument"],"comment":"Procedural Foreclosure: purports to terminate the submission record on administrative grounds. Primary certiorari target. Grounds: (1) irrationality under O'Keeffe; (2) legitimate expectation; (3) fair procedures.","auditStatus":"STRONG — three independent review grounds established"},{"id":"McEnteeForeclosureActivity","label":"McEntee Foreclosure activity, 4 Feb 2026","color":"#C04040","group":"Foreclosure","types":["im:ProceduralForeclosure"],"comment":"","auditStatus":""},{"id":"GunnLetter_24Feb2026","label":"Gunn Letter, 24 February 2026","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument"],"comment":"Fresh reviewable act within the 12-month judicial review window. Independent certiorari target alongside the McEntee Foreclosure.","auditStatus":"STRONG — within 12-month Order 84 RSC window"},{"id":"GunnLetterActivity","label":"Gunn Letter activity, 24 Feb 2026","color":"#C04040","group":"Foreclosure","types":["im:ProceduralForeclosure"],"comment":"","auditStatus":""},{"id":"MemorandumToGovernment_5Feb2026","label":"Memorandum to Government, 5 Feb 2026","color":"#E0845A","group":"Legal doc","types":["im:LegalInstrument","im:Submission"],"comment":"Transmitted the day after the McEntee Foreclosure. Establishes additional O'Keeffe irrationality ground. Compounds the procedural foreclosure.","auditStatus":"STRONG — third independent O'Keeffe irrationality limb"},{"id":"MemorandumTransmittalActivity","label":"Memorandum transmittal, 5 Feb 2026","color":"#1D9E75","group":"Submission act","types":["im:SubmissionActivity"],"comment":"","auditStatus":""},{"id":"TairiscintMheinhardt_v10","label":"Tairiscint Mheinhardt v10","color":"#D85A30","group":"Instrument","types":["im:OperativeInstrument"],"comment":"Multi-functional apex instrument: Constitutional Indictment; Legal Register; Saisine; Framework for Remedy. Engages Irish domestic law, EU law, and ECHR provisions.","auditStatus":"NEEDS LINT — OI-06 blocking transmission"},{"id":"TairiscintDraftingActivity","label":"Tairiscint drafting activity","color":"#BA7517","group":"Escalation","types":["im:EscalationActivity"],"comment":"","auditStatus":""},{"id":"DualUseTimeline","label":"Dual-use competent authority timeline","color":"#0F6E56","group":"Collection","types":["prov:Collection"],"comment":"Analytical record documenting DFA's continuous structural involvement in Ireland's dual-use export control regime, 2000–2026.","auditStatus":"PARTIAL — custodial handover gap requires formal confirmation"},{"id":"CompetentAuthorityTransfer_2024","label":"Competent authority transfer DFA→DETE 2024","color":"#639922","group":"Legislation","types":["im:LegislativeActivity"],"comment":"Commencement of Control of Exports Act 2023. No public record of handover documentation for the unprocessed 2006–2024 submission record.","auditStatus":"PARTIAL — handover documentation gap"},{"id":"HighCourtTrack","label":"High Court judicial review track","color":"#BA7517","group":"Escalation","types":["im:EscalationActivity"],"comment":"Certiorari of McEntee Foreclosure and Gunn Letter; mandamus to compel evaluation.","auditStatus":"READY — grounds established; within limitation window"},{"id":"OmbudsmanComplaint","label":"Ombudsman complaint","color":"#1D9E75","group":"Submission","types":["im:Submission"],"comment":"Active complaint track. Structural tension: Houses of the Oireachtas acts simultaneously as respondent and Ombudsman overseer via JCPP.","auditStatus":"RISK — JCPP respondent/overseer tension unresolved (OI-02)"},{"id":"CJEUTrack","label":"CJEU pre-litigation track","color":"#BA7517","group":"Escalation","types":["im:EscalationActivity"],"comment":"Art. 2 TEU notification; Member State failure under Reg. 2021/821; copies to Commissioners Šefčovič and Lahbib, Judge Regan, AG Szpunar.","auditStatus":"PREPARED — dual-use ground and Art. 2 TEU fully documented"},{"id":"SeanadSubmission_v4","label":"Seanad submission v4","color":"#1D9E75","group":"Submission","types":["im:Submission"],"comment":"Active track. Senator McDowell as internal parliamentary witness. Option A / Option B election pending response.","auditStatus":"ACTIVE — response pending"},{"id":"PresidencyParadox","label":"EU Council Presidency Paradox","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Ireland assumes EU Council Presidency 1 July 2026 while maintaining an unresolved 20-year zero-determination record on a submission engaging Reg. 2021/821.","auditStatus":"FRAMING RISK — deploy as accountability context only"},{"id":"HypothesisA_StructuralNonGovernance","label":"Hypothesis A — Structural Non-Governance","color":"#534AB7","group":"Hypothesis","types":["im:Hypothesis"],"comment":"The failure is architectural, not intentional. No individual bad faith required. Remedy: mandamus, damages, architectural reform.","auditStatus":""},{"id":"HypothesisB_MisfeasanceInPublicOffice","label":"Hypothesis B — Misfeasance in Public Office","color":"#534AB7","group":"Hypothesis","types":["im:Hypothesis"],"comment":"Named acts require examination against the bad-faith threshold: 2009 Ballyphehane commitment; McEntee Foreclosure citing contested conclusions; JCEUA deletion of correspondence.","auditStatus":""},{"id":"HypothesisC_EpistemicFailure","label":"Hypothesis C — Epistemic Failure","color":"#534AB7","group":"Hypothesis","types":["im:Hypothesis"],"comment":"Institutions not equipped to evaluate what was placed before them; performed the appearance of evaluation instead. OEP June 2025 is the clearest instance.","auditStatus":"NEEDS WORK — OI-01 dependency"},{"id":"OI_01_HypothesisCArgument","label":"OI-01: Hypothesis C argument","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Build the Hypothesis C argument from the OEP internal contradiction: Kelliher 2009 vs McMoreland June 2025. Deploy the Double Confound structure.","auditStatus":"NEEDS WORK"},{"id":"OI_02_JCPPTension","label":"OI-02: JCPP structural tension","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Resolve the structural problem: Houses of the Oireachtas is simultaneously a named respondent and Ombudsman overseer via JCPP.","auditStatus":"RISK"},{"id":"OI_03_NonSubstitutabilityProof","label":"OI-03: Non-substitutability proof","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Three-tier non-substitutability currently asserted but not derived from operative instruments.","auditStatus":"NEEDS WORK"},{"id":"OI_04_GrammarImplementation","label":"OI-04: Grammar implementation","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Implement the corpus key-grammar as an executable validation tool.","auditStatus":"PENDING"},{"id":"OI_05_LintScript","label":"OI-05: Lint script","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Automated lint script for corpus document formatting standards.","auditStatus":"PENDING"},{"id":"OI_06_TairiscintLintPass","label":"OI-06: Tairiscint pre-transmission lint","color":"#1D9E75","group":"Entity","types":["prov:Entity"],"comment":"Complete XML-level formatting pass on Tairiscint v10: stranded Tier III header p.15; Tier IV orphan check; em-dash consistency.","auditStatus":"NEEDS LINT — blocking transmission"},{"id":"InterregnumNullificansCorpus","label":"Interregnum Nullificans","color":"#3C3489","group":"Bundle","types":["prov:Bundle","prov:Collection"],"comment":"19-year governance record: Brøek Meinhardt v. Irish Government. Publicly indexed at https://dr-bosch.github.io/sitemap.","auditStatus":""}],"edges":[{"source":"DFA","target":"IrishGovernment","rel":"on behalf of"},{"source":"DETE","target":"IrishGovernment","rel":"on behalf of"},{"source":"DOD","target":"IrishGovernment","rel":"on behalf of"},{"source":"JCEUA","target":"HousesOfOireachtas","rel":"on behalf of"},{"source":"OEP","target":"DOD","rel":"on behalf of"},{"source":"MinisterMcEntee","target":"DOD","rel":"on behalf of"},{"source":"MinisterMcEntee","target":"DFA","rel":"on behalf of"},{"source":"MinisterMichaelMartin","target":"DFA","rel":"on behalf of"},{"source":"MinisterRichmond","target":"DFA","rel":"on behalf of"},{"source":"PeterFinnegan","target":"HousesOfOireachtas","rel":"on behalf of"},{"source":"SecGenCallinan","target":"HousesOfOireachtas","rel":"on behalf of"},{"source":"SecGenGunn","target":"HousesOfOireachtas","rel":"on behalf of"},{"source":"MrMcMoreland","target":"OEP","rel":"on behalf of"},{"source":"SenatorMcDowell","target":"HousesOfOireachtas","rel":"on behalf of"},{"source":"BarryWardTD","target":"JCEUA","rel":"on behalf of"},{"source":"IvanFarmer","target":"JCEUA","rel":"on behalf of"},{"source":"ORCorpus","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"ORSubmission_May2006","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"ORSubmission_May2006","target":"ORCorpus","rel":"has member"},{"source":"ORSubmission_May2006","target":"WassenaarDualUseList_Cat4","rel":"derived from"},{"source":"NullificationRecord_2006_2025","target":"ORCorpus","rel":"used"},{"source":"NullificationRecord_2006_2025","target":"IrishGovernment","rel":"associated with"},{"source":"NullificationRecord_2006_2025","target":"DFA","rel":"associated with"},{"source":"NullificationRecord_2006_2025","target":"DETE","rel":"associated with"},{"source":"NullDetermination_2006_2025","target":"NullificationRecord_2006_2025","rel":"no determination"},{"source":"MartinCommitment_2009","target":"MinisterMichaelMartin","rel":"attributed to"},{"source":"MartinForeknowledge_Span","target":"MartinCommitment_2009","rel":"used"},{"source":"MartinForeknowledge_Span","target":"MinisterMichaelMartin","rel":"associated with"},{"source":"OEPAdequacyResponse_1Jun2025","target":"MrMcMoreland","rel":"attributed to"},{"source":"Feb4thForeclosure","target":"MinisterMcEntee","rel":"attributed to"},{"source":"Feb4thForeclosure","target":"McEnteeForeclosureActivity","rel":"generated by"},{"source":"McEnteeForeclosureActivity","target":"MinisterMcEntee","rel":"associated with"},{"source":"McEnteeForeclosureActivity","target":"ORCorpus","rel":"used"},{"source":"GunnLetter_24Feb2026","target":"SecGenGunn","rel":"attributed to"},{"source":"GunnLetter_24Feb2026","target":"GunnLetterActivity","rel":"generated by"},{"source":"GunnLetterActivity","target":"SecGenGunn","rel":"associated with"},{"source":"GunnLetterActivity","target":"McEnteeForeclosureActivity","rel":"informed by"},{"source":"MemorandumToGovernment_5Feb2026","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"MemorandumToGovernment_5Feb2026","target":"MemorandumTransmittalActivity","rel":"generated by"},{"source":"MemorandumToGovernment_5Feb2026","target":"Feb4thForeclosure","rel":"derived from"},{"source":"MemorandumToGovernment_5Feb2026","target":"OKeeffe_v_ABordPleanala_1993","rel":"derived from"},{"source":"MemorandumTransmittalActivity","target":"BrøekMeinhardt","rel":"associated with"},{"source":"MemorandumTransmittalActivity","target":"McEnteeForeclosureActivity","rel":"informed by"},{"source":"MemorandumTransmittalActivity","target":"ORCorpus","rel":"used"},{"source":"MemorandumTransmittalActivity","target":"OKeeffe_v_ABordPleanala_1993","rel":"used"},{"source":"TairiscintMheinhardt_v10","target":"TairiscintDraftingActivity","rel":"generated by"},{"source":"TairiscintMheinhardt_v10","target":"ORCorpus","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"NullificationRecord_2006_2025","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"Feb4thForeclosure","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"GunnLetter_24Feb2026","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"MemorandumToGovernment_5Feb2026","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"OKeeffe_v_ABordPleanala_1993","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"Meadows_v_Minister_2010","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"EUReg_2021_821","rel":"derived from"},{"source":"TairiscintMheinhardt_v10","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"TairiscintDraftingActivity","target":"BrøekMeinhardt","rel":"associated with"},{"source":"TairiscintDraftingActivity","target":"ORCorpus","rel":"used"},{"source":"TairiscintDraftingActivity","target":"NullificationRecord_2006_2025","rel":"used"},{"source":"TairiscintDraftingActivity","target":"DualUseTimeline","rel":"used"},{"source":"DualUseTimeline","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"DualUseTimeline","target":"ForfasReport_2004","rel":"derived from"},{"source":"DualUseTimeline","target":"OireachtasDebate_19Jan2022","rel":"derived from"},{"source":"DualUseTimeline","target":"ControlOfExportsAct2023","rel":"derived from"},{"source":"DualUseTimeline","target":"EUReg_2021_821","rel":"derived from"},{"source":"DualUseTimeline","target":"PwCIreland_2025","rel":"derived from"},{"source":"CompetentAuthorityTransfer_2024","target":"IrishGovernment","rel":"associated with"},{"source":"CompetentAuthorityTransfer_2024","target":"ControlOfExportsAct2023","rel":"used"},{"source":"CompetentAuthorityTransfer_2024","target":"NullificationRecord_2006_2025","rel":"informed by"},{"source":"HighCourtTrack","target":"TairiscintMheinhardt_v10","rel":"used"},{"source":"HighCourtTrack","target":"Feb4thForeclosure","rel":"used"},{"source":"HighCourtTrack","target":"GunnLetter_24Feb2026","rel":"used"},{"source":"HighCourtTrack","target":"BrøekMeinhardt","rel":"associated with"},{"source":"OmbudsmanComplaint","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"OmbudsmanComplaint","target":"TairiscintMheinhardt_v10","rel":"derived from"},{"source":"CJEUTrack","target":"TairiscintMheinhardt_v10","rel":"used"},{"source":"CJEUTrack","target":"EUReg_2021_821","rel":"used"},{"source":"CJEUTrack","target":"BrøekMeinhardt","rel":"associated with"},{"source":"SeanadSubmission_v4","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"SeanadSubmission_v4","target":"TairiscintMheinhardt_v10","rel":"derived from"},{"source":"PresidencyParadox","target":"IrishGovernment","rel":"attributed to"},{"source":"InterregnumNullificansCorpus","target":"BrøekMeinhardt","rel":"attributed to"},{"source":"InterregnumNullificansCorpus","target":"ORCorpus","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"TairiscintMheinhardt_v10","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"DualUseTimeline","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"Feb4thForeclosure","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"GunnLetter_24Feb2026","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"MemorandumToGovernment_5Feb2026","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"NullificationRecord_2006_2025","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"HypothesisA_StructuralNonGovernance","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"HypothesisB_MisfeasanceInPublicOffice","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"HypothesisC_EpistemicFailure","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"HighCourtTrack","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"OmbudsmanComplaint","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"CJEUTrack","rel":"has member"},{"source":"InterregnumNullificansCorpus","target":"SeanadSubmission_v4","rel":"has member"}]};
+
+const REL_COLORS = {
+  "derived from":    "#1D9E75",
+  "used":            "#BA7517",
+  "attributed to":   "#185FA5",
+  "on behalf of":    "#888780",
+  "has member":      "#534AB7",
+  "generated by":    "#D85A30",
+  "associated with": "#5F5E5A",
+  "informed by":     "#639922",
+  "no determination":"#A32D2D"
+};
+
+let showLabels = false;
+let selectedNode = null;
+const groups = [...new Set(RAW.nodes.map(n=>n.group))].sort();
+
+// Build filters
+const fDiv = document.getElementById('filters');
+const activeGroups = new Set(groups);
+groups.forEach(g => {
+  const color = RAW.nodes.find(n=>n.group===g)?.color || '#888';
+  const div = document.createElement('div');
+  div.className = 'filter-item';
+  div.innerHTML = `<input type="checkbox" checked data-g="${g}"><span class="dot" style="background:${color}"></span>${g}`;
+  div.querySelector('input').addEventListener('change', e => {
+    if(e.target.checked) activeGroups.add(g); else activeGroups.delete(g);
+    updateVisibility();
+  });
+  fDiv.appendChild(div);
+});
+
+// Edge legend
+const eDiv = document.getElementById('edge-items');
+Object.entries(REL_COLORS).forEach(([rel,col])=>{
+  const d = document.createElement('div');
+  d.className = 'edge-item';
+  d.innerHTML = `<span class="edge-line" style="background:${col}"></span>${rel}`;
+  eDiv.appendChild(d);
+});
+
+const svg = d3.select('#g');
+const container = svg.append('g');
+
+const width  = () => document.getElementById('graph-area').clientWidth;
+const height = () => document.getElementById('graph-area').clientHeight;
+
+const zoom = d3.zoom().scaleExtent([0.2,4]).on('zoom', e => container.attr('transform', e.transform));
+svg.call(zoom);
+
+const nodes = RAW.nodes.map(d=>({...d}));
+const edges = RAW.edges.map(d=>({...d}));
+
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(edges).id(d=>d.id).distance(80).strength(0.4))
+  .force('charge', d3.forceManyBody().strength(-220))
+  .force('center', d3.forceCenter(0,0))
+  .force('collision', d3.forceCollide(18))
+  .alphaDecay(0.025);
+
+const link = container.append('g').selectAll('line')
+  .data(edges).join('line')
+  .attr('class','link')
+  .attr('stroke', d => REL_COLORS[d.rel] || '#888')
+  .attr('marker-end', d => {
+    const id = 'arr-'+d.rel.replace(/ /g,'-');
+    return `url(#${id})`;
+  });
+
+// Arrow markers
+const defs = svg.append('defs');
+Object.entries(REL_COLORS).forEach(([rel,col])=>{
+  const id = 'arr-'+rel.replace(/ /g,'-');
+  defs.append('marker').attr('id',id).attr('viewBox','0 0 10 10')
+    .attr('refX',18).attr('refY',5).attr('markerWidth',5).attr('markerHeight',5)
+    .attr('orient','auto-start-reverse')
+    .append('path').attr('d','M2 1L8 5L2 9').attr('fill','none')
+    .attr('stroke',col).attr('stroke-width',1.5).attr('stroke-linecap','round');
+});
+
+const node = container.append('g').selectAll('g')
+  .data(nodes).join('g').attr('class','node').style('cursor','pointer');
+
+node.append('circle')
+  .attr('r', d => d.id==='InterregnumNullificansCorpus'?14 : d.id==='TairiscintMheinhardt_v10'?11 : 7)
+  .attr('fill', d => d.color)
+  .attr('stroke', d => d3.color(d.color).darker(0.8))
+  .attr('stroke-opacity', 0.8);
+
+const labels = node.append('text')
+  .text(d => d.label.length > 22 ? d.label.slice(0,20)+'…' : d.label)
+  .attr('dy','1.6em').attr('text-anchor','middle')
+  .style('display', showLabels ? 'block' : 'none');
+
+node.call(d3.drag()
+  .on('start', (e,d)=>{ if(!e.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+  .on('drag',  (e,d)=>{ d.fx=e.x; d.fy=e.y; })
+  .on('end',   (e,d)=>{ if(!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+node.on('click',(e,d)=>{ e.stopPropagation(); selectNode(d); });
+node.on('mouseover',(e,d)=>{
+  if(selectedNode) return;
+  const tt = document.getElementById('tooltip');
+  tt.textContent = d.label;
+  tt.style.display = 'block';
+  tt.style.left = (e.offsetX+12)+'px';
+  tt.style.top  = (e.offsetY-10)+'px';
+});
+node.on('mousemove',(e)=>{
+  const tt = document.getElementById('tooltip');
+  tt.style.left=(e.offsetX+12)+'px';
+  tt.style.top=(e.offsetY-10)+'px';
+});
+node.on('mouseout',()=>{ document.getElementById('tooltip').style.display='none'; });
+svg.on('click',()=>clearSel());
+
+sim.on('tick',()=>{
+  link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
+      .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+  node.attr('transform',d=>`translate(${d.x},${d.y})`);
+});
+
+function selectNode(d) {
+  selectedNode = d;
+  document.getElementById('tooltip').style.display='none';
+  const connected = new Set([d.id]);
+  const connEdges = new Set();
+  edges.forEach((e,i)=>{
+    if(e.source.id===d.id||e.target.id===d.id){
+      connected.add(e.source.id); connected.add(e.target.id); connEdges.add(i);
+    }
+  });
+  node.classed('highlighted', n=>n.id===d.id)
+      .classed('dimmed', n=>!connected.has(n.id));
+  link.classed('highlighted', (_,i)=>connEdges.has(i))
+      .classed('dimmed', (_,i)=>!connEdges.has(i));
+  showDetail(d);
+}
+
+function clearSel() {
+  selectedNode = null;
+  node.classed('highlighted',false).classed('dimmed',false);
+  link.classed('highlighted',false).classed('dimmed',false);
+  document.getElementById('detail').style.display='none';
+}
+
+function showDetail(d) {
+  const el = document.getElementById('detail');
+  const statusClass = d.auditStatus.startsWith('STRONG')  ? 'status-strong'
+    : d.auditStatus.startsWith('RISK')    ? 'status-risk'
+    : d.auditStatus.startsWith('PARTIAL') ? 'status-partial'
+    : d.auditStatus.startsWith('NEEDS')   ? 'status-needs'
+    : d.auditStatus.startsWith('READY') || d.auditStatus.startsWith('PREPARED') || d.auditStatus.startsWith('ACTIVE') ? 'status-ready'
+    : d.auditStatus.startsWith('PENDING') ? 'status-pending' : '';
+  el.innerHTML = `<h3>${d.label}</h3>
+    <div class="dtype">${d.types.join(' · ')} · ${d.group}</div>
+    ${d.comment ? `<div class="dcomment">${d.comment}</div>` : ''}
+    ${d.auditStatus ? `<span class="dstatus ${statusClass}">${d.auditStatus}</span>` : ''}`;
+  el.style.display='block';
+}
+
+function updateVisibility() {
+  node.style('display', d => activeGroups.has(d.group) ? null : 'none');
+  link.style('display', d => {
+    const sv = typeof d.source==='object'?d.source:nodes.find(n=>n.id===d.source);
+    const tv = typeof d.target==='object'?d.target:nodes.find(n=>n.id===d.target);
+    return activeGroups.has(sv?.group) && activeGroups.has(tv?.group) ? null : 'none';
+  });
+}
+
+function toggleLabels() {
+  showLabels = !showLabels;
+  labels.style('display', showLabels ? 'block' : 'none');
+}
+
+function resetView() {
+  clearSel();
+  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+}
+
+document.getElementById('search').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if(!q){ node.classed('dimmed',false).classed('highlighted',false); link.classed('dimmed',false); return; }
+  const matches = new Set(nodes.filter(n=>n.label.toLowerCase().includes(q)||n.comment.toLowerCase().includes(q)).map(n=>n.id));
+  node.classed('highlighted', d=>matches.has(d.id)).classed('dimmed', d=>!matches.has(d.id));
+  link.classed('dimmed', d=>{
+    const s = typeof d.source==='object'?d.source.id:d.source;
+    const t = typeof d.target==='object'?d.target.id:d.target;
+    return !matches.has(s)&&!matches.has(t);
+  });
+});
+
+setTimeout(()=>{
+  const W=width(), H=height();
+  sim.force('center', d3.forceCenter(W/2, H/2));
+  svg.call(zoom.transform, d3.zoomIdentity.translate(W/2, H/2).scale(0.65).translate(-W/2,-H/2));
+  sim.alpha(0.8).restart();
+},100);
+</script>
+
+</body>
+</html>
