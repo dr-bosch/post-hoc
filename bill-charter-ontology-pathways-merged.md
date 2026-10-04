@@ -68,7 +68,7 @@ Claiming closure without evaluating the specific submission — asserting, in ef
 **4. `fsd:ForeClosureByProxy` (Section 8A)**
 The most legally precise characterisation of the most recent institutional act in the record. A purported determination by a body that: (i) did not hold the competent authority designation at the time of submission; (ii) relies exclusively on conclusions of a body that also lacked CA designation; and (iii) does not engage formally rebutted conclusions. Named instance: **DOD-MO-01201-2025**, 4 February 2026. This is the clearest single instantiation of `:violates` in the entire corpus. Pathway relevance: the TD who has read the Technical Annex should know this provision exists and why Section 8A is not drafting excess — the McEntee Foreclosure is the provision's direct motivation.
 
-_Structural accountability note (audit Layer 4):_ The ForeClosureByProxy argument is strengthened by the **McEntee dual portfolio** — DFA and Defence were held simultaneously from November 2025. The body issuing the Foreclosure (DoD, 4 February 2026) was under the portfolio of the minister simultaneously holding the CA function's predecessor ministry (DFA). This structural coupling — documented in the audit as STRONG — means the designation gap was not incidental: the minister who held the competent authority function also held the issuing body's portfolio at the moment of issue. The TD should have this chronology available; it is the accountability nexus that makes the ForeClosureByProxy argument more than a technical jurisdictional point.
+_Structural accountability note (audit Layer 4):_ The ForeClosureByProxy argument is strengthened by the **McEntee dual portfolio** — DFA and Defence were held simultaneously from November 2025. The body issuing the Foreclosure (DoD, 4 February 2026) was under the portfolio of the minister simultaneously holding the CA advisory function ministry (DFA). This structural coupling —documented in the audit as STRONG— means the designation gap was not incidental: the minister who held the normative and advisory function also held the issuing body's portfolio at the moment of issue: the breaking condition was that decision wasn't issued to the Competent Authority (DETE), which received no information whatsoever. The TD should have this chronology available; it is the accountability nexus that makes the ForeClosureByProxy argument more than a technical jurisdictional point.
 
 **5. `fsd:AdministrativeAmnesia` (Section 10A(1))**
 Passive reset: successive officers encounter a submission as if for the first time, without awareness of prior engagement, producing fresh cycles of superficial closure. Evidential signature: absence of cross-referencing across file records. Distinct from `fsd:DesignedForgetting` in that intent is not required — the amnesia can be structural rather than deliberate.
@@ -76,11 +76,10 @@ Passive reset: successive officers encounter a submission as if for the first ti
 **6. `fsd:DesignedForgetting` (Section 10)**
 Active: deliberate destruction or rendering inaccessible of formally lodged correspondence. Named instance: JCEUA deletion, October 2025. Engages Art. 41 CFR right of access to file directly. Breach per se: destruction of a qualifying submission record is not subject to the reasonableness standard applicable to other failures — it is unlawful on its face. Pathway relevance: the think tank's novelty claim is strongest here — "designed forgetting" as a defined legal category does not appear in any existing European legal ontology.
 
-### Competent Authority Transition — The Date That Matters
+### Competent Authority 
 
-The FSD Ontology records the competent authority handover with precision:
-- **DFA**: designated competent authority **2009 – 22 August 2024**
-- **DETE**: designated competent authority **from 22 August 2024**
+The FSD Ontology records the competent authority with precision:
+- **DETE**: designated competent authority under Reg. (EU) 2021/801 **from 22 August 2024**
 
 This date is legally significant for all three pathways:
 - **TD**: Section 13 (retrospective provision) requires DETE to audit and determine submissions received by DFA before 22 August 2024 within 6 months of commencement. A sponsor pressed on retrospective effect should have this date and its legal basis ready. Note also that the handover gap is not fully resolved in the evidentiary record — the audit marks the DFA 26-year span node as PARTIAL, not STRONG, precisely because the transition produced a period in which neither body had taken formal ownership of the in-tray. This is an open finding, not merely a dateable legal transition.
