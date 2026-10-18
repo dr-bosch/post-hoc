@@ -15,7 +15,8 @@
 ### PDF Links
 - [Operations Research Corpus - Competent Authority Determination](http://dr-bosch.github.io/post-hoc/ANNEX-Operations-Research-Corpus-Competent-Authority-Determination.pdf)
 - [Interregnum Nullificans](http://dr-bosch.github.io/post-hoc/Interregnum-Nullificans.pdf)
-- [Submission to the National Strategic Risk Assessment2026](http://dr-bosch.github.io/post-hoc/Submission-to-the-National-Strategic-Risk-Assessment-2026.pdf)
+- [Submission to the National Strategic Risk Assessment 2026](http://dr-bosch.github.io/post-hoc/Submission-to-the-National-Strategic-Risk-Assessment-2026.pdf)
+- [State Operational Resilience (policy paper, Oct. 18th, 2026)](http://dr-bosch.github.io/post-hoc/State-Operational-Resilience.pdf)
 - [Political Risk Report 2026 (Marsh Global)](http://dr-bosch.github.io/post-hoc/Political-Risk-Report-2026-MAR-GLOBAL.pdf)
 
 ### SVG Links
