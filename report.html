@@ -402,6 +402,7 @@ body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamon
 }
 
 /* ─── CARD BOOKMARK SECTIONS ─── */
+.ds{scroll-margin-top:48px;}
 .card-section{scroll-margin-top:48px;}
 .bookmark-url{display:block;font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.14em;color:var(--cosmic);opacity:.38;margin-bottom:8px;}
 .back-to-map{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment-faint);text-decoration:none;opacity:.5;transition:color .15s,opacity .15s;}
@@ -2349,6 +2350,14 @@ document.addEventListener('DOMContentLoaded',function(){
   /* ── Auto-number tweet thread entries ── */
   (function(){var nums=document.querySelectorAll('.tt-num');var total=nums.length;nums.forEach(function(el,i){el.textContent=(i+1)+' / '+total;});var hdr=document.querySelector('#tweet-thread .sec-sub');if(hdr)hdr.textContent=hdr.textContent.replace(/\d+ entries/,total+' entries');})();
   applyQuery();
+});
+</script>
+<script>
+/* Deep-link fix: re-apply #hash after fonts/layout settle, clear the sticky bar */
+window.addEventListener('load',function(){
+  if(!location.hash)return;
+  var el=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if(el)setTimeout(function(){el.scrollIntoView({block:'start',behavior:'instant'});},200);
 });
 </script>
 </body>
