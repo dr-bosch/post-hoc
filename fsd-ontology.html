@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>FSD-Ontology-2026 — Reference Poster · Nacre</title>
+<title>FSD-Ontology-2026 —Reference Poster · Nacre</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -117,6 +117,7 @@
     font-family: var(--body); font-style:italic; font-size:14.5px; color:var(--ink-60);
     max-width:1400px; margin-bottom:20px; line-height:1.6;
   }
+  .nz-sub code{ font-family:var(--mono); font-style:normal; font-size:12px; word-break:break-all; }
 
   /* ========== CLASS HIERARCHY GROUPS ========== */
   .groups{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
@@ -136,6 +137,12 @@
   .cls .label{ font-size:12px; color:var(--ink-38); font-style:italic; margin-left:6px; }
   .cls .desc{ font-size:12.5px; line-height:1.5; margin-top:4px; color:var(--ink-60); }
   .cls .desc b{ font-weight:600; color:var(--ink); }
+  .cls .new{
+    font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase;
+    margin-left:8px; padding:1px 6px; border:1px solid var(--ink-25); color:var(--ink-60);
+    vertical-align:1px;
+  }
+  .cls.note{ font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-38); padding:7px 14px; }
 
   .group.t-cloud .cls{ background: var(--cloud-dancer); }
   .group.t-glaze .cls{ background: var(--glaze); }
@@ -167,7 +174,7 @@
   table.props td.range{ font-family:var(--mono); font-size:11px; color:var(--ink-60); }
   table.props td.note{ font-size:11.5px; color:var(--ink-60); }
 
-  /* ========== SWRL RULES — ink cards (pcard-ink pattern) ========== */
+  /* ========== SWRL RULES: ink cards (pcard-ink pattern) ========== */
   .rules{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
   .rule{ background: var(--ink); color: var(--cloud-dancer); padding:15px 17px 17px; }
   .rule .rn{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.55; margin-bottom:5px; }
@@ -237,24 +244,24 @@
   <!-- MASTHEAD -->
   <div class="masthead">
     <div>
-      <div class="kicker">OWL 2 DL FORMALISATION · TURTLE / SWRL · v1.0.0 · 24 JULY 2026</div>
+      <div class="kicker">OWL 2 DL FORMALISATION · TURTLE / SWRL · v1.1.0 · CONFORMED 8 OCT 2026 (v1.0.0, 24 JULY 2026)</div>
       <h1>Qualifying Submissions<br><em>(Duty to Determine)</em></h1>
-      <div class="sub">An ontology mapping the duty of determination, prohibited administrative practices, structural failure conditions, and loop-closure mechanisms to a machine-readable knowledge graph — built for European interoperability.</div>
+      <div class="sub">An ontology mapping the duty of determination, prohibited administrative practices, structural failure conditions, and loop-closure mechanisms to a machine-readable knowledge graph —built for European interoperability.</div>
     </div>
     <div class="stamp">FSD·2026<br>ONTOLOGY<br>REFERENCE<br>SHEET</div>
   </div>
 
   <div class="frameworks">
     <span class="fw-label">Interoperates with</span>
-    <span class="fw-chip">LKIF — legal core</span>
-    <span class="fw-chip">ELI — legislation ID</span>
-    <span class="fw-chip">SEMIC CPV — public service</span>
-    <span class="fw-chip">Akoma Ntoso — doc structure</span>
-    <span class="fw-chip">LegalRuleML — rule encoding</span>
-    <span class="fw-chip">SKOS — corpus lexicon</span>
-    <span class="fw-chip">DCAT-AP / Dublin Core — metadata</span>
-    <span class="fw-chip">FOAF — agents</span>
-    <span class="fw-chip">EIF — interoperability layers</span>
+    <span class="fw-chip">LKIF —legal core</span>
+    <span class="fw-chip">ELI —legislation ID</span>
+    <span class="fw-chip">SEMIC CPV —public service</span>
+    <span class="fw-chip">Akoma Ntoso —doc structure</span>
+    <span class="fw-chip">LegalRuleML —rule encoding</span>
+    <span class="fw-chip">SKOS —corpus lexicon</span>
+    <span class="fw-chip">DCAT-AP / Dublin Core —metadata</span>
+    <span class="fw-chip">FOAF —agents</span>
+    <span class="fw-chip">EIF —interoperability layers</span>
   </div>
 
   <nav class="ontology-bridge" aria-label="Related ontology pages">
@@ -267,7 +274,7 @@
   <div class="section" id="class-hierarchy">
     <div class="nz-eyebrow">§4 · Class Hierarchy</div>
     <div class="nz-title">Six groups, one ontology</div>
-    <div class="nz-sub">Namespace <code>fsd:</code> = https://meinhardt.gov/ontology/fsd/2026# — classes with no LKIF/SEMIC/ELI/Akoma mapping (marked in §8) are the ontology's genuine contributions. Paper Doctrine governs: one stock, one role.</div>
+    <div class="nz-sub">Namespace <code>fsd:</code> = <code>https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</code> —classes with no LKIF/SEMIC/ELI/Akoma mapping (marked in §8) are the ontology's genuine contributions. Paper Doctrine governs: one stock, one role. Classes marked <i>v1.1.0</i> were added in the conformed edition.</div>
 
     <div class="groups">
 
@@ -278,7 +285,7 @@
         <div class="cls child"><span class="name">SubmissionOfNationalUtility</span>
           <div class="desc">4-part test s.2(1): (a) national significance (b) invokes the duty (c) identified person (d) plausible body connection. <b>Saving:</b> retrospective cases waive (b) if (a)(c)(d) hold.</div></div>
         <div class="cls child"><span class="name">DualUseSubmission</span>
-          <div class="desc">Asserts dual-use character under Reg. (EU) 2021/821 Art.2(1) → triggers Art.9(2) competent-authority assessment duty.</div></div>
+          <div class="desc">Asserts dual-use characteristics under Reg. (EU) 2021/821 (<b>Art.2(1)</b> defines dual-use items). Whether a determination duty is engaged depends on the <b>instrument invoked</b> (an application, or a request to the competent authority under the Control of Exports Act 2023), not on the date of presentation. Art.9(2) is not an assessment obligation and is not relied on.</div></div>
         <div class="cls child"><span class="name">HighRiskAISubmission</span>
           <div class="desc">Asserts high-risk AI system under Reg. (EU) 2024/1689 → engages conformity duties, Arts. 9, 13, 14, 27.</div></div>
         <div class="cls child"><span class="name">TestableSubmission</span>
@@ -289,12 +296,19 @@
         <div class="group-head"><span>4.2 INSTITUTIONAL</span><span class="ref">s.1</span></div>
         <div class="cls"><span class="name">fsd:PublicBody</span><span class="label">Comhlacht Poiblí</span>
           <div class="desc">Any body bearing a determination obligation: ministers, departments, statutory bodies, Oireachtas clerks (Art.15 savings), designated competent authorities. ⊑ <b>cpv:PublicOrganisation</b>, <b>lkif:PublicBody</b>.</div></div>
-        <div class="cls child"><span class="name">CompetentAuthority</span>
-          <div class="desc">Reg. (EU) 2021/821 Art.9(1) designee; must maintain assessment capacity (Art.9(2)). IE: DFA 2009–2024‑08‑22 → DETE thereafter.</div></div>
+        <div class="cls child"><span class="name">CompetentAuthority</span><span class="label">Údarás Inniúil</span>
+          <div class="desc">Body notified by the Member State as competent under Reg. (EU) 2021/821 (notification: <b>Art.23(1)(a)</b>). IE: <b>DETE</b>, National Competent Authority and licensing authority, Control of Exports Act 2023 s.3, throughout the record. Commencement of the Act on 2024-08-22 restated DETE's statutory basis; <b>no designation passed from DFA to DETE.</b> DFA is not a competent authority. Security-assessment architecture sits in the Department of Defence.</div></div>
         <div class="cls child"><span class="name">Ombudsman</span>
           <div class="desc">Residual determination authority, Part VI. On loop condition: investigate, report, apply to the High Court.</div></div>
+        <div class="cls note">Three obligations, kept separate <span class="new">v1.1.0</span></div>
+        <div class="cls child"><span class="name">ConsultationBody</span><span class="new">v1.1.0</span>
+          <div class="desc">Body whose views the competent authority seeks on export licence applications. IE: <b>DFA</b>, views sought on dual-use and military applications (Dáil PQ 80, 19 Jan 2022; to be verified). Application-triggered and conditional; not shown to have been engaged on the record. Not a competent authority.</div></div>
+        <div class="cls child"><span class="name">AdministrativeUndertaking</span><span class="new">v1.1.0</span>
+          <div class="desc">Undertaking by a named officer or minister to perform an administrative act on a submission (report on it, follow it up). Independent of any application and of any CA designation. In the record: O'Leary, written, 29 Jan 2009; ministerial, 25 Sep 2009 (wording unconfirmed). Enforceability depends on wording and provenance.</div></div>
+        <div class="cls child"><span class="name">StatutoryCompetentFunction</span><span class="new">v1.1.0</span>
+          <div class="desc">Function conferred on a competent authority by Reg. (EU) 2021/821 and the Control of Exports Act 2023. Distinct from ConsultationBody duties and from AdministrativeUndertaking. Keep the three separate in every use.</div></div>
         <div class="cls"><span class="name">fsd:IndependentAuditor</span>
-          <div class="desc">s.5C appointee for technical audits. ⊑ <b>foaf:Agent</b>. Independence conditions s.5B — no financial, contractual, or institutional interest.</div></div>
+          <div class="desc">s.5C appointee for technical audits. ⊑ <b>foaf:Agent</b>. Independence conditions s.5B: no financial, contractual, or institutional interest.</div></div>
       </div>
 
       <div class="group t-usq" id="determination-classes">
@@ -304,37 +318,37 @@
         <div class="cls child"><span class="name">AcceptanceDetermination</span>
           <div class="desc">Accepts submission, opens statutory evaluation. s.2(1)(a).</div></div>
         <div class="cls child"><span class="name">RejectionDetermination</span>
-          <div class="desc">Rejects with specific, reviewable reasons that engage the submitted corpus — generic domain familiarity does not qualify. s.2(1)(b).</div></div>
+          <div class="desc">Rejects with specific, reviewable reasons that engage the submitted corpus; generic domain familiarity does not qualify. s.2(1)(b).</div></div>
         <div class="cls child"><span class="name">ReferralDetermination</span>
           <div class="desc">Refers to a named competent body with stated legal basis; receiving body's 12-month clock starts on transmission. s.2(1)(c), s.4.</div></div>
         <div class="cls"><span class="name">fsd:NonDetermination</span><span class="label">Neamh-Chinneadh</span>
-          <div class="desc">No determination within the s.3(1) period — established regardless of conduct form (silence / ack / sufficiency / amnesia).</div></div>
+          <div class="desc">No determination within the s.3(1) period, established regardless of conduct form (silence / ack / sufficiency / amnesia).</div></div>
       </div>
 
       <div class="group t-deckledim" id="prohibited-practice-classes">
         <div class="group-head"><span>4.4 PROHIBITED PRACTICES</span><span class="ref">Pts II–III</span></div>
         <div class="cls"><span class="name">fsd:ProhibitedPractice</span><span class="label">Cleachtas Toirmiscthe</span>
-          <div class="desc">Superclass of five prohibited acts. Each is categorically wrong, not a lesser determination — none can satisfy the s.3 duty.</div></div>
+          <div class="desc">Superclass of five prohibited acts. Each is categorically wrong, not a lesser determination; none can satisfy the s.3 duty.</div></div>
         <div class="cls child"><span class="name">RemitDisplacement</span>
-          <div class="desc">"Not our remit" — without (a) naming the body, (b) 30-day transmission, or (c) submitter notice. s.4.</div></div>
+          <div class="desc">"Not our remit" —without (a) naming the body, (b) 30-day transmission, or (c) submitter notice. s.4.</div></div>
         <div class="cls child"><span class="name">SufficiencyAssertion</span>
-          <div class="desc">"Existing provision is sufficient" — issued without evaluating the specific submitted corpus. s.5.</div></div>
+          <div class="desc">"Existing provision is sufficient" —issued without evaluating the specific submitted corpus. s.5.</div></div>
         <div class="cls child"><span class="name">AdministrativeAmnesia</span>
-          <div class="desc">Successive officers meet the submission as if new — passive reset, no accumulated obligation. Distinct from forgetting (active). s.6.</div></div>
+          <div class="desc">Successive officers meet the submission as if new —passive reset, no accumulated obligation. Distinct from forgetting (active). s.6.</div></div>
         <div class="cls child"><span class="name">DesignedForgetting</span>
           <div class="desc">Active deletion of lodged correspondence without determination/transmission/record. Engages CFR Art.41 access-to-file. Instance: <i>JCEUA deletion, Oct 2025.</i> s.7.</div></div>
         <div class="cls child"><span class="name">ForeclosureByProxy</span>
-          <div class="desc">Determination issued by a body lacking CA designation, relying on another non-CA body's conclusions. Instance: <i>DOD-MO-01201-2025, 4 Feb 2026.</i> s.8A.</div></div>
+          <div class="desc">Purported determination by a body that held <b>no competent-authority function</b> in respect of the matter, relying exclusively on conclusions of another body that also held none, and not engaging formally rebutted conclusions. Instance: <i>DOD-MO-01201-2025, 4 Feb 2026.</i> s.8A.</div></div>
       </div>
 
       <div class="group t-quire" id="structural-condition-classes">
         <div class="group-head"><span>4.5 STRUCTURAL CONDITIONS</span><span class="ref">s.2A</span></div>
         <div class="cls"><span class="name">fsd:StructuralCondition</span><span class="label">Coinníoll Struchtúrach</span>
-          <div class="desc">Systemic capacity failure. Four types defined by s.2A — mutually reinforcing, not mutually exclusive.</div></div>
+          <div class="desc">Systemic capacity failure. Four types defined by s.2A, mutually reinforcing, not mutually exclusive.</div></div>
         <div class="cls child"><span class="name">NormativeCollapse</span>
-          <div class="desc">Procedurally valid outputs issue while substantive obligations stay permanently unmet — a self-sustaining form/substance gap. s.2A(2)(a).</div></div>
+          <div class="desc">Procedurally valid outputs issue while substantive obligations stay permanently unmet —a self-sustaining form/substance gap. s.2A(2)(a).</div></div>
         <div class="cls child"><span class="name">SilenceVeto</span>
-          <div class="desc">Silence functions as a substantive adverse determination — no notice, hearing, or reasons. No intent required, effect-test only. Engages CFR Art.41 / <i>Re Haughey</i> [1971]. s.2A(2)(b).</div></div>
+          <div class="desc">Silence functions as a substantive adverse determination —no notice, hearing, or reasons. No intent required, effect-test only. Engages CFR Art.41 / <i>Re Haughey</i> [1971]. s.2A(2)(b).</div></div>
         <div class="cls child"><span class="name">StructuralDisplacement</span>
           <div class="desc">Required competence is split across bodies with no assembly mechanism. Established from the statutory architecture alone. s.2A(2)(c).</div></div>
         <div class="cls child" style="padding-left:32px;"><span class="name">↳ OnticCollapse</span>
@@ -352,7 +366,7 @@
         <div class="cls"><span class="name">fsd:LoopClosure</span>
           <div class="desc">Ends via: body determination pre-application / High Court order s.10C(7) / ontic-collapse finding. Entered on the s.10E public register.</div></div>
         <div class="cls"><span class="name">fsd:TechnicalAudit</span>
-          <div class="desc">s.5C: assesses operational capacity, executability, replicability, EU 2021/821 Art.9(2) & AI Act Arts.13–14 compliance. Does not rule on the merits.</div></div>
+          <div class="desc">s.5C: assesses operational capacity, executability, replicability, and the characteristics relevant to Reg. (EU) 2021/821 and, where applicable, AI Act Arts.13–14. Does not rule on the merits.</div></div>
       </div>
 
     </div>
@@ -364,7 +378,7 @@
     <div class="nz-title">The relations that bind the classes</div>
     <div class="props-wrap">
       <table class="props deckle">
-        <caption>OBJECT PROPERTIES — domain → range</caption>
+        <caption>OBJECT PROPERTIES: domain → range</caption>
         <tr><th>property</th><th>domain → range</th><th>note</th></tr>
         <tr><td class="prop">hasSubmitter</td><td class="range">Submission → foaf:Agent</td><td class="note">natural / legal person who lodged it</td></tr>
         <tr><td class="prop">hasReceivingBody</td><td class="range">Submission → PublicBody</td><td class="note">body with which it was lodged</td></tr>
@@ -381,7 +395,7 @@
       </table>
 
       <table class="props willow">
-        <caption>DATA PROPERTIES — domain → range</caption>
+        <caption>DATA PROPERTIES: domain → range</caption>
         <tr><th>property</th><th>domain → range</th><th>note</th></tr>
         <tr><td class="prop">submissionDate</td><td class="range">Submission → xsd:date</td><td class="note">lodging date</td></tr>
         <tr><td class="prop">referenceNumber</td><td class="range">Submission → xsd:string</td><td class="note">if assigned on receipt</td></tr>
@@ -455,7 +469,7 @@
   <div class="section" id="framework-alignment">
     <div class="nz-eyebrow">§8 · European Framework Alignment</div>
     <div class="nz-title">Where the bill's concepts already have a European home</div>
-    <div class="nz-sub">Blank cells = genuine ontological contributions — no equivalent exists in prior European legal ontologies.</div>
+    <div class="nz-sub">Blank cells = genuine ontological contributions —no equivalent exists in prior European legal ontologies.</div>
     <table class="align">
       <tr><th>Bill Concept</th><th>OWL Class</th><th>LKIF</th><th>SEMIC CPV</th><th>ELI</th><th>Akoma Ntoso</th></tr>
       <tr><td class="concept">Submission of National Utility</td><td class="cls">fsd:SubmissionOfNationalUtility</td><td class="dim">lkif:LegalDocument</td><td class="dim">cpv:Evidence</td><td class="dim">eli:LegalResource</td><td class="dim">an:doc</td></tr>
@@ -489,27 +503,27 @@
         <div class="eif-row"><b>LEGAL</b>The duty of determination becomes justiciable across member-state law (CFR Art.41/47, TEU Art.2/4(3)); mapped to machine-readable axioms.</div>
         <div class="eif-row"><b>ORGANISATIONAL</b>LoopCondition &amp; ResidualObligation model cross-body coordination failure and its statutory resolution.</div>
         <div class="eif-row"><b>SEMANTIC</b>The SKOS scheme (right) gives a controlled vocabulary for consistent cross-system interpretation.</div>
-        <div class="eif-row"><b>TECHNICAL</b>OWL 2 DL profile — compatible with Jena / Stardog / GraphDB &amp; SPARQL; integrable with EUR-Lex and Ombudsman case systems.</div>
+        <div class="eif-row"><b>TECHNICAL</b>OWL 2 DL profile, compatible with Jena / Stardog / GraphDB &amp; SPARQL; integrable with EUR-Lex and Ombudsman case systems.</div>
       </div>
 
       <div class="card g-deckle">
         <h4>SKOS Concept Scheme <small>Meinhardt Governance Failure Vocabulary</small></h4>
         <div class="skos-item"><span class="term">Nullification Loop</span>Five-stage administrative attractor producing non-determination regardless of personnel.<span class="rel"> related → Normative Collapse, Silence Veto</span></div>
         <div class="skos-item"><span class="term">Normative Collapse</span>Structural condition: valid procedural outputs, permanently unmet substantive obligation.</div>
-        <div class="skos-item"><span class="term">Silence Veto</span>Procedural silence as substantive adverse determination — no notice, hearing, or reasons. Engages CFR Art.41.</div>
+        <div class="skos-item"><span class="term">Silence Veto</span>Procedural silence as substantive adverse determination, rendered without notice, hearing, or reasons. Engages CFR Art.41.</div>
         <div class="skos-item"><span class="term">Structural Displacement</span>Competence distributed with no institutional subject able to determine.<span class="rel"> narrower → Ontic Collapse</span></div>
         <div class="skos-item"><span class="term">Ontic Collapse</span>Acute form: no institutional subject capable of determination exists at all.<span class="rel"> broader → Structural Displacement</span></div>
       </div>
 
       <div class="card g-glaze">
         <h4>Linked Data Integration Points</h4>
-        <div class="link-row"><span class="res">EUR-Lex — Reg. 2021/821</span><span class="uri">data.europa.eu/eli/reg/2021/821</span> via <b>fsd:engagesRegulation</b></div>
-        <div class="link-row"><span class="res">EUR-Lex — AI Act 2024/1689</span><span class="uri">data.europa.eu/eli/reg/2024/1689</span> via <b>fsd:engagesRegulation</b></div>
+        <div class="link-row"><span class="res">EUR-Lex: Reg. 2021/821</span><span class="uri">data.europa.eu/eli/reg/2021/821</span> via <b>fsd:engagesRegulation</b></div>
+        <div class="link-row"><span class="res">EUR-Lex: AI Act 2024/1689</span><span class="uri">data.europa.eu/eli/reg/2024/1689</span> via <b>fsd:engagesRegulation</b></div>
         <div class="link-row"><span class="res">EU Publications Office</span><span class="uri">publications.europa.eu/resource/authority/</span> language / country / institution codes</div>
         <div class="link-row"><span class="res">Irish Statute Book</span><span class="uri">irishstatutebook.ie/eli/2026/</span> via <b>eli:is_about</b> (on enactment)</div>
         <div class="link-row"><span class="res">Oireachtas Open Data</span><span class="uri">data.oireachtas.ie</span> bill provenance &amp; stage</div>
-        <div class="link-row"><span class="res">Irish Ombudsman register</span>reserved: <b>fsd:ombudsmanCaseURI</b> — loop closure register, s.10E</div>
-        <div class="link-row"><span class="res">Wassenaar Arrangement lists</span>via DG Trade linked data — dual-use classification validation</div>
+        <div class="link-row"><span class="res">Irish Ombudsman register</span>reserved: <b>fsd:ombudsmanCaseURI</b> (loop closure register, s.10E)</div>
+        <div class="link-row"><span class="res">Wassenaar Arrangement lists</span>via DG Trade linked data, for dual-use classification validation</div>
       </div>
 
     </div>
@@ -519,20 +533,20 @@
   <div class="section" id="governance-record">
     <div class="nz-eyebrow">§12 · Governance Note &amp; Record Instantiation</div>
     <div class="nz-title">Applied to the existing record</div>
-    <div class="nz-sub">Pre-enactment status: the ontology is a <b>semantic specification</b>; the SWRL rules are <b>testable hypotheses</b>; the SKOS scheme is the canonical vocabulary for PETI / Ombudsman / CJEU filings.</div>
+    <div class="nz-sub">Pre-enactment status: the ontology is a <b>semantic specification</b>; the SWRL rules are <b>testable hypotheses</b>; the SKOS scheme is the canonical vocabulary for PETI / Ombudsman / CJEU filings. Applied to the existing record, and on the assumptions stated, the rules give the illustrative instantiations below: <b>hypotheses, not findings.</b></div>
     <table class="record">
       <tr><th>Rule</th><th>Instantiation on Existing Record</th></tr>
-      <tr><td class="rref">R1 · Non-Determination</td><td>Established — submitted Nov 2006; deadline Nov 2007; no determination to date.</td></tr>
-      <tr><td class="rref">R2 · Loop (3 Declinations)</td><td>Established — JCEUA, JCPP, SSCEUST, JCFAT, Defence, Justice, Finance, PAC (partial), Budgetary Oversight; threshold exceeded by a factor of three.</td></tr>
-      <tr><td class="rref">R3 · Loop (24-Month)</td><td>Established — non-determination period ≈ 236 months at date of this document.</td></tr>
-      <tr><td class="rref">R4 · Residual Obligation</td><td>Would vest in the Ombudsman on enactment — complaint OMB-260331-CSD014 currently active as pre-legislative equivalent.</td></tr>
-      <tr><td class="rref">R6 · Ontic Collapse</td><td>Established — CA function split across DETE (licensing), DFA (regime memberships), DoD (security assessment); no statutory coordination mechanism.</td></tr>
+      <tr><td class="rref">R1 · Non-Determination</td><td>Satisfied on the stated assumptions: first presentations May–July 2006 (the November 2006 date carried in some documents is a recorded date conflict: doctrine Part VI); no determination identified. Illustrative only: how far the Bill reaches existing submissions is a question for its commencement and transitional provisions.</td></tr>
+      <tr><td class="rref">R2 · Loop (3 Declinations)</td><td>Satisfied on the stated assumptions: JCEUA, JCPP (non-response), SSCEUST, JCFAT, Defence, Justice, Finance, Budgetary Oversight, eight bodies against a threshold of three. The PAC is not counted: its decision of 23 April 2026 was an affirmative act. Whether non-response counts as declination is a question for the text of s.10B.</td></tr>
+      <tr><td class="rref">R3 · Loop (24-Month)</td><td>Satisfied on the stated assumptions: from May 2006, approximately 242 months at 24 July 2026 (the earlier figure of 236 months assumed a November 2006 start).</td></tr>
+      <tr><td class="rref">R4 · Residual Obligation</td><td>Would vest in the Ombudsman on enactment; complaint OMB-260331-CSD014 currently active as the pre-legislative equivalent.</td></tr>
+      <tr><td class="rref">R6 · Ontic Collapse</td><td>Satisfied on the stated assumptions: the functions an integrated assessment requires are distributed across DETE (competent authority and licensing), DFA (consultation input; regime memberships) and DoD (security assessment), with no statutory coordination mechanism.</td></tr>
     </table>
   </div>
 
   <!-- COLOPHON -->
   <div class="colophon">
-    <span>FSD-Ontology-2026 · v1.0.0 · 24 Jul 2026 · ns: https://meinhardt.gov/ontology/fsd/2026#</span>
+    <span>FSD-Ontology-2026 · v1.1.0 · conformed to the doctrine file of 8 Oct 2026 (v1.0.0: 24 Jul 2026) · ns: https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</span>
     <span>OWL 2 DL · LKIF · ELI · SEMIC CPV · Akoma Ntoso · LegalRuleML · SKOS · DCAT-AP · FOAF · EIF</span>
     <span class="ga">Ointlocht Aighneachtaí Foirmiúla (Dualgas Cinneadh a Dhéanamh) 2026 · EN / GA</span>
   </div>
