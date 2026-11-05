@@ -175,7 +175,7 @@
   table.props td.note{ font-size:11.5px; color:var(--ink-60); }
 
   /* ========== SWRL RULES: ink cards (pcard-ink pattern) ========== */
-  .rules{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .rules{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
   .rule{ background: var(--ink); color: var(--cloud-dancer); padding:15px 17px 17px; }
   .rule .rn{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.55; margin-bottom:5px; }
   .rule .rtitle{ font-family:var(--serif); font-weight:400; font-size:16.5px; margin-bottom:9px; }
@@ -214,6 +214,8 @@
     margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--rule-md);
   }
   .card h4 small{ font-family:var(--mono); font-size:10.5px; color:var(--ink-38); font-weight:400; }
+  .card p{ font-size:12px; line-height:1.5; margin-bottom:10px; }
+  .card pre{ font-family:var(--mono); font-size:11px; line-height:1.65; white-space:pre-wrap; color:var(--ink); margin-top:4px; }
   .eif-row{ margin-bottom:10px; font-size:12px; line-height:1.5; }
   .eif-row b{ display:block; font-family:var(--mono); font-size:11px; color:var(--ink); margin-bottom:2px; letter-spacing:.04em;}
   .skos-item{ margin-bottom:10px; font-size:12px; line-height:1.5; }
@@ -244,7 +246,7 @@
   <!-- MASTHEAD -->
   <div class="masthead">
     <div>
-      <div class="kicker">OWL 2 DL FORMALISATION · TURTLE / SWRL · v1.1.0 · CONFORMED 8 OCT 2026 (v1.0.0, 24 JULY 2026)</div>
+      <div class="kicker">OWL 2 DL FORMALISATION · TURTLE / SWRL · v2.2.0 · UPDATED 4 NOV 2026 (v1.0.0, 24 JULY 2026)</div>
       <h1>Qualifying Submissions<br><em>(Duty to Determine)</em></h1>
       <div class="sub">An ontology mapping the duty of determination, prohibited administrative practices, structural failure conditions, and loop-closure mechanisms to a machine-readable knowledge graph —built for European interoperability.</div>
     </div>
@@ -274,7 +276,7 @@
   <div class="section" id="class-hierarchy">
     <div class="nz-eyebrow">§4 · Class Hierarchy</div>
     <div class="nz-title">Six groups, one ontology</div>
-    <div class="nz-sub">Namespace <code>fsd:</code> = <code>https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</code> —classes with no LKIF/SEMIC/ELI/Akoma mapping (marked in §8) are the ontology's genuine contributions. Paper Doctrine governs: one stock, one role. Classes marked <i>v1.1.0</i> were added in the conformed edition.</div>
+    <div class="nz-sub">Namespace <code>fsd:</code> = <code>https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</code> —classes with no LKIF/SEMIC/ELI/Akoma mapping (marked in §8) are the ontology's genuine contributions. Paper Doctrine governs: one stock, one role. Classes marked <i>v1.1.0</i> or <i>v2.2.0</i> were added in later editions.</div>
 
     <div class="groups">
 
@@ -353,6 +355,11 @@
           <div class="desc">Required competence is split across bodies with no assembly mechanism. Established from the statutory architecture alone. s.2A(2)(c).</div></div>
         <div class="cls child" style="padding-left:32px;"><span class="name">↳ OnticCollapse</span>
           <div class="desc">Acute StructuralDisplacement: no body holds full competence <b>and</b> no mechanism assembles the parts. Identifies the level of intervention (legislative/executive) required. s.2A(1A).</div></div>
+        <div class="cls child" style="padding-left:32px;"><span class="name">↳ UnownedCollision</span><span class="label">Imbhualadh gan Úinéir ina Fhéin</span><span class="new">v2.2.0</span>
+          <div class="desc">Two or more bodies with overlapping competence mandates converge on a single obligation, and no body has assumed, or is required by statute to assume, carriage of it. Established from mandate architecture alone: no coordination failure or bad faith required. Distinct from OnticCollapse: the competence exists in two or more bodies, but no mechanism assigns the duty at their intersection. Instance: <i>the CER Directive (EU) 2022/2557 and Industrial Accelerator Act (JCEUA) tracks, as transposed by S.I. No. 559 of 2024, regs 11(3) and 11(4)(c).</i> s.2A(2)(c).</div></div>
+        <div class="cls note">Supporting class <span class="new">v2.2.0</span></div>
+        <div class="cls"><span class="name">fsd:AssemblyMechanism</span><span class="new">v2.2.0</span>
+          <div class="desc">A statutory mechanism that assembles the partial competences of separate bodies into a capacity able to issue a determination or discharge an obligation: a lead-body designation, a joint statutory function, a binding coordination duty. Declaring the class prejudges nothing; whether one exists in a given case is a fact to be established.</div></div>
       </div>
 
       <div class="group t-aqua" id="loop-architecture-classes">
@@ -392,6 +399,10 @@
         <tr><td class="prop">vestsObligationIn</td><td class="range">LoopCondition → Ombudsman</td><td class="note">residual obligation vesting</td></tr>
         <tr><td class="prop">hasAudited</td><td class="range">TechnicalAudit → TestableSubmission</td><td class="note">—</td></tr>
         <tr><td class="prop">conductedBy</td><td class="range">TechnicalAudit → IndependentAuditor</td><td class="note">—</td></tr>
+        <tr><td class="prop">hasAssignedCarriage</td><td class="range">obligation → PublicBody</td><td class="note">body holding carriage by statute or assignment; its absence is the test for an unowned collision</td></tr>
+        <tr><td class="prop">hasBodyWithPartialCompetence</td><td class="range">matter → PublicBody</td><td class="note">body holding part of the competence required</td></tr>
+        <tr><td class="prop">hasBodyWithFullCompetence</td><td class="range">matter → PublicBody</td><td class="note">body holding the full competence required; used in the ontic-collapse test</td></tr>
+        <tr><td class="prop">hasAssemblyMechanism</td><td class="range">matter → AssemblyMechanism</td><td class="note">mechanism assembling partial competences</td></tr>
       </table>
 
       <table class="props willow">
@@ -457,9 +468,34 @@
         <div class="rn">RULE 6 · s.2A(1A)</div>
         <div class="rtitle">Ontic Collapse</div>
         <div class="rlogic">StructuralDisplacement(sd) ∧
-¬bodyWithFullCompetence(s) ∧
-¬assemblyMechanism(s)
-<span class="arrow">⇒</span> OnticCollapse(oc,s)</div>
+¬∃b3 hasBodyWithFullCompetence(s,b3) ∧
+¬∃m hasAssemblyMechanism(s,m)
+<span class="arrow">⇒</span> OnticCollapse(oc) ∧
+    hasStructuralCondition(s,oc)</div>
+      </div>
+
+      <div class="rule a-quire">
+        <div class="rn">RULE 7 · s.2A(2)(c)</div>
+        <div class="rtitle">Unowned Collision</div>
+        <div class="rlogic">Submission(s) ∧ StructuralDisplacement(sd) ∧
+hasStructuralCondition(s,sd) ∧
+hasBodyWithPartialCompetence(s,b1) ∧
+hasBodyWithPartialCompetence(s,b2) ∧
+b1 ≠ b2 ∧
+¬∃b3 hasAssignedCarriage(s,b3)
+<span class="arrow">⇒</span> UnownedCollision(uc) ∧
+    hasStructuralCondition(s,uc)</div>
+      </div>
+
+      <div class="rule a-usq">
+        <div class="rn">RULE S1 · SOR module</div>
+        <div class="rtitle">Unowned Backlog</div>
+        <div class="rlogic">MaintenanceBacklog(bl) ∧
+hasBodyWithPartialCompetence(bl,b1) ∧
+hasBodyWithPartialCompetence(bl,b2) ∧
+b1 ≠ b2 ∧
+¬∃b3 hasAssignedCarriage(bl,b3)
+<span class="arrow">⇒</span> UnownedBacklog(bl)</div>
       </div>
 
     </div>
@@ -485,6 +521,7 @@
       <tr><td class="concept">Designed Forgetting</td><td class="cls">fsd:DesignedForgetting</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
       <tr><td class="concept">Normative Collapse</td><td class="cls">fsd:NormativeCollapse</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
       <tr><td class="concept">Silence Veto</td><td class="cls">fsd:SilenceVeto</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
+      <tr><td class="concept">Unowned Collision</td><td class="cls">fsd:UnownedCollision</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
       <tr><td class="concept">Ontic Collapse</td><td class="cls">fsd:OnticCollapse</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
       <tr><td class="concept">Loop Condition</td><td class="cls">fsd:LoopCondition</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
       <tr><td class="concept">Residual Obligation</td><td class="cls">fsd:ResidualObligation</td><td class="dim">lkif:Obligation</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr>
@@ -511,7 +548,8 @@
         <div class="skos-item"><span class="term">Nullification Loop</span>Five-stage administrative attractor producing non-determination regardless of personnel.<span class="rel"> related → Normative Collapse, Silence Veto</span></div>
         <div class="skos-item"><span class="term">Normative Collapse</span>Structural condition: valid procedural outputs, permanently unmet substantive obligation.</div>
         <div class="skos-item"><span class="term">Silence Veto</span>Procedural silence as substantive adverse determination, rendered without notice, hearing, or reasons. Engages CFR Art.41.</div>
-        <div class="skos-item"><span class="term">Structural Displacement</span>Competence distributed with no institutional subject able to determine.<span class="rel"> narrower → Ontic Collapse</span></div>
+        <div class="skos-item"><span class="term">Structural Displacement</span>Competence distributed with no institutional subject able to determine.<span class="rel"> narrower → Unowned Collision, Ontic Collapse</span></div>
+        <div class="skos-item"><span class="term">Unowned Collision</span>Two or more competence-bearing bodies converge on an obligation neither holds: the obligation point is reached but not owned. The competence is present in two or more bodies but unassigned at the point of intersection. Established by mandate architecture alone.<span class="rel"> broader → Structural Displacement · related → Ontic Collapse</span></div>
         <div class="skos-item"><span class="term">Ontic Collapse</span>Acute form: no institutional subject capable of determination exists at all.<span class="rel"> broader → Structural Displacement</span></div>
       </div>
 
@@ -541,12 +579,50 @@
       <tr><td class="rref">R3 · Loop (24-Month)</td><td>Satisfied on the stated assumptions: from May 2006, approximately 242 months at 24 July 2026 (the earlier figure of 236 months assumed a November 2006 start).</td></tr>
       <tr><td class="rref">R4 · Residual Obligation</td><td>Would vest in the Ombudsman on enactment; complaint OMB-260331-CSD014 currently active as the pre-legislative equivalent.</td></tr>
       <tr><td class="rref">R6 · Ontic Collapse</td><td>Satisfied on the stated assumptions: the functions an integrated assessment requires are distributed across DETE (competent authority and licensing), DFA (consultation input; regime memberships) and DoD (security assessment), with no statutory coordination mechanism.</td></tr>
+      <tr><td class="rref">R7 · Unowned Collision</td><td>Satisfied on the stated assumptions: CER Directive (EU) 2022/2557 and the IAA (JCEUA) each engage the competent-authority architecture; S.I. No. 559 of 2024 transposes one without resolving the intersection of mandates; no body has assumed carriage of the overlapping obligation.</td></tr>
     </table>
+  </div>
+
+  <!-- §13 SOR EXTENSION MODULE -->
+  <div class="section" id="sor-module">
+    <div class="nz-eyebrow">§13 · SOR Extension Module</div>
+    <div class="nz-title">The same test, applied to maintenance</div>
+    <div class="nz-sub">A policy-analytic extension in its own namespace, <code>sor:</code> = <code>https://dr-bosch.github.io/nullification-loops/ontology/sor/2026#</code>, importing <code>fsd:</code>. It sits outside the statutory layer: it applies the unowned-collision test to maintenance obligations on asset systems such as water networks, grid infrastructure and hospital estates, as used in the paper <i>State Operational Resilience</i>.</div>
+    <div class="trio">
+
+      <div class="card g-glaze">
+        <h4>Classes and property</h4>
+        <div class="skos-item"><span class="term">sor:MaintenanceBacklog</span>Accumulated deferred maintenance on an asset system. A stock in the system dynamics sense: it grows when deferral outpaces remediation.</div>
+        <div class="skos-item"><span class="term">sor:UnownedBacklog</span>An unowned collision whose obligation is a maintenance backlog. Two or more bodies hold overlapping mandates over the asset system, and no body has assumed, or is required by statute to assume, carriage of the backlog. Established by mandate architecture alone; no fault is implied.<span class="rel"> subclass of → fsd:UnownedCollision</span></div>
+        <div class="skos-item"><span class="term">sor:hasPublishedRegister</span>Whether the backlog is measured and published, by whom and how often: the observable test for whether carriage can be inspected from outside.</div>
+      </div>
+
+      <div class="card g-willow">
+        <h4>The carriage test</h4>
+        <div class="eif-row"><b>1 · COMPETENCE</b>Which bodies hold part of the competence over this asset system?</div>
+        <div class="eif-row"><b>2 · CARRIAGE</b>Does any statute or assignment give one body carriage of the backlog?</div>
+        <div class="eif-row"><b>3 · REGISTER</b>Is the backlog measured and published, by whom, and how often?</div>
+        <p>If the answer to 2 is no, the backlog is unowned. If the answer to 3 is no, carriage cannot be inspected from outside even where it exists. Applied to a real asset system, the classes state a hypothesis to be tested against a mandate map, not a finding.</p>
+      </div>
+
+      <div class="card g-deckle">
+        <h4>Closed-world form of Rule S1</h4>
+        <p>Rule S1 depends on the absence of any carriage statement. Under OWL's open-world reading that absence proves nothing, so the test is run closed-world against a mandate map stated to be complete.</p>
+<pre>SELECT DISTINCT ?bl WHERE {
+  ?bl a sor:MaintenanceBacklog ;
+      fsd:hasBodyWithPartialCompetence ?b1 , ?b2 .
+  FILTER (?b1 != ?b2)
+  FILTER NOT EXISTS
+    { ?bl fsd:hasAssignedCarriage ?b }
+}</pre>
+      </div>
+
+    </div>
   </div>
 
   <!-- COLOPHON -->
   <div class="colophon">
-    <span>FSD-Ontology-2026 · v1.1.0 · conformed to the doctrine file of 8 Oct 2026 (v1.0.0: 24 Jul 2026) · ns: https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</span>
+    <span>FSD-Ontology-2026 · v2.2.0 · updated 4 Nov 2026 (v1.0.0: 24 Jul 2026) · ns: https://dr-bosch.github.io/nullification-loops/ontology/fsd/2026#</span>
     <span>OWL 2 DL · LKIF · ELI · SEMIC CPV · Akoma Ntoso · LegalRuleML · SKOS · DCAT-AP · FOAF · EIF</span>
     <span class="ga">Ointlocht Aighneachtaí Foirmiúla (Dualgas Cinneadh a Dhéanamh) 2026 · EN / GA</span>
   </div>
